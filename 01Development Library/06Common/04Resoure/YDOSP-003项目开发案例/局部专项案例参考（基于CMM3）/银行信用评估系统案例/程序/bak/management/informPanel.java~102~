@@ -1,0 +1,211 @@
+package management;
+
+import java.awt.*;
+import javax.swing.*;
+import com.borland.dx.sql.dataset.*;
+import com.borland.dbswing.*;
+import java.awt.event.*;
+import java.sql.*;
+import com.borland.dx.dataset.*;
+import com.borland.jbcl.layout.*;
+/**
+ * <p>Title: </p>
+ * <p>Description: </p>
+ * <p>Copyright: Copyright (c) 2004</p>
+ * <p>Company: </p>
+ * @author not attributable
+ * @version 1.0
+ */
+
+public class informPanel extends JPanel {
+  JLabel jLabel2 = new JLabel();
+  JTextField jTextField1 = new JTextField();
+  JButton jButton1 = new JButton();
+  JButton jButton2 = new JButton();
+  Database database1 = new Database();
+  QueryDataSet queryDataSet1 = new QueryDataSet();
+  QueryResolver queryResolver1 = new QueryResolver();
+  JdbNavToolBar jdbNavToolBar1 = new JdbNavToolBar();
+  JdbStatusLabel jdbStatusLabel1 = new JdbStatusLabel();
+  TableScrollPane tableScrollPane1 = new TableScrollPane();
+  JdbTable jdbTable1 = new JdbTable();
+
+   PreparedStatement pstmt;
+   Connection con;
+   String query;
+   ResultSet rs;
+   String str;
+  JLabel jLabel3 = new JLabel();
+
+  JLabel jLabel4 = new JLabel();
+  JButton jButton3 = new JButton();
+
+  public informPanel() {
+    try {
+      jbInit();
+    }
+    catch(Exception ex) {
+      ex.printStackTrace();
+    }
+  }
+  void jbInit() throws Exception {
+    this.setLayout(null);
+    jLabel2.setFont(new java.awt.Font("Dialog", 1, 22));
+    jLabel2.setText("输入学号:");
+    jLabel2.setBounds(new Rectangle(84, 72, 105, 30));
+    jTextField1.setText("");
+    jTextField1.setBounds(new Rectangle(213, 76, 191, 25));
+    jButton1.setBounds(new Rectangle(94, 113, 84, 27));
+    jButton1.setText("信息管理");
+    jButton1.addActionListener(new informPanel_jButton1_actionAdapter(this));
+    jButton2.setBounds(new Rectangle(240, 110, 83, 27));
+    jButton2.setText("重置");
+    jButton2.addActionListener(new informPanel_jButton2_actionAdapter(this));
+    database1.setConnection(new com.borland.dx.sql.dataset.ConnectionDescriptor("jdbc:microsoft:sqlserver://localhost:1433;DatabaseName=student", "sa", "lomf8244", false, "com.microsoft.jdbc.sqlserver.SQLServerDriver"));
+    database1.setUseTransactions(false);
+    queryDataSet1.setResolver(queryResolver1);
+    queryDataSet1.setQuery(new com.borland.dx.sql.dataset.QueryDescriptor(null, "", null, true, Load.ALL));
+    queryResolver1.setDatabase(database1);
+    queryResolver1.setUpdateMode(com.borland.dx.dataset.UpdateMode.KEY_COLUMNS);
+    jdbNavToolBar1.setFont(new java.awt.Font("Dialog", 0, 10));
+    jdbNavToolBar1.setDataSet(queryDataSet1);
+    jdbNavToolBar1.setBounds(new Rectangle(0, 140, 508, 39));
+    jdbStatusLabel1.setText(" ");
+    jdbStatusLabel1.setDataSet(queryDataSet1);
+    jdbStatusLabel1.setBounds(new Rectangle(60, 171, 350, 24));
+    tableScrollPane1.getViewport().setBackground(SystemColor.info);
+    tableScrollPane1.setAutoscrolls(true);
+    tableScrollPane1.setBounds(new Rectangle(0, 195, 512, 232));
+    jdbTable1.setBackground(Color.cyan);
+    jdbTable1.setAutoResizeMode(JTable.AUTO_RESIZE_LAST_COLUMN);
+    jdbTable1.setSelectionBackground(SystemColor.info);
+    jdbTable1.setSelectionForeground(UIManager.getColor("CheckBox.foreground"));
+    jLabel3.setText("");
+    jLabel3.setBounds(new Rectangle(10, 10, 0, 0));
+
+
+    jLabel4.setFont(new java.awt.Font("Dialog", 1, 40));
+    jLabel4.setForeground(Color.pink);
+    jLabel4.setText("      学 生 信 息 管 理");
+    jLabel4.setBounds(new Rectangle(0, 0, 512, 56));
+    jButton3.setBounds(new Rectangle(378, 111, 83, 27));
+    jButton3.setText("密码管理");
+    jButton3.addActionListener(new informPanel_jButton3_actionAdapter(this));
+    this.add(jTextField1, null);
+    this.add(jLabel2, null);
+    this.add(tableScrollPane1, null);
+    tableScrollPane1.getViewport().add(jdbTable1, null);
+    this.add(jdbStatusLabel1, null);
+    this.add(jdbNavToolBar1, null);
+    this.add(jLabel3, null);
+    this.add(jLabel4, null);
+    this.add(jButton1, null);
+    this.add(jButton3, null);
+    this.add(jButton2, null);
+
+     Class.forName("com.microsoft.jdbc.sqlserver.SQLServerDriver");
+     String url = "jdbc:microsoft:sqlserver://localhost:1433;DatabaseName=student";
+     String username= "sa";
+     String password= "lomf8244";
+     con = DriverManager.getConnection(url,username,password);
+     query="select * from student where STUDENTNO=?";
+     pstmt = con.prepareStatement(query);
+     jLabel3.setVisible(false);
+  }
+
+  void jButton2_actionPerformed(ActionEvent e) {
+     jTextField1.setText("");
+     queryDataSet1.close();
+     queryDataSet1.setQuery(new com.borland.dx.sql.dataset.QueryDescriptor(database1, "select * from student", null, true, Load.ALL));
+     queryDataSet1.refresh();
+     jdbNavToolBar1.setDataSet(queryDataSet1);
+     jdbStatusLabel1.setDataSet(queryDataSet1);
+     jdbTable1.setDataSet(queryDataSet1);
+     jdbTable1.repaint();
+
+  }
+
+  void jButton1_actionPerformed(ActionEvent e) {
+   try{
+   str=jTextField1.getText();
+   pstmt.setString(1,str);
+   rs=pstmt.executeQuery();
+
+    if(jTextField1.getText().length()==0 || str.equals("学号不存在!"))
+    {  jTextField1.setText("请输入学号!");
+    }
+    else
+    {
+
+       if(rs.next()){
+         queryDataSet1.close();
+         jLabel3.setText(rs.getString("STUDENTNO"));
+         str=jLabel3.getText();
+
+        queryDataSet1.setQuery(new com.borland.dx.sql.dataset.QueryDescriptor(database1, "select STUDENTNO as"+ "\'"+"学号" +"\'"+",STUDENTNAME as"+ "\'"+"姓名" +"\'"+",STUDENTAGE as"+ "\'"+"年龄" +"\'"+",STUDENTSEX as"+ "\'"+"性别" +"\'"+",STUENTRACE as"+ "\'"+"民族" +"\'"+",STUDENTSPECIATION as"+ "\'"+"专业" +"\'"+"from student where STUDENTNO="+str, null, true, Load.ALL));
+
+        queryDataSet1.refresh();
+
+        jdbNavToolBar1.setDataSet(queryDataSet1);
+        jdbStatusLabel1.setDataSet(queryDataSet1);
+        jdbTable1.setDataSet(queryDataSet1);
+        jdbTable1.repaint();
+       }
+       else{
+       jTextField1.setText("学号不存在!");
+        queryDataSet1.close();
+        queryDataSet1.refresh();
+       jdbTable1.setDataSet(null);
+        jdbTable1.repaint();
+       }
+    }
+     }
+     catch(SQLException ex) {
+      System.out.print("系统错误，请重新运行。");
+     }
+  }
+
+  void jButton3_actionPerformed(ActionEvent e) {
+    queryDataSet1.close();
+     queryDataSet1.setQuery(new com.borland.dx.sql.dataset.QueryDescriptor(database1, "selectSTUDENTNO as"+ "\'"+"学号" +"\'"+",STUDENTNAME as"+ "\'"+"姓名" +"\'"+",STUDENTAGE as"+ "\'"+"年龄" +"\'"+",STUDENTSEX as"+ "\'"+"性别" +"\'"+",STUENTRACE as"+ "\'"+"民族" +"\'"+",STUDENTSPECIATION as"+ "\'"+"专业" +"\'"+" from usercheck", null, true, Load.ALL));
+     queryDataSet1.refresh();
+   jdbNavToolBar1.setDataSet(queryDataSet1);
+   jdbStatusLabel1.setDataSet(queryDataSet1);
+  jdbTable1.setDataSet(queryDataSet1);
+  jdbTable1.repaint();
+
+  }
+}
+
+class informPanel_jButton2_actionAdapter implements java.awt.event.ActionListener {
+  informPanel adaptee;
+
+  informPanel_jButton2_actionAdapter(informPanel adaptee) {
+    this.adaptee = adaptee;
+  }
+  public void actionPerformed(ActionEvent e) {
+    adaptee.jButton2_actionPerformed(e);
+  }
+}
+
+class informPanel_jButton1_actionAdapter implements java.awt.event.ActionListener {
+  informPanel adaptee;
+
+  informPanel_jButton1_actionAdapter(informPanel adaptee) {
+    this.adaptee = adaptee;
+  }
+  public void actionPerformed(ActionEvent e) {
+    adaptee.jButton1_actionPerformed(e);
+  }
+}
+
+class informPanel_jButton3_actionAdapter implements java.awt.event.ActionListener {
+  informPanel adaptee;
+
+  informPanel_jButton3_actionAdapter(informPanel adaptee) {
+    this.adaptee = adaptee;
+  }
+  public void actionPerformed(ActionEvent e) {
+    adaptee.jButton3_actionPerformed(e);
+  }
+}

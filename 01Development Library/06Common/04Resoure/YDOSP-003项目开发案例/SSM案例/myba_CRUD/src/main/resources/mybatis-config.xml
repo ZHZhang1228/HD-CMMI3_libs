@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+<!-- 这是根标签 -->
+<configuration>
+	<!-- 元素允许在主配置文件之外提供一个properties格式对应文件，从而使得主配置文件更加通用。这样对部署非常有用 -->
+	<properties resource="mysql.properties" />
+	<!-- 设置别名，一定要放在properties下面 -->
+	<typeAliases>
+		<typeAlias alias="Employeer" type="com.mucfc.model.Employeer" />
+	</typeAliases>
+	<!-- 配置数据源相关的信息 -->
+	<environments default="development">
+		<environment id="development">
+			<transactionManager type="JDBC" />
+			<dataSource type="POOLED">
+				<!-- <property name="driver" value="com.mysql.jdbc.Driver"/> <property 
+					name="url" value="jdbc:mysql://localhost:3306/test?characterEncoding=UTF-8"/> 
+					<property name="username" value="root"/> <property name="password" value=""/> -->
+				<property name="driver" value="${driver}" />
+				<property name="url" value="${url}" />
+				<property name="username" value="${username}" />
+				<property name="password" value="${password}" />
+			</dataSource>
+		</environment>
+	</environments>
+	<!-- 列出映射文件 -->
+	<mappers>
+		<mapper resource="com/mucfc/mapper/Employeer.xml" />
+	</mappers>
+</configuration>

@@ -1,0 +1,903 @@
+<?xml version="1.0" encoding='GB2312' ?>
+<?xml:stylesheet type="text/xsl" href="table.xsl" ?><Report>
+<ReportTitle>B20 基线发布报告</ReportTitle>
+<RunDate>2001-10-10 11:46:22</RunDate>
+<Parameters>LOOKIN=在LEDS库中; 基线号="B20";</Parameters>
+<Header>
+<Column Label="Element Path" Type="element_pn"/>
+</Header>
+<Row>
+<element_pn> \leds\SQA</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\SQA\LEDS项目SQA计划.doc</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\SQA\SCM-变更流程(2001-10-13).xls</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\SQA\SQA报告（2001-08-15LEDS）.doc</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\SQA\SQA报告（2001-08-24LEDS）.doc</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\SQA\SQA报告（2001-09-11LEDS）.doc</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\SQA\SQA报告（2001-09-14LEDS）.doc</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\SQA\SQA报告（2001-09-29LEDS）.doc</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\SQA\SQA报告（2001-10-13LEDS）.doc</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\SQA\SQA报告（2001-10-15LEDS）.doc</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\SQA\SQA报告（2001-10-23LEDS）.doc</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\SQA\SQA检查表（2001-08-15LEDS）.xls</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\SQA\SQA检查表（2001-08-24LEDS）.xls</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\SQA\SQA检查表（2001-09-11LEDS）.xls</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\SQA\SQA检查表（2001-09-14LEDS）.xls</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\SQA\SQA检查表（2001-10-15LEDS）.xls</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\SQA\TPUP-实施-制定集成计划(2001-09-29).xls</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\标准与指南</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\标准与指南\CR.doc</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\标准与指南\LEDS-TEST-TG.doc</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\标准与指南\LEDS项目内部正式评审流程的补充.doc</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\标准与指南\评审记录表模板（V1.0）.doc</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\标准与指南\评审准备情况表.doc</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\部署</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\部署\LED产品清单.doc</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\部署\LED产品用户维护意见反馈卡.doc</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\部署\LED产品注册卡.doc</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\部署\LED托普集团软件产品《使用许可协议》.doc</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\部署\LED用户产品使用意见反馈卡.doc</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\部署\LED用户维护申请单.doc</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\部署\手册风格设计指南.doc</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\测试</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\测试\过程</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\测试\过程\LED-TEST-SST-TPR-InsertPlaying.doc</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\测试\过程\LEDS-TEST-SIT-TPR-ManagePlayingPlan.doc</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\测试\过程\LEDS-TEST-SIT-TPR-TimePlaying.doc</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\测试\过程\LEDS-TEST-SST-TPR-ControlPlaying.doc</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\测试\过程\LEDS-TEST-SST-TPR-Login.doc</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\测试\过程\LEDS-TEST-SST-TPR-MakeProgramMenu.doc</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\测试\过程\LEDS-TEST-SST-TPR-ManagePlayingPlan.doc</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\测试\过程\LEDS-TEST-SST-TPR-TimeControl.doc</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\测试\过程\LEDS-TEST-SST-TPR-TimePlaying.doc</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\测试\计划</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\测试\计划\LEDS-TEST-TP-Integration.doc</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\测试\计划\LEDS-TEST-TP-System.doc</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\测试\计划\LEDS-TEST-TP.doc</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\测试\计划\可测试性报告.doc</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\测试\脚本</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\测试\结果</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\测试\结果\LEDS Integration Test Evaluation Summary.doc</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\测试\结果\LEDS Systest Test Evaluation Summary.doc</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\测试\用例</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\测试\用例\LEDS-TEST-SIT-TC-ControlPlaying.doc</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\测试\用例\LEDS-TEST-SIT-TC-InsertPlaying.doc</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\测试\用例\LEDS-TEST-SIT-TC-MakeProgramMenu.doc</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\测试\用例\LEDS-TEST-SIT-TC-ManagePlayingPlan.doc</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\测试\用例\LEDS-TEST-SIT-TC-TimeControl.doc</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\测试\用例\LEDS-TEST-SIT-TC-TimePlaying.doc</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\测试\用例\LEDS-TEST-SST-TC-ConfigureLED.doc</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\测试\用例\LEDS-TEST-SST-TC-ConnectLED.doc</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\测试\用例\LEDS-TEST-SST-TC-ControlPlaying.doc</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\测试\用例\LEDS-TEST-SST-TC-InformState.doc</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\测试\用例\LEDS-TEST-SST-TC-InsertPlaying.doc</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\测试\用例\LEDS-TEST-SST-TC-Login.doc</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\测试\用例\LEDS-TEST-SST-TC-MakeDynamicDataMation.doc</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\测试\用例\LEDS-TEST-SST-TC-MakeProgramMenu.doc</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\测试\用例\LEDS-TEST-SST-TC-ManageLEDState.doc</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\测试\用例\LEDS-TEST-SST-TC-ManagePlayingLog.doc</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\测试\用例\LEDS-TEST-SST-TC-ManagePlayingPlan.doc</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\测试\用例\LEDS-TEST-SST-TC-ManageSystem.doc</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\测试\用例\LEDS-TEST-SST-TC-ManageWrongLog.doc</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\测试\用例\LEDS-TEST-SST-TC-PreviewProgramMenu.doc</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\测试\用例\LEDS-TEST-SST-TC-TimeControl.doc</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\测试\用例\LEDS-TEST-SST-TC-TimePlaying.doc</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\测试\指南</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\测试\指南\LEDS-TEST-TG.doc</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\代码</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\代码\Core</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\代码\Core\ActiveX</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\代码\Core\ControlPlaying</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\代码\Core\ControlPlaying\CControlPlayingControl.cpp</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\代码\Core\ControlPlaying\CControlPlayingControl.h</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\代码\Core\global</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\代码\Core\global\Global.h</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\代码\Core\InsertPlaying</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\代码\Core\InsertPlaying\InsertPlayingControl.cpp</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\代码\Core\InsertPlaying\InsertPlayingControl.h</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\代码\Core\LedSet</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\代码\Core\LedSet\LedSet.cpp</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\代码\Core\LedSet\LedSet.h</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\代码\Core\PlayPlan</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\代码\Core\PlayPlan\PlayingItemSink.cpp</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\代码\Core\PlayPlan\PlayingItemSink.h</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\代码\Core\PlayPlan\PlayingPlanForMake.cpp</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\代码\Core\PlayPlan\PlayingPlanForMake.h</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\代码\Core\PlayPlan\PlayingPlanForPlay.cpp</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\代码\Core\PlayPlan\PlayingPlanForPlay.h</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\代码\Core\PlayPlan\PlayItem.cpp</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\代码\Core\PlayPlan\PlayItem.h</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\代码\Core\ProGramMenu</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\代码\Core\ProGramMenu\Program.cpp</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\代码\Core\ProGramMenu\Program.h</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\代码\Core\ProGramMenu\ProgramMenuForMake.cpp</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\代码\Core\ProGramMenu\ProgramMenuForMake.h</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\代码\Core\ProGramMenu\ProgramMenuForPlay.cpp</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\代码\Core\ProGramMenu\ProgramMenuForPlay.h</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\代码\Core\SystemClock</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\代码\Core\SystemClock\Clock.cpp</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\代码\Core\SystemClock\Clock.h</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\代码\Core\SystemClock\LedTimerStuct.cpp</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\代码\Core\SystemClock\LedTimerStuct.h</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\代码\Player Subsystem</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\代码\Player Subsystem\FlashPlayWnd.cpp</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\代码\Player Subsystem\FlashPlayWnd.h</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\代码\Player Subsystem\mediaplayer2.cpp</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\代码\Player Subsystem\mediaplayer2.h</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\代码\Player Subsystem\mediaplayerdvd.cpp</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\代码\Player Subsystem\mediaplayerdvd.h</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\代码\Player Subsystem\PlayAVIDialog.cpp</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\代码\Player Subsystem\PlayAVIDialog.h</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\代码\Player Subsystem\PlayFlashDialog.cpp</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\代码\Player Subsystem\PlayFlashDialog.h</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\代码\Player Subsystem\shockwaveflash.cpp</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\代码\Player Subsystem\shockwaveflash.h</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\代码\Player Subsystem\VideoPlayWnd.cpp</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\代码\Player Subsystem\VideoPlayWnd.h</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\代码\UI_AutoCode</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\代码\UI_AutoCode\Leds</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\代码\UI_AutoCode\Leds\Debug</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\代码\UI_AutoCode\Leds\Debug\LEDS.exe</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\代码\UI_AutoCode\Leds\default.pln</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\代码\UI_AutoCode\Leds\Global.h</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\代码\UI_AutoCode\Leds\InsertPlayDlg.cpp</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\代码\UI_AutoCode\Leds\InsertPlayDlg.h</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\代码\UI_AutoCode\Leds\LEDS.APS</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\代码\UI_AutoCode\Leds\LEDS.clw</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\代码\UI_AutoCode\Leds\LEDS.cpp</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\代码\UI_AutoCode\Leds\LEDS.dsp</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\代码\UI_AutoCode\Leds\LEDS.dsw</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\代码\UI_AutoCode\Leds\LEDS.h</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\代码\UI_AutoCode\Leds\LEDS.ncb</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\代码\UI_AutoCode\Leds\LEDS.opt</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\代码\UI_AutoCode\Leds\LEDS.plg</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\代码\UI_AutoCode\Leds\LEDS.rc</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\代码\UI_AutoCode\Leds\LEDSDlg.cpp</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\代码\UI_AutoCode\Leds\LEDSDlg.h</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\代码\UI_AutoCode\Leds\mssccprj.scc</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\代码\UI_AutoCode\Leds\ReadMe.txt</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\代码\UI_AutoCode\Leds\res</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\代码\UI_AutoCode\Leds\res\LEDS.ico</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\代码\UI_AutoCode\Leds\res\LEDS.rc2</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\代码\UI_AutoCode\Leds\Resource.h</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\代码\UI_AutoCode\Leds\StdAfx.cpp</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\代码\UI_AutoCode\Leds\StdAfx.h</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\代码\UI_AutoCode\Leds\test.tpm</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\代码\UI_AutoCode\Make Program Menu</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\代码\UI_AutoCode\Make Program Menu\Debug</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\代码\UI_AutoCode\Make Program Menu\Debug\MakeProPlan.exe</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\代码\UI_AutoCode\Make Program Menu\MakeProPlan.aps</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\代码\UI_AutoCode\Make Program Menu\MakeProPlan.clw</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\代码\UI_AutoCode\Make Program Menu\MakeProPlan.cpp</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\代码\UI_AutoCode\Make Program Menu\MakeProPlan.dsp</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\代码\UI_AutoCode\Make Program Menu\MakeProPlan.dsw</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\代码\UI_AutoCode\Make Program Menu\MakeProPlan.h</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\代码\UI_AutoCode\Make Program Menu\MakeProPlan.ncb</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\代码\UI_AutoCode\Make Program Menu\MakeProPlan.opt</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\代码\UI_AutoCode\Make Program Menu\MakeProPlan.plg</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\代码\UI_AutoCode\Make Program Menu\MakeProPlan.rc</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\代码\UI_AutoCode\Make Program Menu\MakeProPlanDlg.cpp</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\代码\UI_AutoCode\Make Program Menu\MakeProPlanDlg.h</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\代码\UI_AutoCode\Make Program Menu\mssccprj.scc</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\代码\UI_AutoCode\Make Program Menu\PlayandPlan</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\代码\UI_AutoCode\Make Program Menu\PlayItemDlg.cpp</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\代码\UI_AutoCode\Make Program Menu\PlayItemDlg.h</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\代码\UI_AutoCode\Make Program Menu\ReadMe.txt</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\代码\UI_AutoCode\Make Program Menu\res</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\代码\UI_AutoCode\Make Program Menu\res\MakeProPlan.ico</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\代码\UI_AutoCode\Make Program Menu\res\MakeProPlan.rc2</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\代码\UI_AutoCode\Make Program Menu\resource.h</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\代码\UI_AutoCode\Make Program Menu\StdAfx.cpp</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\代码\UI_AutoCode\Make Program Menu\StdAfx.h</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\代码\UI_AutoCode\Manage Playing Plan</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\代码\UI_AutoCode\Manage Playing Plan\AddProgramDlg.cpp</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\代码\UI_AutoCode\Manage Playing Plan\AddProgramDlg.h</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\代码\UI_AutoCode\Manage Playing Plan\BLUR24.AVI</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\代码\UI_AutoCode\Manage Playing Plan\Debug</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\代码\UI_AutoCode\Manage Playing Plan\Debug\MakePM.exe</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\代码\UI_AutoCode\Manage Playing Plan\default.tpm</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\代码\UI_AutoCode\Manage Playing Plan\DelProgramDialog.cpp</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\代码\UI_AutoCode\Manage Playing Plan\DelProgramDialog.h</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\代码\UI_AutoCode\Manage Playing Plan\EditDialog.cpp</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\代码\UI_AutoCode\Manage Playing Plan\EditDialog.h</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\代码\UI_AutoCode\Manage Playing Plan\EndPlayNotifyWnd.cpp</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\代码\UI_AutoCode\Manage Playing Plan\EndPlayNotifyWnd.h</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\代码\UI_AutoCode\Manage Playing Plan\GLOBE.AVI</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\代码\UI_AutoCode\Manage Playing Plan\MainFrm.cpp</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\代码\UI_AutoCode\Manage Playing Plan\MainFrm.h</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\代码\UI_AutoCode\Manage Playing Plan\MakePM.aps</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\代码\UI_AutoCode\Manage Playing Plan\MakePM.clw</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\代码\UI_AutoCode\Manage Playing Plan\MakePM.cpp</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\代码\UI_AutoCode\Manage Playing Plan\MakePM.dsp</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\代码\UI_AutoCode\Manage Playing Plan\MakePM.dsw</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\代码\UI_AutoCode\Manage Playing Plan\MakePM.h</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\代码\UI_AutoCode\Manage Playing Plan\MakePM.ncb</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\代码\UI_AutoCode\Manage Playing Plan\MakePM.opt</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\代码\UI_AutoCode\Manage Playing Plan\MakePM.plg</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\代码\UI_AutoCode\Manage Playing Plan\MakePM.rc</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\代码\UI_AutoCode\Manage Playing Plan\MakePMDoc.cpp</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\代码\UI_AutoCode\Manage Playing Plan\MakePMDoc.h</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\代码\UI_AutoCode\Manage Playing Plan\MakePMView.cpp</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\代码\UI_AutoCode\Manage Playing Plan\MakePMView.h</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\代码\UI_AutoCode\Manage Playing Plan\MakeProgramMenuForm.cpp</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\代码\UI_AutoCode\Manage Playing Plan\MakeProgramMenuForm.h</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\代码\UI_AutoCode\Manage Playing Plan\mssccprj.scc</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\代码\UI_AutoCode\Manage Playing Plan\ProgramMenuForMake.cpp</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\代码\UI_AutoCode\Manage Playing Plan\ProgramMenuForMake.h</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\代码\UI_AutoCode\Manage Playing Plan\ReadMe.txt</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\代码\UI_AutoCode\Manage Playing Plan\Release</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\代码\UI_AutoCode\Manage Playing Plan\Release\MakePM.exe</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\代码\UI_AutoCode\Manage Playing Plan\res</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\代码\UI_AutoCode\Manage Playing Plan\res\MakePM.ico</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\代码\UI_AutoCode\Manage Playing Plan\res\MakePM.rc2</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\代码\UI_AutoCode\Manage Playing Plan\res\MakePMDoc.ico</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\代码\UI_AutoCode\Manage Playing Plan\res\Toolbar.bmp</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\代码\UI_AutoCode\Manage Playing Plan\Resource.h</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\代码\UI_AutoCode\Manage Playing Plan\StdAfx.cpp</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\代码\UI_AutoCode\Manage Playing Plan\StdAfx.h</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\代码\UI_AutoCode\Manage Playing Plan\trip.swf</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\配置管理</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\配置管理\计划</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\配置管理\计划\Configuration Management Plan.doc</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\配置管理\配置项发布</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\评审</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\设计与实施</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\设计与实施\文档</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\设计与实施\文档\Integration Build Plan.doc</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\设计与实施\文档\LEDS-SAD.doc</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\设计与实施\文档\LEDS-SCAD.doc</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\设计与实施\文档\UI Guideline.doc</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\项目管理</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\项目管理\计划</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\项目管理\计划\Iteration Plan in Inception.mpp</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\项目管理\计划\LEDS-(Elaboration) Iteration Plan.doc</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\项目管理\计划\LEDS-(Inception) Iteration Plan.doc</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\项目管理\计划\LEDS-Consturction Iteration Plan.doc</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\项目管理\计划\LEDS-Problem Resolution Plan.doc</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\项目管理\计划\LEDS-Project Risk List.doc</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\项目管理\计划\LEDS-Requirements Management Plan.doc</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\项目管理\计划\LEDS-Risk Management Plan.dot</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\项目管理\计划\LEDS-Software Development Plan.doc</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\项目管理\计划\working sheet20011013.mpp</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\项目管理\计划\working sheet20011022.mpp</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\项目管理\计划\working sheet20011026.mpp</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\项目管理\评估</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\项目管理\评估\LEDS-(Elaboration) Iteration Assessment.doc</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\项目管理\评估\LEDS-Elaboration Status Assessment.doc</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\项目管理\评估\LEDS-Inception Status Assessment.doc</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\项目管理\评估\表4：项目进度跟踪表20010826.doc</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\项目管理\评估\表4：项目进度跟踪表20010901.doc</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\项目管理\评估\表4：项目进度跟踪表20010908.doc</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\项目管理\评估\表4：项目进度跟踪表20010914.doc</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\项目管理\评估\表4：项目进度跟踪表20010929.doc</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\项目管理\评估\表4：项目进度跟踪表20011013.doc</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\项目管理\评估\表4：项目进度跟踪表20011022.doc</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\项目管理\评估\表4：项目进度跟踪表20011026.doc</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\需求</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\需求\报告</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\需求\报告\LEDS-REQ-Status-Report.doc</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\需求\模型</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\需求\模型\LEDS.mdl</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\需求\数据库</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\需求\数据库\LEDS( S054-06-2001).MDB</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\需求\数据库\LEDS( S054-06-2001).RQS</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\需求\数据库\PROJ_PRD.SS</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\需求\数据库\PROJ_SRS.FEAT</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\需求\数据库\UC 用例属性.CSV</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\需求\文档</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\需求\文档\Glossary.doc</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\需求\文档\LEDS-Development Case.doc</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\需求\文档\LEDS-Stakeholder Requests.doc</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\需求\文档\LEDS-Supplementary Specification.doc</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\需求\文档\LEDS-Vision.doc</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\需求\文档\UCS-Configure LED.doc</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\需求\文档\UCS-Connect LED.doc</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\需求\文档\UCS-Control Play.doc</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\需求\文档\UCS-Inform Status.doc</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\需求\文档\UCS-Insert Playing.doc</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\需求\文档\UCS-Login.doc</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\需求\文档\UCS-Make Dynamic Datamation.doc</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\需求\文档\UCS-Make Program Menu.doc</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\需求\文档\UCS-Manage LED State.doc</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\需求\文档\UCS-Manage Playing Log.doc</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\需求\文档\UCS-Manage Playing Plan .doc</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\需求\文档\UCS-Manage System.doc</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\需求\文档\UCS-Manage Wrong Log.doc</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\需求\文档\UCS-Preview Program Menu.doc</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\需求\文档\UCS-Time Control.doc</element_pn>
+</Row>
+<Row>
+<element_pn> \leds\需求\文档\UCS-Time Playing.doc</element_pn>
+</Row>
+</Report>

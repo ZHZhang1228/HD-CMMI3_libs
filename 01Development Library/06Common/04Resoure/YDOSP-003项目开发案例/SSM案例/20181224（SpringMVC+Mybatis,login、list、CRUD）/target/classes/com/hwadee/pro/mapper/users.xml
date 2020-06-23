@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hwadee.pro.mapper.usersMapper">
+
+<!--     登录
+	<select id="findEmployeerByLogin" parameterType="int" resultType="Employeer">
+		select * from `t_employeer` where employeer_name =#{employeer_name} and employeer_age =#{employeer_age}
+	</select> -->
+
+	<!-- 查找 -->
+	<select id="findUserByName" parameterType="String" resultType="users">
+		select * from `users` where username =#{username}
+	</select>
+	
+	  <!-- 查询所有 --> 
+    <select id="findAllUser" parameterType="String" resultType="users">
+        select * from `users`
+    </select>
+
+	<!-- 插入 -->
+	<!-- useGeneratedKeys设置为"true"表明要MyBatis获取由数据库自动生成的主键；keyProperty="id"指定把获取到的主键值注入到Employeer的id属性 -->
+	<!-- <insert id="addEmployeer" parameterType="Employeer"
+		useGeneratedKeys="true" keyProperty="employeer_id">
+		insert into
+		`t_employeer`(employeer_name,employeer_age,employeer_department,employeer_worktype)
+		values(#{employeer_name},#{employeer_age},#{employeer_department},#{employeer_worktype})
+	</insert>
+
+	删除
+	<delete id="deleteEmployeer" parameterType="int">
+		delete from `t_employeer` where employeer_id = #{employeer_id}
+	</delete>
+
+	修改
+	<update id="updateEmployeer" parameterType="Employeer">
+		update t_employeer set employeer_name = #{employeer_name},employeer_age=
+		#{employeer_age},employeer_department = #{employeer_department}
+		,employeer_worktype=#{employeer_worktype} where employeer_id =
+		#{employeer_id}
+	</update> -->
+
+</mapper>

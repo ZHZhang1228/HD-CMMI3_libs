@@ -1,0 +1,163 @@
+package management;
+
+import java.awt.*;
+import javax.swing.*;
+import com.borland.dbswing.*;
+import java.awt.event.*;
+import com.borland.jbcl.layout.*;
+import com.borland.dx.sql.dataset.*;
+import java.awt.event.*;
+import java.sql.*;
+
+/**
+ * <p>Title: </p>
+ * <p>Description: </p>
+ * <p>Copyright: Copyright (c) 2004</p>
+ * <p>Company: </p>
+ * @author not attributable
+ * @version 1.0
+ */
+
+public class statisticPanel extends JPanel {
+  JLabel jLabel1 = new JLabel();
+  JComboBox jComboBox1 = new JComboBox();
+  JLabel jLabel2 = new JLabel();
+  JLabel jLabel3 = new JLabel();
+  JLabel jLabel4 = new JLabel();
+  TableScrollPane tableScrollPane1 = new TableScrollPane();
+  JdbTable jdbTable1 = new JdbTable();
+  JButton jButton1 = new JButton();
+
+  PreparedStatement pstmt;
+  Connection con;
+  String query;
+  ResultSet rs;
+  String str;
+  QueryDataSet queryDataSet1 = new QueryDataSet();
+  JLabel jLabel5 = new JLabel();
+
+  public statisticPanel() {
+    try {
+      jbInit();
+    }
+    catch(Exception ex) {
+      ex.printStackTrace();
+    }
+  }
+  void jbInit() throws Exception {
+    jLabel1.setFont(new java.awt.Font("Dialog", 1, 40));
+    jLabel1.setText("   学 生 统 计 管 理");
+    jLabel1.setBounds(new Rectangle(48, 7, 386, 44));
+    this.setLayout(null);
+    jComboBox1.setBounds(new Rectangle(227, 67, 234, 26));
+    jComboBox1.addItemListener(new statisticPanel_jComboBox1_itemAdapter(this));
+    jLabel2.setFont(new java.awt.Font("Dialog", 1, 22));
+    jLabel2.setToolTipText("");
+    jLabel2.setText("   选 择 统 计 项 :");
+    jLabel2.setBounds(new Rectangle(15, 67, 187, 26));
+    this.setBackground(UIManager.getColor("InternalFrame.activeTitleGradient"));
+    jLabel3.setBackground(Color.red);
+    jLabel3.setFont(new java.awt.Font("Dialog", 1, 15));
+    jLabel3.setForeground(Color.red);
+    jLabel3.setText("留级标准：未通过课程学分累计达到5分");
+    jLabel3.setBounds(new Rectangle(40, 120, 292, 16));
+    jLabel4.setFont(new java.awt.Font("Dialog", 1, 15));
+    jLabel4.setForeground(Color.red);
+    jLabel4.setText("退学标准：未通过课程学分累计达到8分");
+    jLabel4.setBounds(new Rectangle(42, 152, 284, 16));
+    tableScrollPane1.setBounds(new Rectangle(-1, 177, 494, 268));
+    jButton1.setBounds(new Rectangle(367, 148, 66, 19));
+    jButton1.setText("统计");
+    jdbTable1.setAutoResizeMode(JTable.AUTO_RESIZE_LAST_COLUMN);
+    jdbTable1.setDataSet(queryDataSet1);
+    jLabel5.setText("jLabel5");
+    jLabel5.setBounds(new Rectangle(344, 108, 142, 30));
+    this.add(jLabel1, null);
+    this.add(jComboBox1, null);
+    this.add(jLabel2, null);
+    this.add(jLabel3, null);
+    this.add(jLabel4, null);
+    this.add(tableScrollPane1, null);
+    this.add(jButton1, null);
+    this.add(jLabel5, null);
+    tableScrollPane1.getViewport().add(jdbTable1, null);
+    jComboBox1.addItem("重修统计");
+    jComboBox1.addItem("留级统计");
+    jComboBox1.addItem("退学统计");
+
+    Class.forName("com.microsoft.jdbc.sqlserver.SQLServerDriver");
+       String url = "jdbc:microsoft:sqlserver://localhost:1433;DatabaseName=student";
+       String username= "sa";
+       String password= "lomf8244";
+       con = DriverManager.getConnection(url,username,password);
+
+  }
+
+  void jComboBox1_itemStateChanged(ItemEvent e) {
+      str=(String)jComboBox1.getSelectedItem();
+       if(str.equals("重修统计"))
+        {
+          jLabel5.setText("HELLO");
+        try{
+         str="重修";
+          query="select * from score where SCORETPYE="+str;
+          pstmt = con.prepareStatement(query);
+          }
+         catch(Exception ef)
+         { System.out.print("YES,系统错误，请重新运行。");
+         }
+
+      }
+
+  }
+
+  void jButton1_actionPerformed(ActionEvent e) {
+/*  try{
+    if(rs.next()){
+    queryDataSet1.close();
+    str=rs.getString("SCORETPYE");
+     str= "select * from score where SCORETPYE="+"\'"+str+"\'";
+    queryDataSet1.setQuery(new com.borland.dx.sql.dataset.QueryDescriptor(database1, str, null, true, Load.ALL));
+    queryDataSet1.refresh();
+    jdbTable1.setDataSet(queryDataSet1);
+    jdbTable1.repaint();
+    }
+  else{
+
+ //  jTextField1.setText("学号不存在!");
+   queryDataSet1.close();
+   queryDataSet1.refresh();
+   jdbTable1.setDataSet(null);
+   jdbTable1.repaint();
+   }
+  }
+
+   catch(Exception ef)
+  { System.out.print("系统错误，请重新运行。");
+  }
+        */
+  }
+
+}
+
+class statisticPanel_jComboBox1_itemAdapter implements java.awt.event.ItemListener {
+  statisticPanel adaptee;
+
+  statisticPanel_jComboBox1_itemAdapter(statisticPanel adaptee) {
+    this.adaptee = adaptee;
+  }
+  public void itemStateChanged(ItemEvent e) {
+    adaptee.jComboBox1_itemStateChanged(e);
+  }
+}
+
+class statisticPanel_jButton1_actionAdapter implements java.awt.event.ActionListener {
+  statisticPanel adaptee;
+
+  statisticPanel_jButton1_actionAdapter(statisticPanel adaptee) {
+    this.adaptee = adaptee;
+  }
+  public void actionPerformed(ActionEvent e) {
+    adaptee.jButton1_actionPerformed(e);
+  }
+}

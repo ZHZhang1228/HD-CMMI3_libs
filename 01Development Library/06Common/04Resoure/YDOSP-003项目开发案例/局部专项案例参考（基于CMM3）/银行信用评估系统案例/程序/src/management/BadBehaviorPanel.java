@@ -1,0 +1,331 @@
+package management;
+
+import java.awt.*;
+import javax.swing.*;
+import javax.swing.border.*;
+import java.awt.event.*;
+import java.sql.*;
+import javax.swing.JOptionPane;
+
+/**
+ * <p>Title: </p>
+ * <p>Description: </p>
+ * <p>Copyright: Copyright (c) 2004</p>
+ * <p>Company: </p>
+ * @author not attributable
+ * @version 1.0
+ */
+
+public class BadBehaviorPanel extends JPanel {
+  JPanel jPanel1 = new JPanel();
+  TitledBorder titledBorder1;
+  JPanel jPanel2 = new JPanel();
+  TitledBorder titledBorder2;
+  TitledBorder titledBorder3;
+  JPanel jPanel3 = new JPanel();
+  TitledBorder titledBorder4;
+  TitledBorder titledBorder5;
+  JPanel jPanel4 = new JPanel();
+  TitledBorder titledBorder6;
+  JLabel jLabel1 = new JLabel();
+  JLabel jLabel2 = new JLabel();
+  JLabel jLabel3 = new JLabel();
+  JLabel jLabel4 = new JLabel();
+  JTextField jTextField1 = new JTextField();
+  JTextField jTextField2 = new JTextField();
+  JTextField jTextField3 = new JTextField();
+  JLabel jLabel5 = new JLabel();
+  JTextField jTextField4 = new JTextField();
+  JLabel jLabel6 = new JLabel();
+  JLabel jLabel7 = new JLabel();
+  JLabel jLabel8 = new JLabel();
+  JLabel jLabel9 = new JLabel();
+  JTextField jTextField5 = new JTextField();
+  JTextField jTextField6 = new JTextField();
+  JTextField jTextField7 = new JTextField();
+  JLabel jLabel10 = new JLabel();
+  JLabel jLabel11 = new JLabel();
+  JLabel jLabel12 = new JLabel();
+  JLabel jLabel13 = new JLabel();
+  JTextField jTextField8 = new JTextField();
+  JTextField jTextField9 = new JTextField();
+  JTextField jTextField10 = new JTextField();
+  PreparedStatement pstmt,pstmt2;
+  Connection con;
+  String query,query2;
+  ResultSet rs;
+  String Yqoverdraft,Dxoverdraft,Dzoverdraft,BadBehavior;
+  String Criminal,Punish,JusticeInq,Qt5_1,Qt1_3,Qt3;
+
+  public BadBehaviorPanel() {
+    try {
+      jbInit();
+      connect();
+      loaddata();
+    }
+    catch(Exception ex) {
+      ex.printStackTrace();
+    }
+  }
+
+  void jbInit() throws Exception {
+    titledBorder1 = new TitledBorder("");
+    titledBorder2 = new TitledBorder("");
+    titledBorder3 = new TitledBorder("");
+    titledBorder4 = new TitledBorder("");
+    titledBorder5 = new TitledBorder("");
+    titledBorder6 = new TitledBorder("");
+    this.setLayout(gridBagLayout1);
+    jPanel1.setBackground(new Color(217, 230, 236));
+    jPanel1.setBorder(titledBorder2);
+    jPanel1.setLayout(null);
+    jPanel2.setBackground(new Color(217, 230, 236));
+    jPanel2.setBorder(titledBorder4);
+    jPanel2.setLayout(null);
+    jPanel3.setBackground(new Color(217, 230, 236));
+    jPanel3.setBorder(titledBorder5);
+    jPanel3.setLayout(null);
+    jPanel4.setBackground(new Color(217, 230, 236));
+    jPanel4.setBorder(titledBorder6);
+    jPanel4.setLayout(null);
+    jLabel1.setFont(new java.awt.Font("Dialog", 0, 14));
+    jLabel1.setText("有非正常透支");
+    jLabel2.setFont(new java.awt.Font("Dialog", 0, 12));
+    jLabel2.setMinimumSize(new Dimension(44, 16));
+    jLabel2.setText("逾期透支");
+    jLabel2.setBounds(new Rectangle(28, 8, 56, 16));
+    jLabel3.setFont(new java.awt.Font("Dialog", 0, 12));
+    jLabel3.setText("呆滞透支");
+    jLabel3.setBounds(new Rectangle(117, 7, 54, 16));
+    jLabel4.setFont(new java.awt.Font("Dialog", 0, 12));
+    jLabel4.setText("呆帐透支");
+    jLabel4.setBounds(new Rectangle(200, 8, 77, 16));
+    jTextField1.setText("jTextField1");
+    jTextField1.setBounds(new Rectangle(28, 28, 57, 22));
+    jTextField2.setText("jTextField2");
+    jTextField2.setBounds(new Rectangle(116, 27, 57, 22));
+    jTextField3.setText("jTextField3");
+    jTextField3.setBounds(new Rectangle(200, 27, 57, 22));
+    jLabel5.setFont(new java.awt.Font("Dialog", 0, 14));
+    jLabel5.setRequestFocusEnabled(true);
+    jLabel5.setText("在我行贷款有不良行为");
+    jTextField4.setText("jTextField4");
+    jTextField4.setBounds(new Rectangle(27, 13, 68, 22));
+    jLabel6.setFont(new java.awt.Font("Dialog", 0, 14));
+    jLabel6.setText("涉嫌犯罪或正受法律处罚和调查");
+    jLabel7.setFont(new java.awt.Font("Dialog", 0, 12));
+    jLabel7.setText("涉嫌犯罪");
+    jLabel7.setBounds(new Rectangle(20, 12, 79, 16));
+    jLabel8.setFont(new java.awt.Font("Dialog", 0, 12));
+    jLabel8.setText("法律处罚");
+    jLabel8.setBounds(new Rectangle(114, 12, 63, 16));
+    jLabel9.setFont(new java.awt.Font("Dialog", 0, 12));
+    jLabel9.setText("司法调查");
+    jLabel9.setBounds(new Rectangle(207, 13, 68, 16));
+    jTextField5.setText("jTextField5");
+    jTextField5.setBounds(new Rectangle(18, 31, 57, 22));
+    jTextField6.setText("jTextField6");
+    jTextField6.setBounds(new Rectangle(111, 32, 57, 22));
+    jTextField7.setText("jTextField7");
+    jTextField7.setBounds(new Rectangle(205, 35, 57, 22));
+    jLabel10.setFont(new java.awt.Font("Dialog", 0, 14));
+    jLabel10.setText("其它未偿还的债务");
+    jLabel11.setText("5000元-10000元以下");
+    jLabel11.setBounds(new Rectangle(2, 12, 117, 16));
+    jLabel12.setRequestFocusEnabled(true);
+    jLabel12.setVerifyInputWhenFocusTarget(true);
+    jLabel12.setText("10000元-30000元");
+    jLabel12.setBounds(new Rectangle(112, 11, 110, 16));
+    jLabel13.setText("30000元以上");
+    jLabel13.setBounds(new Rectangle(206, 10, 80, 16));
+    jTextField8.setText("jTextField8");
+    jTextField8.setBounds(new Rectangle(21, 32, 57, 22));
+    jTextField9.setText("jTextField9");
+    jTextField9.setBounds(new Rectangle(112, 31, 57, 22));
+    jTextField10.setText("jTextField10");
+    jTextField10.setBounds(new Rectangle(208, 30, 63, 22));
+    jButton1.setBackground(new Color(151, 164, 203));
+    jButton1.setFont(new java.awt.Font("Dialog", 0, 13));
+    jButton1.setToolTipText("");
+    jButton1.setText("更新");
+    jButton1.addActionListener(new BadBehaviorPanel_jButton1_actionAdapter(this));
+    jButton2.setBackground(new Color(151, 164, 203));
+    jButton2.setFont(new java.awt.Font("Dialog", 0, 13));
+    jButton2.setFocusPainted(true);
+    jButton2.setText("取消");
+    jButton2.addActionListener(new BadBehaviorPanel_jButton2_actionAdapter(this));
+    jButton3.setBackground(new Color(151, 164, 203));
+    jButton3.setFont(new java.awt.Font("Dialog", 0, 13));
+    jButton3.setText("返回");
+    jButton3.addActionListener(new BadBehaviorPanel_jButton3_actionAdapter(this));
+    this.setBackground(new Color(217, 230, 236));
+    jPanel4.add(jTextField8, null);
+    jPanel4.add(jLabel12, null);
+    jPanel4.add(jTextField10, null);
+    jPanel4.add(jTextField9, null);
+    jPanel4.add(jLabel11, null);
+    jPanel4.add(jLabel13, null);
+    jPanel3.add(jLabel7, null);
+    jPanel3.add(jTextField5, null);
+    jPanel3.add(jTextField7, null);
+    jPanel3.add(jLabel9, null);
+    jPanel3.add(jTextField6, null);
+    jPanel3.add(jLabel8, null);
+    this.add(jButton1, new GridBagConstraints(0, 8, 1, 1, 0.0, 0.0
+            ,GridBagConstraints.NORTH, GridBagConstraints.NONE, new Insets(13, 77, 10, 22), 11, -1));
+    this.add(jButton2, new GridBagConstraints(1, 8, 1, 1, 0.0, 0.0
+            ,GridBagConstraints.NORTHEAST, GridBagConstraints.NONE, new Insets(14, 3, 9, 10), 16, 0));
+    this.add(jButton3, new GridBagConstraints(2, 8, 1, 1, 0.0, 0.0
+            ,GridBagConstraints.NORTH, GridBagConstraints.NONE, new Insets(14, 6, 8, 50), 15, 0));
+    this.add(jLabel10,  new GridBagConstraints(0, 6, 2, 1, 0.0, 0.0
+            ,GridBagConstraints.WEST, GridBagConstraints.NONE, new Insets(12, 55, 0, 55), 43, -4));
+    this.add(jPanel4,  new GridBagConstraints(0, 7, 3, 1, 1.0, 1.0
+            ,GridBagConstraints.CENTER, GridBagConstraints.BOTH, new Insets(0, 55, 0, 50), 294, 64));
+    this.add(jLabel1,  new GridBagConstraints(0, 0, 1, 1, 0.0, 0.0
+            ,GridBagConstraints.WEST, GridBagConstraints.NONE, new Insets(24, 55, 0, 0), 32, -4));
+    this.add(jPanel1,  new GridBagConstraints(0, 1, 3, 1, 1.0, 1.0
+            ,GridBagConstraints.CENTER, GridBagConstraints.BOTH, new Insets(0, 55, 0, 50), 294, 63));
+    jPanel1.add(jTextField1, null);
+    jPanel1.add(jTextField3, null);
+    jPanel1.add(jLabel4, null);
+    jPanel1.add(jTextField2, null);
+    jPanel1.add(jLabel2, null);
+    jPanel1.add(jLabel3, null);
+    this.add(jLabel5,  new GridBagConstraints(0, 2, 2, 1, 0.0, 0.0
+            ,GridBagConstraints.WEST, GridBagConstraints.NONE, new Insets(8, 55, 0, 48), 22, -6));
+    this.add(jPanel2,  new GridBagConstraints(0, 3, 3, 1, 1.0, 1.0
+            ,GridBagConstraints.CENTER, GridBagConstraints.BOTH, new Insets(8, 55, 0, 50), 287, 46));
+    jPanel2.add(jTextField4, null);
+    this.add(jLabel6,  new GridBagConstraints(0, 4, 2, 1, 0.0, 0.0
+            ,GridBagConstraints.WEST, GridBagConstraints.NONE, new Insets(13, 55, 0, 0), 14, -4));
+    this.add(jPanel3,  new GridBagConstraints(0, 5, 3, 1, 1.0, 1.0
+            ,GridBagConstraints.CENTER, GridBagConstraints.BOTH, new Insets(9, 55, 0, 50), 294, 68));
+    Class.forName("com.microsoft.jdbc.sqlserver.SQLServerDriver");
+
+  }
+
+  public void connect() {
+     try{
+       String url ="jdbc:microsoft:sqlserver://localhost:1433;DatabaseName=CCES";
+       String username = "sa";
+       String password = "";
+       con = DriverManager.getConnection(url, username, password);
+     }
+   catch(Exception e)
+     {System.out.print("系统错误，请重新运行。");}
+   }
+
+void loaddata()
+{
+     try{
+       query = "select * from Unlrecord ";
+       pstmt = con.prepareStatement(query);
+       rs = pstmt.executeQuery();
+       if (rs.next()) {
+        jTextField1.setText(Integer.toString(rs.getInt(1)));
+        jTextField2.setText(Integer.toString(rs.getInt(2)));
+        jTextField3.setText(Integer.toString(rs.getInt(3)));
+        jTextField4.setText(Integer.toString(rs.getInt(4)));
+        jTextField5.setText(Integer.toString(rs.getInt(5)));
+        jTextField6.setText(Integer.toString(rs.getInt(6)));
+        jTextField7.setText(Integer.toString(rs.getInt(7)));
+        jTextField8.setText(Integer.toString(rs.getInt(8)));
+        jTextField9.setText(Integer.toString(rs.getInt(9)));
+        jTextField10.setText(Integer.toString(rs.getInt(10)));
+       }
+     }
+       catch(Exception ep)
+          {   System.out.print("系统错误，请重新运行1。");
+          }
+
+}
+        //========change
+  void update()
+  {
+    Yqoverdraft=jTextField1.getText();
+     Dxoverdraft=jTextField2.getText();
+     Dzoverdraft=jTextField3.getText();
+     BadBehavior=jTextField4.getText();
+     Criminal=jTextField5.getText();
+     Punish=jTextField6.getText();
+     JusticeInq=jTextField7.getText();
+     Qt5_1=jTextField8.getText();
+     Qt1_3=jTextField9.getText();
+     Qt3=jTextField10.getText();
+     try{
+          query2="UPDATE  Unlrecord SET Yqoverdraft = ? ,Dxoverdraft=?,";
+          query2=query2+"Dzoverdraft=?,BadBehavior=?,Criminal=?,Punish=?,";
+          query2=query2+"JusticeInq=?,Qt5_1=?,Qt1_3=?,Qt3=?";
+              pstmt2 = con.prepareStatement(query2);
+              pstmt2.setString(1,Yqoverdraft);
+              pstmt2.setString(2,Dxoverdraft);
+              pstmt2.setString(3,Dzoverdraft);
+              pstmt2.setString(4,BadBehavior);
+              pstmt2.setString(5,Criminal);
+              pstmt2.setString(6,Punish);
+              pstmt2.setString(7,JusticeInq);
+              pstmt2.setString(8,Qt5_1);
+              pstmt2.setString(9,Qt1_3);
+              pstmt2.setString(10,Qt3);
+              pstmt2.executeUpdate();
+              JOptionPane.showMessageDialog(this,"修改成功！","update", JOptionPane.INFORMATION_MESSAGE);
+        }
+        catch(SQLException ep)
+        {System.out.print(ep.getMessage());
+        }
+  }
+  JButton jButton1 = new JButton();
+  JButton jButton2 = new JButton();
+  JButton jButton3 = new JButton();
+  GridBagLayout gridBagLayout1 = new GridBagLayout();
+
+  void jButton1_actionPerformed(ActionEvent e) {
+    int respond;
+     respond = JOptionPane.showConfirmDialog(this,"确实要修改吗？","sure",JOptionPane.YES_NO_CANCEL_OPTION);
+     if(respond==JOptionPane.YES_OPTION) update();
+     else loaddata();
+
+  }
+
+  void jButton2_actionPerformed(ActionEvent e) {
+ loaddata();
+  }
+
+  void jButton3_actionPerformed(ActionEvent e) {
+    eventFrame.jSplitPane1.remove(eventFrame.jSplitPane1.getRightComponent());
+    eventFrame.jSplitPane1.add(new helloPanel(),JSplitPane.RIGHT);
+  }
+}
+
+class BadBehaviorPanel_jButton1_actionAdapter implements java.awt.event.ActionListener {
+  BadBehaviorPanel adaptee;
+
+  BadBehaviorPanel_jButton1_actionAdapter(BadBehaviorPanel adaptee) {
+    this.adaptee = adaptee;
+  }
+  public void actionPerformed(ActionEvent e) {
+    adaptee.jButton1_actionPerformed(e);
+  }
+}
+
+class BadBehaviorPanel_jButton2_actionAdapter implements java.awt.event.ActionListener {
+  BadBehaviorPanel adaptee;
+
+  BadBehaviorPanel_jButton2_actionAdapter(BadBehaviorPanel adaptee) {
+    this.adaptee = adaptee;
+  }
+  public void actionPerformed(ActionEvent e) {
+    adaptee.jButton2_actionPerformed(e);
+  }
+}
+
+class BadBehaviorPanel_jButton3_actionAdapter implements java.awt.event.ActionListener {
+  BadBehaviorPanel adaptee;
+
+  BadBehaviorPanel_jButton3_actionAdapter(BadBehaviorPanel adaptee) {
+    this.adaptee = adaptee;
+  }
+  public void actionPerformed(ActionEvent e) {
+    adaptee.jButton3_actionPerformed(e);
+  }
+}

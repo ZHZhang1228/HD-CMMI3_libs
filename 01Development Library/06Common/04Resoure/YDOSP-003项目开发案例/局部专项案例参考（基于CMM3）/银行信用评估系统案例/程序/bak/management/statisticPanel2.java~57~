@@ -1,0 +1,254 @@
+package management;
+
+import java.awt.*;
+import javax.swing.*;
+import com.borland.dbswing.*;
+import com.borland.dx.sql.dataset.*;
+import java.awt.event.*;
+import java.sql.*;
+import com.borland.dx.dataset.*;
+import com.borland.jbcl.layout.*;
+import com.borland.dx.sql.dataset.*;
+
+/**
+ * <p>Title: </p>
+ * <p>Description: </p>
+ * <p>Copyright: Copyright (c) 2004</p>
+ * <p>Company: </p>
+ * @author not attributable
+ * @version 1.0
+ */
+
+public class statisticPanel2 extends JPanel {
+  JButton jButton1 = new JButton();
+  TableScrollPane tableScrollPane1 = new TableScrollPane();
+  JdbTable jdbTable1 = new JdbTable();
+  Database database1 = new Database();
+
+  PreparedStatement pstmt;
+   Connection con;
+   String query;
+   ResultSet rs;
+   String str;
+  JComboBox jComboBox1 = new JComboBox();
+  JLabel jLabel1 = new JLabel();
+  JLabel jLabel2 = new JLabel();
+  JLabel jLabel3 = new JLabel();
+  JLabel jLabel4 = new JLabel();
+  JLabel jLabel6 = new JLabel();
+  QueryDataSet queryDataSet1 = new QueryDataSet();
+  QueryResolver queryResolver1 = new QueryResolver();
+  GridBagLayout gridBagLayout1 = new GridBagLayout();
+  JLabel jLabel7 = new JLabel();
+    String ip;
+
+  public statisticPanel2() {
+    try {
+      jbInit();
+    }
+    catch(Exception ex) {
+      ex.printStackTrace();
+    }
+  }
+  public statisticPanel2(String str) {
+    ip=str;
+    try {
+      jbInit();
+    }
+    catch(Exception ex) {
+      ex.printStackTrace();
+    }
+  }
+
+  void jbInit() throws Exception {
+    this.setLayout(gridBagLayout1);
+    jButton1.setBackground(UIManager.getColor("Slider.background"));
+    jButton1.setFont(new java.awt.Font("Dialog", 1, 13));
+    jButton1.setActionCommand("统计");
+    jButton1.setText("统 计");
+    jButton1.addActionListener(new statisticPanel2_jButton1_actionAdapter(this));
+    database1.setConnection(new com.borland.dx.sql.dataset.ConnectionDescriptor("jdbc:microsoft:sqlserver://"+ip+":1433;DatabaseName=student", "sa", "lomf8244", false, "com.borland.datastore.jdbc.DataStoreDriver"));
+    database1.setTransactionIsolation(java.sql.Connection.TRANSACTION_READ_COMMITTED);
+    jdbTable1.setBackground(Color.cyan);
+    jdbTable1.setAutoResizeMode(JTable.AUTO_RESIZE_LAST_COLUMN);
+    jdbTable1.setSelectionBackground(UIManager.getColor("info"));
+    jdbTable1.setSelectionForeground(Color.red);
+    jdbTable1.setDataSet(queryDataSet1);
+    jComboBox1.addItemListener(new statisticPanel2_jComboBox1_itemAdapter(this));
+    this.setBackground(new Color(255, 255, 197));
+    this.setForeground(Color.black);
+    jLabel1.setBackground(Color.pink);
+    jLabel1.setForeground(Color.magenta);
+    jLabel1.setMaximumSize(new Dimension(0, 0));
+    jLabel1.setText("");
+    jLabel1.setBounds(new Rectangle(1, 158, 488, 45));
+    jLabel2.setFont(new java.awt.Font("Dialog", 1, 20));
+    jLabel2.setForeground(Color.red);
+    jLabel2.setText(" 留级标准：未通过课程学分累计达到5分");
+    jLabel3.setFont(new java.awt.Font("Dialog", 1, 20));
+    jLabel3.setForeground(Color.red);
+    jLabel3.setText("退学标准：未通过课程学分累计达到8分");
+    jLabel4.setFont(new java.awt.Font("Dialog", 1, 20));
+    jLabel4.setForeground(Color.magenta);
+    jLabel4.setHorizontalTextPosition(SwingConstants.TRAILING);
+    jLabel4.setText("");
+    jLabel6.setFont(new java.awt.Font("Dialog", 1, 28));
+    jLabel6.setText("选 择 统 计 项：");
+    tableScrollPane1.getViewport().setBackground(UIManager.getColor("ToolTip.background"));
+    queryDataSet1.setResolver(queryResolver1);
+    queryResolver1.setDatabase(database1);
+    queryResolver1.setUpdateMode(com.borland.dx.dataset.UpdateMode.KEY_COLUMNS);
+    jLabel7.setFont(new java.awt.Font("Dialog", 1, 40));
+    jLabel7.setForeground(Color.magenta);
+    jLabel7.setText("      学 生 统 计 管 理");
+    this.add(tableScrollPane1,   new GridBagConstraints(0, 6, 3, 1, 1.0, 1.0
+            ,GridBagConstraints.CENTER, GridBagConstraints.BOTH, new Insets(8, 0, 0, 0), 20, -129));
+    tableScrollPane1.getViewport().add(jdbTable1, null);
+    this.add(jComboBox1,   new GridBagConstraints(1, 2, 2, 1, 1.0, 0.0
+            ,GridBagConstraints.CENTER, GridBagConstraints.HORIZONTAL, new Insets(0, 17, 0, 11), 212, 3));
+    this.add(jButton1,   new GridBagConstraints(2, 3, 1, 2, 0.0, 0.0
+            ,GridBagConstraints.CENTER, GridBagConstraints.NONE, new Insets(24, 20, 10, 12), 4, 11));
+    this.add(jLabel2,   new GridBagConstraints(0, 3, 2, 1, 0.0, 0.0
+            ,GridBagConstraints.WEST, GridBagConstraints.NONE, new Insets(14, 0, 0, 10), 0, -2));
+    this.add(jLabel3,   new GridBagConstraints(0, 4, 2, 1, 0.0, 0.0
+            ,GridBagConstraints.WEST, GridBagConstraints.NONE, new Insets(7, 8, 0, 7), 3, -3));
+    this.add(jLabel6,   new GridBagConstraints(0, 2, 1, 1, 0.0, 0.0
+            ,GridBagConstraints.WEST, GridBagConstraints.NONE, new Insets(0, 9, 0, 0), 2, -12));
+    this.add(jLabel4,   new GridBagConstraints(0, 5, 2, 1, 0.0, 0.0
+            ,GridBagConstraints.WEST, GridBagConstraints.NONE, new Insets(0, 100, 0, 0), 289, 38));
+    this.add(jLabel7,    new GridBagConstraints(0, 0, 3, 1, 0.0, 0.0
+            ,GridBagConstraints.CENTER, GridBagConstraints.NONE, new Insets(0, 0, 0, 0), 290, 0));
+
+    Class.forName("com.microsoft.jdbc.sqlserver.SQLServerDriver");
+    String url = "jdbc:microsoft:sqlserver://"+ip+":1433;DatabaseName=student";
+    String username= "sa";
+    String password= "lomf8244";
+    con = DriverManager.getConnection(url,username,password);
+
+    jComboBox1.addItem("重修统计");
+   jComboBox1.addItem("留级统计");
+   jComboBox1.addItem("退学统计");
+
+  }
+
+  void jButton1_actionPerformed(ActionEvent e) {
+    try{
+      if(str.equals("重修"))
+      {
+        query = "select * from score where SCORETPYE=?";
+        pstmt = con.prepareStatement(query);
+        pstmt.setString(1,str);
+      }
+     else if(str.equals("留级统计"))
+     {
+       query="select STUDENTNO as '学号',sum(SCORECREDIT) as '留级学分总和' from score student  where score<60 group by studentno having sum(SCORECREDIT)>5 and sum(SCORECREDIT)<10";
+       pstmt = con.prepareStatement(query);
+     }
+     else
+     {
+       query="select STUDENTNO as '学号',sum(SCORECREDIT) as '留级学分总和' from score student  where score<60 group by studentno having sum(SCORECREDIT)>8";
+       pstmt = con.prepareStatement(query);
+
+     }
+
+     rs=pstmt.executeQuery();
+     if(rs.next()){
+            queryDataSet1.close();
+            if(str.equals("重修"))
+              {
+                 jLabel4.setText("重修统计名单如下");
+                 str = rs.getString("SCORETPYE");
+                 str = "select STUDENTNO as"+ "\'"+"学号" +"\'"+",COURSENAME as"+ "\'"+"课程名称" +"\'"+",SCORE as"+ "\'"+"成绩" +"\'"+",SCORECREDIT as"+ "\'"+"学分" +"\'"+",SCORESORT as"+ "\'"+"类别" +"\'"+",SCORETPYE as"+ "\'"+"考别" +"\'"+",SCOREREMARK as"+ "\'"+"备注" +"\'"+",SCORETIME as"+ "\'"+"时间" +"\'"+"from score where SCORETPYE=" + "\'" + str + "\'";
+                 queryDataSet1.setQuery(new com.borland.dx.sql.dataset.QueryDescriptor(database1, str, null, true, Load.ALL));
+              }
+            if(str.equals("留级统计"))
+             {
+               jLabel4.setText("留级统计名单如下");
+               String m[]=new String[1024];
+               m[0]=rs.getString("学号");
+               for(int i=1;rs.next();i++)
+               {   m[i]=rs.getString("学号");
+               }
+                  if(m[0]!=null)
+                  str = "select STUDENTNO as"+ "\'"+"学号" +"\'"+",STUDENTNAME as"+ "\'"+"姓名" +"\'"+",STUDENTAGE as"+ "\'"+"年龄" +"\'"+",STUDENTSEX as"+ "\'"+"性别" +"\'"+",STUENTRACE as"+ "\'"+"民族" +"\'"+",STUDENTSPECIATION as"+ "\'"+"专业" +"\'"+"from student where STUDENTNO="+ "\'" + m[0]+ "\'";
+                  for(int i=1;i<m.length;i++)
+                  {
+                      if(m[i]!=null)
+                      str=str+ " or STUDENTNO="+ "\'" + m[i]+ "\'";
+                  }
+                  queryDataSet1.setQuery(new com.borland.dx.sql.dataset.QueryDescriptor(database1, str, null, true, Load.ALL));
+             }
+             if(str.equals("退学统计"))
+             {
+               jLabel4.setText("退学统计名单如下");
+               String m[]=new String[1024];
+               m[0]=rs.getString("学号");
+               for(int i=1;rs.next();i++)
+               {   m[i]=rs.getString("学号");
+               }
+                  if(m[0]!=null)
+                  str = "select STUDENTNO as"+ "\'"+"学号" +"\'"+",STUDENTNAME as"+ "\'"+"姓名" +"\'"+",STUDENTAGE as"+ "\'"+"年龄" +"\'"+",STUDENTSEX as"+ "\'"+"性别" +"\'"+",STUENTRACE as"+ "\'"+"民族" +"\'"+",STUDENTSPECIATION as"+ "\'"+"专业" +"\'"+"from student where STUDENTNO="+ "\'" + m[0]+ "\'";
+                  for(int i=1;i<m.length;i++)
+                  {
+                      if(m[i]!=null)
+                      str=str+ " or STUDENTNO="+ "\'" + m[i]+ "\'";
+                  }
+                  queryDataSet1.setQuery(new com.borland.dx.sql.dataset.QueryDescriptor(database1, str, null, true, Load.ALL));
+              }
+
+                queryDataSet1.refresh();
+                jdbTable1.setDataSet(queryDataSet1);
+                 jdbTable1.repaint();
+      }
+      else{
+        jLabel4.setText("没有匹配项!");
+        queryDataSet1.close();
+        queryDataSet1.refresh();
+        jdbTable1.setDataSet(null);
+        jdbTable1.repaint();
+    }
+}
+catch(Exception ef)
+{ System.out.print("系统错误，请重新运行。");
+}
+
+  }
+
+  void jComboBox1_itemStateChanged(ItemEvent e) {
+    str=(String)jComboBox1.getSelectedItem();
+    if(str.equals("重修统计"))
+     {
+       str="重修";
+     }
+     else if(str.equals("留级统计"))
+    {
+     str="留级统计";
+    }
+    else
+    {
+      str="退学统计";
+     }
+  }
+}
+
+class statisticPanel2_jButton1_actionAdapter implements java.awt.event.ActionListener {
+  statisticPanel2 adaptee;
+
+  statisticPanel2_jButton1_actionAdapter(statisticPanel2 adaptee) {
+    this.adaptee = adaptee;
+  }
+  public void actionPerformed(ActionEvent e) {
+    adaptee.jButton1_actionPerformed(e);
+  }
+}
+
+class statisticPanel2_jComboBox1_itemAdapter implements java.awt.event.ItemListener {
+  statisticPanel2 adaptee;
+
+  statisticPanel2_jComboBox1_itemAdapter(statisticPanel2 adaptee) {
+    this.adaptee = adaptee;
+  }
+  public void itemStateChanged(ItemEvent e) {
+    adaptee.jComboBox1_itemStateChanged(e);
+  }
+}

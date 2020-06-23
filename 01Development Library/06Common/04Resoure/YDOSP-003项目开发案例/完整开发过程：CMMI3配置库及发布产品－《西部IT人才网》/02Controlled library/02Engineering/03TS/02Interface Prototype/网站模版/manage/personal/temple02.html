@@ -1,0 +1,229 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>添加基本信息</title>
+<link href="../../css/main.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+td img {display: block;}.title {
+	margin-top: 3px;
+	font-size: 16px;
+	font-weight: bold;
+	padding-top: 3px;
+	text-align: center;
+	vertical-align: top;
+}
+.content {
+	font-size: 14px;
+	line-height: 40px;
+	color: #333;
+	text-indent: 2em;
+	margin: 20px;
+}
+</style>
+</head>
+
+<body>
+<table width="960" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+  <td width="203" valign="top"><div id="linkDiv">
+	<br />
+	<br />
+    <div style="width:100%; height:30px; font-size:14px; font-weight: bold;"><a href="">基本信息维护</a></div> 
+    <div style="height:30px; font-size:14px; margin-left:25px;"><a href="mod_password.html">修改密码</a></div> 
+    <div style="height:30px; font-size:14px; margin-left:25px;"><a href="add_basicInfo.html">添加基本信息</a></div>
+    <div style="height:30px; font-size:14px; margin-left:25px;"><a href="mod_basicInfo.html">修改信息</a></div>
+    <div style="width:100%; height:30px; font-size:14px; font-weight: bold;"><a href="">招聘管理</a></div> 
+    <div style="height:30px; font-size:14px; margin-left:25px;"><a href="jobs_list.html">职位列表</a></div> 
+    <div style="height:30px; font-size:14px; margin-left:25px;"><a href="add_job.html">添加职位</a></div>
+    <div style="height:30px; font-size:14px; margin-left:25px;"><a href="resume_favorite.html">查看简历收藏列表</a></div>
+    <div style="width:100%; height:30px; font-size:14px; font-weight: bold;"><a href="">系统管理</a></div> 
+    <div style="height:30px; font-size:14px; margin-left:25px;"><a href="javascript:window.close()">退出</a></div>    
+    </div></td>
+    <td width="800" valign="top">
+<div class="title">标题</div>
+   	   		<hr noshade="noshade" color="#999999" />
+      <div class="rect-white">
+            <div class="datatitle topmargin">
+  <h3>企业后台管理 &gt; 收到的简历</h3>
+            </div>
+	  <div class="tabs_content">
+	    <table border="0" cellspacing="0" class="formtable">
+	      <tbody>
+	        <tr>
+	          <td width="2%"><span 
+            class="FontRed">*</span></td>
+	          <td width="20%"><div align="right"><strong>单位名称：</strong></div></td>
+	          <td width="51%"><input class="intxt2" maxlength="50" name="caree" /></td>
+	          <td width="27%">请输全称，与执照一致，提交后不能自行更改</td>
+	          </tr>
+	        <tr>
+	          <td height="32"></td>
+	          <td><div align="right"><strong>单位性质：</strong></div></td>
+	          <td><select class="intxt1" size="1" name="type">
+	            <option value="" 
+        selected="selected">请选择单位性质</option>
+	            <option value="全民">全民</option>
+	            <option 
+        value="集体">集体</option>
+	            <option value="私营">私营</option>
+	            <option 
+        value="三资">三资</option>
+	            <option value="股份制">股份制</option>
+	            <option 
+        value="有限责任公司">有限责任公司</option>
+	            <option value="其它">其它</option>
+	            </select></td>
+	          <td>&nbsp;</td>
+	          </tr>
+	        <tr>
+	          <td height="32"></td>
+	          <td><div align="right"><strong>所属行业：</strong></div></td>
+	          <td><select class="intxt" size="1" name="trade">
+	            <option 
+        selected="selected">请选择单位所属行业</option>
+	            <option value="计算机、通讯业">计算机、通讯业</option>
+	            <option value="科研设计、科技开发">科研设计、科技开发</option>
+	            <option 
+        value="生产、制造、加工业">生产、制造、加工业</option>
+	            <option value="电子、电器">电子、电器</option>
+	            <option value="仪器、仪表、自动化">仪器、仪表、自动化</option>
+	            <option 
+        value="机械制造、机电设备">机械制造、机电设备</option>
+	            <option 
+        value="矿产、冶金、金属制品">矿产、冶金、金属制品</option>
+	            <option 
+        value="非金属制品业">非金属制品业</option>
+	            <option 
+        value="车辆制造、部件、销售维修">车辆制造、部件、销售维修</option>
+	            <option 
+        value="动力、电力、能源">动力、电力、能源</option>
+	            <option 
+        value="建筑、安装、交通工程">建筑、安装、交通工程</option>
+	            <option 
+        value="房地产、物业、园林绿化">房地产、物业、园林绿化</option>
+	            <option 
+        value="装修、装璜、设计">装修、装璜、设计</option>
+	            <option 
+        value="轻工、纺织、服装、制革">轻工、纺织、服装、制革</option>
+	            <option 
+        value="造纸、印刷、包装">造纸、印刷、包装</option>
+	            <option 
+        value="木材家具、工艺品">木材家具、工艺品</option>
+	            <option value="市政、公用事业">市政、公用事业</option>
+	            <option value="交通运输、物流快递">交通运输、物流快递</option>
+	            <option 
+        value="邮政、电信">邮政、电信</option>
+	            <option value="化学化工、生物制药">化学化工、生物制药</option>
+	            <option value="环境、环保、治污">环境、环保、治污</option>
+	            <option 
+        value="商业、贸易">商业、贸易</option>
+	            <option 
+        value="日用品、快速消费品、食品">日用品、快速消费品、食品</option>
+	            <option 
+        value="市场、批发、零售">市场、批发、零售</option>
+	            <option 
+        value="广告、策划、设计">广告、策划、设计</option>
+	            <option 
+        value="新闻出版、广播影视">新闻出版、广播影视</option>
+	            <option value="文化、艺术">文化、艺术</option>
+	            <option value="咨询、事务所、中介机构">咨询、事务所、中介机构</option>
+	            <option 
+        value="金融、保险">金融、保险</option>
+	            <option value="教育、培训">教育、培训</option>
+	            <option 
+        value="卫生、医疗设备">卫生、医疗设备</option>
+	            <option value="服务业">服务业</option>
+	            <option 
+        value="体育、文化、办公用品">体育、文化、办公用品</option>
+	            <option 
+        value="旅游、酒店、餐饮、娱乐">旅游、酒店、餐饮、娱乐</option>
+	            <option 
+        value="政府部门、党政群团机构">政府部门、党政群团机构</option>
+	            <option 
+        value="协会、社团、非营利机构">协会、社团、非营利机构</option>
+	            <option value="农林牧渔">农林牧渔</option>
+	            <option value="综合性工商企业">综合性工商企业</option>
+	            </select></td>
+	          <td>&nbsp;</td>
+	          </tr>
+	        <tr>
+	          <td></td>
+	          <td><div align="right"><strong>电&nbsp;话：</strong></div></td>
+	          <td><input class="intxt1" maxlength="20" 
+      onchange="document.thist.phone0.value=document.thist.phone.value" size="24" 
+      name="phone2" /></td>
+	          <td>电话号码格式为“区号-电话号码-分机号”</td>
+	          </tr>
+	        <tr>
+	          <td></td>
+	          <td><div align="right"><strong>手&nbsp;机：</strong></div></td>
+	          <td><input class="intxt1" maxlength="20" 
+      onchange="document.thist.phone0.value=document.thist.phone.value" size="24" 
+      name="phone" /></td>
+	          <td>手机号</td>
+	          </tr>
+	        <tr>
+	          <td></td>
+	          <td><div align="right"><strong>传真号码：</strong></div></td>
+	          <td><input class="intxt1" maxlength="20" size="24" name="fax" /></td>
+	          <td>传真号码格式为“区号-传真号码-分机号”</td>
+	          </tr>
+	        <tr>
+	          <td></td>
+	          <td height="32"><div align="right"><strong>联 系 人：</strong></div></td>
+	          <td><input class="intxt1" maxlength="20" size="24" name="fax2" /></td>
+	          <td>必须填写</td>
+	          </tr>
+	        <tr>
+	          <td height="32"></td>
+	          <td><div align="right"><strong>邮政编码：</strong></div></td>
+	          <td><input class="intxt1" maxlength="20" size="24" name="fax22" /></td>
+	          <td>&nbsp;</td>
+	          </tr>
+	        <tr>
+	          <td height="32"></td>
+	          <td><div align="right"><strong>通讯地址：</strong></div></td>
+	          <td><input class="intxt1" maxlength="20" size="24" name="fax222" /></td>
+	          <td></td>
+	          </tr>
+	        <tr>
+	          <td height="32"></td>
+	          <td><div align="right"><strong>电子邮件：</strong></div></td>
+	          <td><input class="intxt" maxlength="20" size="24" name="salary" /></td>
+	          <td>&nbsp;</td>
+	          </tr>
+	        <tr>
+	          <td height="32"></td>
+	          <td><div align="right"><strong>单位网址：</strong></div></td>
+	          <td><input class="intxt" maxlength="20" size="24" name="salary2" /></td>
+	          <td>&nbsp;</td>
+	          </tr>
+	        <tr>
+	          <td></td>
+	          <td><div align="right"><strong>公司简介：</strong></div></td>
+	          <td 
+            colspan="2"><textarea name="other" rows="12" cols="75"></textarea>
+	            <br />
+	            <span>2400个字符以内<br />
+	              </span></td>
+	          </tr>
+	        </tbody>
+	      </table>
+	  </div>
+      </div>
+   	 <TABLE cellSpacing=5 cellPadding=5 width=781 align=center border=0>
+   	   <TBODY>
+  <TR>
+    <TD width="761">&nbsp;</TD>
+  </TR>
+  <TR>
+    <TD style="BORDER-TOP: #ccc 1px dashed; HEIGHT: 50px; TEXT-ALIGN: center"><input type="submit" value="提交基本信息" name="Submit" /></TD>
+  </TR>
+  </TBODY>
+  </TABLE>
+  </td>
+  </tr>
+</table>
+</body>
+</html>

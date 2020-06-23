@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>none</title>
+    <link href="CSS/main.css" type="text/css" rel="stylesheet" />
+<style type="text/css">
+<!--
+.name {
+	color: #F00;
+}
+-->
+</style>
+</head>
+
+<body>
+    <div class="Top">
+    </div>
+    <div style="text-align: left; width: 990px;">
+      <div class="Menu">
+        <div class="UserInfo"><marquee height=40 width=96% direction="left" scrollamount=3 onMouseOver=this.stop() onMouseOut=this.start()>
+          您好！请<a href="regest.htm" target="_top">注册</a>,或<a href="login.htm" target="_parent">登录</a>。</marquee></div>
+   	        <div class="time">
+      <!---Date---->
+今天是：
+<script language=JavaScript>
+today=new Date();
+function initArray(){
+this.length=initArray.arguments.length
+for(var i=0;i<this.length;i++)
+this[i+1]=initArray.arguments[i]  }
+var d=new initArray(
+"星期日",
+"星期一",
+"星期二",
+"星期三",
+"星期四",
+"星期五",
+"星期六");
+document.write("<font color=brown style='font-family: verdana, tahoma, arial, helvetica; font-size: 9pt;'>",d[today.getDay()+1]," ",today.getYear(),"年",today.getMonth()+1,"月",today.getDate(),"日","</font>");
+</script>，祝您工作愉快！
+<!---Date---->
+            </div>				
+      </div>
+</div>
+</body>
+</html>

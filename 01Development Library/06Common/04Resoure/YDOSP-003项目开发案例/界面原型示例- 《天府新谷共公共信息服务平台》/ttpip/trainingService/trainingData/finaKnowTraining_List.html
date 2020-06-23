@@ -1,0 +1,130 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>授课培训需求调查</title>
+<link href="../../css/common.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript">
+
+function modifySurvey()
+{
+	var objs = document.getElementsByName("checkbox3");
+	var j=0;
+	for(var i=0;i<objs.length;i++)   
+	{    
+		  if(objs[i].checked)   
+		  {   
+		    j++;
+		    var id = objs[i].value;
+			window.location.href="Survey_Modify.html";   
+		  }
+	}
+	if(j == 0)
+	{
+		alert("请先选择记录！");
+	}
+}
+
+
+function deleteSurvey()
+{
+	var objs = document.getElementsByName("checkbox3");
+	var j=0;
+	for(var i=0;i<objs.length;i++)   
+	{    
+		  if(objs[i].checked)   
+		  {   
+		    j++;   
+		    var id = objs[i].value;
+			alert("确实要删除吗?");
+		    window.location.href="Survey_List.html"; 
+		    
+		  }
+	}
+	if(j == 0)
+	{
+		alert("请先选择记录！");
+	}
+}
+
+
+
+</script>
+</head>
+
+<body>
+<div span class="title">孵化服务</div>
+</span>
+<div class="container">
+  <div class="content">
+    <div class="mainarea">
+      <div class="rect">
+        <div class="rmm">
+          <div class="datatitle topmargin">
+  <h3><img src="../../images/icons/result.gif" />金融知识培训资料</h3>
+  </div>
+			<div class="tabs_content" style="padding-left:0; padding-right:0;">
+			<form>
+			<table class="formtable" cellpadding="0" cellspacing="0">
+				<tr class="odd">
+      <td colspan="2" align="left" bgcolor="#F1F1F1"><font face="宋体"><strong>主 &nbsp; &nbsp;题</strong>
+        <input name="textfield22" type="text"  id="textfield22" value="" size="25" />
+
+        <input type="button" name="button12" id="button12" value="查询" />
+      </font></td>
+    </tr>
+	
+    <tr class="odd2" >
+    
+      <td width="22%" align="center"><strong>主 &nbsp; &nbsp;题</strong></td>
+      <td width="37%" align="center"><strong>发布日期</strong></td>
+    </tr>
+      <tr class="odd">
+       
+        <td align="center" bordercolor="1"><a href="../traiDataManage/TrainingData_View.html">aaa</a></td>
+      <td align="center"><p>2009-09-01</p>        </td>
+    </tr>
+    <tr class="odd2">
+     
+      <td align="center"><a href="../traiDataManage/TrainingData_View.html">bbb</a></td>
+      <td align="center"><p>2009-09-01</p>      </td>
+    </tr>
+    <tr class="odd">
+     
+      <td align="center"><a href="../traiDataManage/TrainingData_View.html">ccc</a></td>
+      <td align="center">2009-09-01</td>
+    </tr>
+    <tr class="odd2">
+    
+      <td align="center"><a href="../traiDataManage/TrainingData_View.html">ddd</a></td>
+      <td align="center">2009-09-01</td>
+    </tr>  
+    <tr class="odd" >
+     
+      <td align="center"><a href="../traiDataManage/TrainingData_View.html">eee</a></td>
+      <td align="center">2009-09-01</td>
+    </tr>                                   
+
+				
+			</table>
+			<div class="page">
+  <span class="page-link">共15条 1页，当前第1页 &lt;&lt; &lt; &gt; &gt;&gt; 转
+            <select name="select12" id="select12">
+              <option>1</option>
+        </select>
+            页	</span>
+  </div>
+			
+			</form>
+			</div>
+
+
+		</div>
+      </div>
+      <!--清除浮动-->
+      <br class="clear" />
+	</div>
+</div>
+</div>
+</body>
+</html>

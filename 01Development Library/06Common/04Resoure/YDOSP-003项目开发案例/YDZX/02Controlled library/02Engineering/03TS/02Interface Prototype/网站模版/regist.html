@@ -1,0 +1,234 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0014)about:internet -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>regest</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">td img {display: block;}</style>
+<link href="main.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+td img {display: block;}.title {
+	margin-top: 3px;
+	font-size: 16px;
+	font-weight: bold;
+	padding-top: 3px;
+	text-align: center;
+	vertical-align: top;
+}
+.content {
+	font-size: 14px;
+	line-height: 40px;
+	color: #333;
+	text-indent: 2em;
+	margin: 20px;
+}
+</style>
+</head>
+<body id="countainer">
+<table width="960" border="0" align="center" cellpadding="0" cellspacing="0">
+<!-- fwtable fwsrc="guide.png" fwpage="Page 1" fwbase="guide.jpg" fwstyle="Dreamweaver" fwdocid = "1786606152" fwnested="0" -->
+  <tr>
+   <td><img src="images/spacer.gif" width="29" height="1" border="0" alt="" /></td>
+   <td><img src="images/spacer.gif" width="349" height="1" border="0" alt="" /></td>
+   <td><img src="images/spacer.gif" width="21" height="1" border="0" alt="" /></td>
+   <td><img src="images/spacer.gif" width="315" height="1" border="0" alt="" /></td>
+   <td><img src="images/spacer.gif" width="246" height="1" border="0" alt="" /></td>
+   <td><img src="images/spacer.gif" width="1" height="1" border="0" alt="" /></td>
+  </tr>
+
+  <tr>
+   <td colspan="4" class="title">个人（企业）用户注册</td>
+   <td rowspan="2"><img name="guide_r1_c5" src="images/guide_r1_c5.jpg" width="246" height="66" border="0" id="guide_r1_c5" alt="" /></td>
+   <td><img src="images/spacer.gif" width="1" height="42" border="0" alt="" /></td>
+  </tr>
+  <tr>
+   <td colspan="4" rowspan="7" valign="top"><div>
+     <table cellspacing="0" cellpadding="0" style=" width:90%; line-height:35px; margin-left:25px">
+       <tr>
+         <td width="12%" align="right">用户名：</td>
+         <td width="35%" align="left"><input size="35" name="userName" />
+           <a href="login.html"></a></td>
+         <td align="left"> </td>
+       </tr>
+       <tr>
+         <td align="right"> </td>
+         <td align="left"><a href="login.html">
+           <input onclick="send_request(document.all.userName.value,'1')" value="检测是否重名" type="button" name="Submit2" />
+         </a></td>
+         <td align="left"> 
+           <div id="showStr"></div>
+           <div id="serverResponse"></div></td>
+       </tr>
+       <tr>
+         <td align="right">Email：</td>
+         <td align="left"><input onblur="checkemail()" size="35" name="Email" /></td>
+         <td width="53%" align="left"><div id="showEamil"></div>
+           <div id="serverResponse"></div>
+           请填写有效的E-mail地址作为登录本网的唯一识别ID</td>
+       </tr>
+       <tr>
+         <td align="right">密码：</td>
+         <td align="left"><input onblur="chkpassword()" value="" size="35" type="password" name="password" /></td>
+         <td align="left"><div id="passwordStr"></div>
+           不少于6个字符，区分大小写</td>
+       </tr>
+       <tr>
+         <td align="right">确认密码：</td>
+         <td align="left"><input onblur="chkconfirmPassword()" value="" size="35" type="password" name="confirmPassword" /></td>
+         <td> 
+           <div id="confirmPasswordStr"></div></td>
+       </tr>
+       <tr>
+         <td align="right">所属机构：</td>
+         <td align="left"><input readonly="readOnly" name="organization" />
+           <img onclick="myopen1()" src="./images/index052.gif" /></td>
+         <td>一般用户不用填写</td>
+       </tr>
+       <tr>
+         <td align="right">所属院校：</td>
+         <td align="left"><input readonly="readOnly" name="school" />
+           <img onclick="myopen2()" src="./images/index052.gif" /></td>
+         <td>一般用户不用填写</td>
+       </tr>
+       <tr>
+         <td> </td>
+         <td id="link-text-blue" colspan="2" align="left">请查看并同意西部IT人才网用户协议：
+           <input checked="checked" type="checkbox" name="accept" />
+           我接受 <a href="login-xy.html" target="_blank">用户协议</a></td>
+       </tr>
+       <tr>
+         <td> </td>
+         <td align="left"><input value="确　定" type="submit" name="Submit" /></td>
+       </tr>
+     </table>
+     <table cellspacing="0" cellpadding="0"  style=" width:90%; line-height:35px; margin-left:25px">
+       <tr>
+         <td width="11%" align="right"> </td>
+         <td width="89%" align="left">您可以：</td>
+       </tr>
+       <tr>
+         <td> </td>
+         <td align="left">·发现心仪工作，随时随地轻松应聘 </td>
+       </tr>
+       <tr>
+         <td> </td>
+         <td align="left">·公开简历，让搜索人才的企业主动联系您 </td>
+       </tr>
+       <tr>
+         <td> </td>
+         <td align="left">·订阅职位邮件，让适合您的职位直接发送到电子邮箱。更快更准找工作。 </td>
+       </tr>
+       <tr>
+         <td> </td>
+         <td align="left">·收藏您关注的职位，随时随地查看职位信息，选择适合职位进行申请。</td>
+       </tr>
+       <tr>
+         <td> </td>
+         <td align="left">·保留职位申请记录，轻松有序管理应聘。</td>
+       </tr>
+     </table>
+     <p>&nbsp;</p>
+   </div>
+   <td><img src="images/spacer.gif" width="1" height="24" border="0" alt="" /></td>
+  </tr>
+  <tr>
+   <td valign="top" style="background-image:url(images/guide_r3_c5.jpg)"><table width="95%" border="0" align="center" cellpadding="0" cellspacing="0">
+     <tr>
+       <td height="24" colspan="2" bgcolor="#FFFFFF">内容三</td>
+       </tr>
+     <tr>
+       <td width="7%">&nbsp;</td>
+       <td width="93%" height="25">文章列表1文章列表1文章列表1文章1</td>
+     </tr>
+     <tr>
+       <td>&nbsp;</td>
+       <td height="25">文章列表1文章列表1文章列表1文章1</td>
+     </tr>
+     <tr>
+       <td>&nbsp;</td>
+       <td height="25">文章列表1文章列表1文章列表1文章1</td>
+     </tr>
+     <tr>
+       <td>&nbsp;</td>
+       <td height="25">文章列表1文章列表1文章列表1文章1</td>
+     </tr>
+     <tr>
+       <td>&nbsp;</td>
+       <td height="25">文章列表1文章列表1文章列表1文章1</td>
+     </tr>
+     <tr>
+       <td>&nbsp;</td>
+       <td height="25">文章列表1文章列表1文章列表1文章1</td>
+     </tr>
+     <tr>
+       <td>&nbsp;</td>
+       <td height="25">文章列表1文章列表1文章列表1文章1</td>
+     </tr>
+     <tr>
+       <td>&nbsp;</td>
+       <td height="25">文章列表1文章列表1文章列表1文章1</td>
+     </tr>
+   </table></td>
+   <td><img src="images/spacer.gif" width="1" height="299" border="0" alt="" /></td>
+  </tr>
+  <tr>
+   <td rowspan="5" valign="top" style="background-image:url(images/guide_r4_c5.jpg)"><table width="95%" border="0" align="center" cellpadding="0" cellspacing="0">
+     <tr>
+       <td height="24" colspan="2" bgcolor="#FFFFFF">内容四</td>
+     </tr>
+     <tr>
+       <td width="7%">&nbsp;</td>
+       <td width="93%" height="25">文章列表1文章列表1文章列表1文章1</td>
+     </tr>
+     <tr>
+       <td>&nbsp;</td>
+       <td height="25">文章列表1文章列表1文章列表1文章1</td>
+     </tr>
+     <tr>
+       <td>&nbsp;</td>
+       <td height="25">文章列表1文章列表1文章列表1文章1</td>
+     </tr>
+     <tr>
+       <td>&nbsp;</td>
+       <td height="25">文章列表1文章列表1文章列表1文章1</td>
+     </tr>
+     <tr>
+       <td>&nbsp;</td>
+       <td height="25">文章列表1文章列表1文章列表1文章1</td>
+     </tr>
+     <tr>
+       <td>&nbsp;</td>
+       <td height="25">文章列表1文章列表1文章列表1文章1</td>
+     </tr>
+     <tr>
+       <td>&nbsp;</td>
+       <td height="25">文章列表1文章列表1文章列表1文章1</td>
+     </tr>
+     <tr>
+       <td>&nbsp;</td>
+       <td height="25">文章列表1文章列表1文章列表1文章1</td>
+     </tr>
+   </table></td>
+   <td><img src="images/spacer.gif" width="1" height="82" border="0" alt="" /></td>
+  </tr>
+  <tr>
+   <td><img src="images/spacer.gif" width="1" height="45" border="0" alt="" /></td>
+  </tr>
+  <tr>
+   <td><img src="images/spacer.gif" width="1" height="20" border="0" alt="" /></td>
+  </tr>
+  <tr>
+   <td><img src="images/spacer.gif" width="1" height="293" border="0" alt="" /></td>
+  </tr>
+  <tr>
+   <td><img src="images/spacer.gif" width="1" height="83" border="0" alt="" /></td>
+  </tr>
+  <tr>
+   <td colspan="5"><img name="guide_r9_c1" src="images/guide_r9_c1.jpg" width="960" height="12" border="0" id="guide_r9_c1" alt="" /></td>
+   <td><img src="images/spacer.gif" width="1" height="12" border="0" alt="" /></td>
+  </tr>
+</table>
+<!--#include file="foot.html"-->
+</body>
+</html>

@@ -1,0 +1,270 @@
+﻿/*body-页面总体样式*/
+body
+{
+	text-align: center;
+	vertical-align: middle;
+	font-family: 宋体;
+	font-size: 14px;
+	background-color: #FFFFFF;
+	margin-left: 0px;
+	margin-right: 0px;
+        margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+/*标题-表格页字体样式*/
+.title
+{
+	text-align: center;
+	vertical-align: middle;
+	font-family: "宋体";
+	font-size: 16px;
+	color: #F60;
+	font-weight: bold;
+	top: 20px;
+}
+
+/*Top-顶部图片*/
+.Top
+{
+	background: url(../images/top-2.jpg) no-repeat;
+	height: 90px;
+	width: 1260px;
+}
+
+/*UserInfo-用户信息显示区*/
+.UserInfo
+{
+	float:left;
+	margin-top:13px;
+	margin-left:36px;
+	width:260px;
+	font-size:14px;
+	text-align:left;
+}
+/*Memu/MemuButton/Hover-导航栏文字及链接样式（链接暂为空）*/
+.Menu
+{
+	background: url(../images/by-menu-2.jpg);
+	background-repeat: no-repeat;
+	height: 40px;
+	width: 1260px;
+	text-align: left;
+	float: left;
+}
+
+.MenuButton
+{
+	width: 78px;
+	text-align: center;
+	vertical-align: middle;
+	font-family: "宋体";
+	font-weight: bold;
+	font-size: 14px;
+	line-height: 30px;
+	float: left;
+}
+
+.MenuButton:Hover
+{
+	width: 78px;
+	text-align: center;
+	vertical-align: middle;
+	color: #000;
+	font-family: "宋体";
+	font-weight: bold;
+	font-size: 14px;
+	line-height: 30px;
+	float: left;
+}
+
+a:link{
+	color:#06C;
+	text-decoration:none;
+}
+
+a:visited{
+	color:#06C;
+	text-decoration:none;
+}
+
+a:hover{
+	color:#F30;
+	text-decoration:underline;
+}
+
+.time
+{
+	width: 360px;
+	text-align: center;
+	vertical-align: middle;
+	color: #000000;
+	font-size: 14px;
+	line-height: 30px;
+	float: left;
+	margin-bottom: 90px;
+}
+
+.table-left
+{
+	background-image: url(../images/by-left.jpg);
+	background-repeat: no-repeat;
+	margin-top: 0px;
+	margin-left:-8px;
+	height: 500px;
+	width: 260px;
+	vertical-align: top;
+	padding-top:40px;
+}
+.content-left
+{
+	background-image:url(../images/bottom.gif);
+	background-repeat: no-repeat;
+	width: 179px;
+	margin-top: 25px;
+	margin-left:30px;
+	height: 31px;
+}
+
+
+/*Foot-脚部版权信息*/
+.Foot
+{
+	background: url(../images/foot.jpg) no-repeat;
+	height: 29px;
+	width: 1260px;
+}
+
+.tree
+{
+	left: 6px;
+	top: 10px;
+}
+
+/*---以下为可选用的参照样式---*/
+/*Content-主体内容区高度暂600，不够请自行增加*/
+.Content
+{
+	background: url(../images/default_r4_c1.jpg) no-repeat;
+	height: 600px;
+	width: 990px;
+}
+/*Path-页面路径*/
+.Path
+{
+	height: 20px;
+	float: right;
+	margin-right: 200px;
+	font-weight: bold;
+	font-size: 12px;
+	margin-top: 5px;
+}
+.InputText
+{
+	border: 1px solid #666666;
+}
+
+.SampleTable
+{
+	border: 1px solid #0066CC;
+	border-collapse: collapse;
+}
+
+.SampleTable th
+{
+	border: 1px solid #0066CC;
+	background:url(../images/by-border.jpg) repeat-x;
+	height:34px;
+	background-color:#68a4e1;
+	height: 25px;
+	font-weight: bold;
+	text-align:center;
+}
+
+.SampleTable td
+{
+	border: 1px solid #0066CC;
+}
+
+.Navigate
+{
+	height: 579px;
+	float: left;
+	margin-left: 5px;
+}
+
+.Navigate li
+{
+	background: url(../images/botton-left.jpg) no-repeat;
+	height: 33px;
+	width: 128px;
+	list-style-type: none;
+	text-align: left;
+	vertical-align: middle;
+	line-height: 33px;
+	margin-top: 5px;
+	text-indent:10px;
+}
+
+.Navigate li:Hover
+{
+	background: url(../images/active-botton-left.jpg) no-repeat;
+	cursor: hand;
+	color: Red;
+	font-weight: bold;
+}
+
+.Navigate li a
+{
+	color: #000000;
+	text-decoration: none;
+}
+
+.Navigate li:Hover a
+{
+	color: Red;
+	font-weight: bold;
+}
+
+.SmallButton
+{
+	height:22px;
+	width:100px;
+	border:0;
+	line-height:24px;
+	background-image: url(../images/botton.jpg);
+	background-repeat: no-repeat;
+}
+
+.SmallButton:Hover
+{
+	background: url(../images/active-botton.jpg) no-repeat;
+	height:22px;
+	width:100px;
+	border:0;
+	line-height:24px;
+}
+
+
+.ComplexTable
+{
+	border: 1px solid #006699;
+	border-collapse: collapse;
+}
+
+.ComplexTable th
+{
+	border: 1px solid #006699;
+	background:url(../images/by-bigborder.jpg) repeat-x;
+	height:34px;
+	background-color:#ffffff;
+	height: 25px;
+	font-weight: bold;
+	text-align:center;
+}
+
+.ComplexTable td
+{
+	border: 1px solid #006699;
+	background-color: #EEF5F9;
+}

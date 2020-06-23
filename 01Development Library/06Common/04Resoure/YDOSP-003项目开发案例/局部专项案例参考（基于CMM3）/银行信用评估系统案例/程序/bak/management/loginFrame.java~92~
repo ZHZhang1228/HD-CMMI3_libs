@@ -1,0 +1,244 @@
+package management;
+
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+import com.borland.jbcl.layout.*;
+import java.sql.*;
+import com.borland.dx.dataset.*;
+import com.borland.dx.sql.dataset.*;
+
+
+/**
+ * <p>Title: </p>
+ * <p>Description: </p>
+ * <p>Copyright: Copyright (c) 2004</p>
+ * <p>Company: </p>
+ * @author not attributable
+ * @version 1.0
+ */
+
+public class loginFrame extends JFrame {
+  JPanel contentPane;
+  JLabel jLabel1 = new JLabel();
+  JLabel jLabel2 = new JLabel();
+  JLabel jLabel3 = new JLabel();
+  JTextField jTextField1 = new JTextField();
+  JPasswordField jPasswordField1 = new JPasswordField();
+  JButton jButton2 = new JButton();
+  JButton jButton1 = new JButton();
+  JLabel jLabel4 = new JLabel();
+
+  PreparedStatement pstmt;
+  PreparedStatement pstmt2;
+  Connection con;
+  String query;
+  String query2;
+  ResultSet rs;
+  JComboBox jComboBox1 = new JComboBox();
+  String str="Creditcard";
+  String a[]={"Creditcard","YHworker"};
+  String b[]={"普通用户","银行职员"};
+  GridBagLayout gridBagLayout1 = new GridBagLayout();
+
+  //Construct the frame
+  public loginFrame() {
+    enableEvents(AWTEvent.WINDOW_EVENT_MASK);
+    try {
+      jbInit();
+    }
+    catch(Exception e) {
+      e.printStackTrace();
+    }
+  }
+  //Component initialization
+  private void jbInit() throws Exception  {
+    contentPane = (JPanel) this.getContentPane();
+    jLabel1.setFont(new java.awt.Font("Dialog", 1, 36));
+    jLabel1.setForeground(Color.magenta);
+    jLabel1.setText("欢迎光临信用卡评估系统");
+    contentPane.setBackground(new Color(217, 230, 236));
+    contentPane.setForeground(SystemColor.info);
+    contentPane.setAlignmentX((float) 0.5);
+    contentPane.setMaximumSize(new Dimension(2147483647, 2147483647));
+    contentPane.setLayout(gridBagLayout1);
+    this.setResizable(false);
+    this.setSize(new Dimension(547, 348));
+    this.setTitle("欢迎光临");
+    jLabel2.setBackground(Color.green);
+    jLabel2.setFont(new java.awt.Font("Dialog", 1, 22));
+    jLabel2.setForeground(Color.blue);
+    jLabel2.setText("用户名 :");
+    jLabel3.setFont(new java.awt.Font("Dialog", 1, 22));
+    jLabel3.setForeground(Color.blue);
+    jLabel3.setText("密   码 :");
+    jTextField1.setFont(new java.awt.Font("Dialog", 1, 22));
+    jTextField1.setText("1000") ;
+    jPasswordField1.setFont(new java.awt.Font("Dialog", 1, 22));
+    jPasswordField1.setText("000");
+    jButton2.setBackground(new Color(151, 164, 203));
+    jButton2.setFont(new java.awt.Font("Dialog", 1, 18));
+    jButton2.setText("重置");
+    jButton2.addActionListener(new loginFrame_jButton2_actionAdapter(this));
+    jButton1.setBackground(new Color(151, 164, 203));
+    jButton1.setFont(new java.awt.Font("Dialog", 1, 18));
+    jButton1.setDebugGraphicsOptions(0);
+    jButton1.setContentAreaFilled(true);
+    jButton1.setText("确定");
+    jButton1.addActionListener(new loginFrame_jButton1_actionAdapter(this));
+    jLabel4.setBackground(Color.blue);
+    jLabel4.setFont(new java.awt.Font("Dialog", 1, 22));
+    jLabel4.setForeground(Color.blue);
+    jLabel4.setText("用户类型:");
+    jComboBox1.setFont(new java.awt.Font("宋体", 1, 22));
+    jComboBox1.addItemListener(new loginFrame_jComboBox1_itemAdapter(this));
+    contentPane.add(jButton2,  new GridBagConstraints(1, 4, 1, 1, 0.0, 0.0
+            ,GridBagConstraints.CENTER, GridBagConstraints.NONE, new Insets(32, 164, 36, 103), 13, 8));
+    contentPane.add(jButton1,  new GridBagConstraints(0, 4, 1, 1, 0.0, 0.0
+            ,GridBagConstraints.CENTER, GridBagConstraints.NONE, new Insets(34, 108, 36, 0), 13, 8));
+    contentPane.add(jPasswordField1,  new GridBagConstraints(1, 3, 1, 1, 1.0, 0.0
+            ,GridBagConstraints.WEST, GridBagConstraints.HORIZONTAL, new Insets(27, 18, 0, 82), 217, -8));
+    contentPane.add(jLabel3,  new GridBagConstraints(0, 3, 1, 1, 0.0, 0.0
+            ,GridBagConstraints.WEST, GridBagConstraints.NONE, new Insets(23, 75, 0, 36), 0, 0));
+    contentPane.add(jLabel4,  new GridBagConstraints(0, 1, 1, 1, 0.0, 0.0
+            ,GridBagConstraints.WEST, GridBagConstraints.NONE, new Insets(19, 76, 0, 11), 7, -5));
+    contentPane.add(jLabel2,  new GridBagConstraints(0, 2, 1, 1, 0.0, 0.0
+            ,GridBagConstraints.WEST, GridBagConstraints.NONE, new Insets(25, 76, 0, 34), 0, 0));
+    contentPane.add(jTextField1,  new GridBagConstraints(1, 2, 1, 1, 1.0, 0.0
+            ,GridBagConstraints.WEST, GridBagConstraints.HORIZONTAL, new Insets(28, 19, 0, 83), 193, -9));
+    contentPane.add(jComboBox1,  new GridBagConstraints(1, 1, 1, 1, 1.0, 0.0
+            ,GridBagConstraints.CENTER, GridBagConstraints.HORIZONTAL, new Insets(20, 19, 0, 82), 207, -6));
+    contentPane.add(jLabel1,     new GridBagConstraints(0, 0, 2, 1, 0.0, 0.0
+            ,GridBagConstraints.NORTHEAST, GridBagConstraints.NONE, new Insets(18, 75, 10, 0), 54, 0));
+    jComboBox1.addItem("普通用户");
+    jComboBox1.addItem("银行职员");
+    Class.forName("com.microsoft.jdbc.sqlserver.SQLServerDriver");
+  }
+  //Overridden so we can exit when window is closed
+  protected void processWindowEvent(WindowEvent e) {
+    super.processWindowEvent(e);
+    if (e.getID() == WindowEvent.WINDOW_CLOSING) {
+      System.exit(0);
+    }
+  }
+
+  void jButton1_actionPerformed(ActionEvent e) {
+   try{
+    String url = "jdbc:microsoft:sqlserver://localhost:1433;DatabaseName=CCES";
+   String username= "sa";
+     String password= "";
+     con = DriverManager.getConnection(url,username,password);
+     query="select * from Creditcard where CreditcardId=? and CreditcardCode=?";
+     pstmt = con.prepareStatement(query);
+     query2="select * from YHworker where YHworkerID=? and Code=?";
+     pstmt2 = con.prepareStatement(query2);
+   }
+   catch(Exception ep)
+   {   System.out.print("系统错误，请重新运行。");
+   }
+    String str1=jTextField1.getText();
+    String str5;
+    String str4="";
+    for(int i=0;i<jPasswordField1.getPassword().length;i++)
+      str4+=jPasswordField1.getPassword()[i];
+
+   if(str.equals("YHworker"))
+  {
+      try{
+             str5=jTextField1.getText();
+             pstmt2.setString(1,str5);
+             pstmt2.setString(2,str4);
+             rs=pstmt2.executeQuery();
+            if(rs.next()){
+             this.dispose();
+             eventFrame eventFrame1=new eventFrame(str5);
+             eventFrame1.setSize(new Dimension(500,350));
+             Dimension screenSize=Toolkit.getDefaultToolkit().getScreenSize();
+             Dimension frameSize=eventFrame1.getSize();
+             eventFrame1.setState(eventFrame1.NORMAL);
+             eventFrame1.setLocation((screenSize.width-frameSize.width)/2,(screenSize.height-frameSize.height)/2);
+             eventFrame1.show();
+            }
+            else
+              jTextField1.setText("用户名或密码错。");
+         }
+       catch(Exception em)
+       {
+         System.out.print("系统错误，请重新运行。");
+       }
+  }
+  else
+    {    try{
+             str5=jTextField1.getText();
+             pstmt.setString(1,str5);
+             pstmt.setString(2,str4);
+             rs=pstmt.executeQuery();
+            if(rs.next()){
+              this.dispose();
+              evFrame1 evFrame=new evFrame1(str5);
+              evFrame.setSize(new Dimension(500,350));
+              Dimension screenSize=Toolkit.getDefaultToolkit().getScreenSize();
+              Dimension frameSize=evFrame.getSize();
+              evFrame.setState(evFrame1.NORMAL);
+              evFrame.setLocation((screenSize.width-frameSize.width)/2,(screenSize.height-frameSize.height)/2);
+              evFrame.show();
+            }
+            else
+              jTextField1.setText("用户名或密码错。");
+         }
+       catch(Exception em)
+       {
+         System.out.print("系统错误，请重新运行。");
+       }
+     }
+
+  }
+
+  void jButton2_actionPerformed(ActionEvent e) {
+    jTextField1.setText(" ");
+       jPasswordField1.setText(" ");
+  }
+
+  void jComboBox1_itemStateChanged(ItemEvent e) {
+    for(int i=0;i<2;i++)
+   if(jComboBox1.getSelectedIndex()==i)
+     str=(String)jComboBox1.getSelectedItem();
+    for(int i=0;i<b.length;i++)
+                if(str.equals(b[i]))
+                  str=a[i];
+
+  }
+}
+
+class loginFrame_jButton1_actionAdapter implements java.awt.event.ActionListener {
+  loginFrame adaptee;
+
+  loginFrame_jButton1_actionAdapter(loginFrame adaptee) {
+    this.adaptee = adaptee;
+  }
+  public void actionPerformed(ActionEvent e) {
+    adaptee.jButton1_actionPerformed(e);
+  }
+}
+
+class loginFrame_jButton2_actionAdapter implements java.awt.event.ActionListener {
+  loginFrame adaptee;
+
+  loginFrame_jButton2_actionAdapter(loginFrame adaptee) {
+    this.adaptee = adaptee;
+  }
+  public void actionPerformed(ActionEvent e) {
+    adaptee.jButton2_actionPerformed(e);
+  }
+}
+
+class loginFrame_jComboBox1_itemAdapter implements java.awt.event.ItemListener {
+  loginFrame adaptee;
+
+  loginFrame_jComboBox1_itemAdapter(loginFrame adaptee) {
+    this.adaptee = adaptee;
+  }
+  public void itemStateChanged(ItemEvent e) {
+    adaptee.jComboBox1_itemStateChanged(e);
+  }
+}

@@ -1,0 +1,1913 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>修改简历</title>
+<link href="../../css/main.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+td img {display: block;}.title {
+	margin-top: 3px;
+	font-size: 16px;
+	font-weight: bold;
+	padding-top: 3px;
+	text-align: center;
+	vertical-align: top;
+}
+.content {
+	font-size: 14px;
+	line-height: 40px;
+	color: #333;
+	text-indent: 2em;
+	margin: 20px;
+}
+</style>
+</head>
+
+<body>
+<table width="960" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="203" valign="top" vlign="top" ><div id="linkDiv">
+	<br /><br />
+     <div style="width:100%; height:30px; font-size:14px; font-weight: bold;"><a href="add_resume.html">简历管理</a></div> 
+    <div style="height:30px; font-size:14px; margin-left:25px;"><a href="add_resume.html">添加简历</a></div> 
+    <div style="height:30px; font-size:14px; margin-left:25px;"><a href="modify_resume.html">修改简历</a></div>
+    <div style="height:30px; font-size:14px; margin-left:25px;"><a href="del_resume.html">删除简历</a></div>
+    <div style="width:100%; height:30px; font-size:14px; font-weight: bold;"><a href="add_resume.html">求职管理</a></div> 
+    <div style="height:30px; font-size:14px; margin-left:25px;"><a href="interview_note.html">面试邀请</a></div> 
+    <div style="height:30px; font-size:14px; margin-left:25px;"><a href="application_record.html">申请记录</a></div>
+    <div style="height:30px; font-size:14px; margin-left:25px;"><a href="application_favorite.html">职位收藏</a></div>
+    <div style="height:30px; font-size:14px; margin-left:25px;"><a href="send_resume.html">外发简历</a></div>
+	<div style="height:30px; font-size:14px; margin-left:25px;"><a href="">职位搜索</a></div>
+    <div style="width:100%; height:30px; font-size:14px; font-weight: bold;"><a href="add_resume.html">注册信息维护</a></div> 
+    <div style="height:30px; font-size:14px; margin-left:25px;"><a href="modPassword.html">修改密码</a></div> 
+    <div style="height:30px; font-size:14px; margin-left:25px;"><a href="mod_RegisteInfo.html">修改注册信息</a></div>    
+    <div style="width:100%; height:30px; font-size:14px; font-weight: bold;"><a href="add_resume.html">系统管理</a></div> 
+    <div style="height:30px; font-size:14px; margin-left:25px;"><a href="javascript:window.close()">退出系统</a></div>       
+    </div>
+	</td>
+    <td width="757" valign="top">
+	<br /><br />
+    <div align="left"><strong>个人后台管理»简历管理»修改简历</strong></div>
+	<hr color="#999999" />
+	<TABLE cellSpacing=5 cellPadding=5 width=730 align=center border=0>
+  <TBODY>
+  <TR>
+    <TD><TABLE cellSpacing=0 cellPadding=0 width=713 border=0>
+        <TBODY>
+        <TR>
+          <TD bgcolor="#F0F0F0">&nbsp;</TD></TR>
+        <TR>
+          <TD vAlign=bottom bgcolor="#F0F0F0"><TABLE 
+            cellSpacing=1 cellPadding=3 width="98%" align=center border=0>
+              <TBODY>
+              <TR>
+                <TD width=269 bgcolor="#F9F9F9">简历名称： <INPUT id=id_resume_name 
+                  onpropertychange="set_change_flag(true,'',this);" maxLength=20 
+                  size=13 value=我的简历 name=resume_name> <INPUT class=but_input id=resume_name_save onclick=check_resume_name() type=button value=保存 name=resume_name_save> 
+                </TD>
+                <TD width=415 align=right bgcolor="#F9F9F9"><!--<input type="button" value="公开设置" onClick="window.location.href='js_resume_wa_secrecy.php'" class="but_input"/>
+
+			
+
+		<input type="button" value="选择简历模板" onClick="window.open('Resumetemps.php?resume_id=6441712','_blank')" class="but_input"/>
+
+
+
+			 <input type="button" value="简历预览" onClick="resume_view()" class="but_input"/>--></TD></TR></TBODY></TABLE></TD></TR>
+        <TR>
+          <TD bgcolor="#F0F0F0">&nbsp;</TD></TR></TBODY></TABLE></TD></TR>
+  <TR>
+    <TD>
+      <TABLE cellSpacing=0 cellPadding=0 width=713 border=0>
+        <TBODY>
+        <TR>
+          <TD bgcolor="#F0F0F0">&nbsp;</TD></TR>
+        <TR>
+          <TD bgcolor="#F9F9F9">
+            <TABLE cellSpacing=1 cellPadding=1 width="98%" align=center 
+border=0>
+              <TBODY>
+              <TR>
+                <TD height=12>
+                  <TABLE cellSpacing=2 cellPadding=3 width="100%" border=0>
+                    <TBODY>
+                    <TR>
+                      <TD width="80%" colSpan=3><STRONG 
+                        class=c_n1>基本信息<img 
+                        src="../../images/icon_p_01.gif" /></STRONG></TD>
+                      <TD width="20%">
+                        <DIV align=right><INPUT class=but_input id=check_baseinfo_save onclick=check_baseinfo() type=button value=保存个人基本资料 name=button4> 
+                        </DIV></TD></TR>
+                    <TR>
+                      <TD colSpan=4>
+                        <TABLE cellSpacing=0 cellPadding=3 width="100%" 
+border=0>
+                          <TBODY>
+                          <TR>
+                            <TD width="20%"><DIV align=right><SPAN 
+                            class=c_n1>*</SPAN>姓名：</DIV></TD>
+                            <TD width="8%"><INPUT id=id_name1 style="WIDTH: 125px" 
+                              onpropertychange="set_change_flag(true,'resume_base',this);" 
+                              name=name1></TD>
+                            <TD colSpan=2>
+                              <DIV align=right><SPAN 
+                            class=c_n1>*</SPAN>性别：</DIV></TD>
+                            <TD width="20%"><SELECT id=id_sex 
+                              style="WIDTH: 130px" 
+                              onchange="change_h_w(this);set_change_flag(true,'resume_base',this);" 
+                              name=sex> <OPTION value=M 
+                                selected>--------男--------</OPTION> <OPTION 
+                                value=F>--------女-------</OPTION></SELECT> </TD>
+                            <TD width="3%">&nbsp; </TD>
+                            <TD width="3%" rowSpan=7><IMG 
+                              src="../../images/man.png" 
+                              width=120 height=150></TD>
+                            <TD width="3%" rowSpan=7>&nbsp; </TD></TR>
+                          <TR>
+                            <TD align=right width="20%">
+                              <DIV align=right><SPAN 
+                              class=c_n1>*</SPAN>出生日期：</DIV></TD>
+                            <TD><SELECT name=bir_Year> <OPTION label=1939 
+                                value=1939>1939</OPTION> <OPTION label=1940 
+                                value=1940>1940</OPTION> <OPTION label=1941 
+                                value=1941>1941</OPTION> <OPTION label=1942 
+                                value=1942>1942</OPTION> <OPTION label=1943 
+                                value=1943>1943</OPTION> <OPTION label=1944 
+                                value=1944>1944</OPTION> <OPTION label=1945 
+                                value=1945>1945</OPTION> <OPTION label=1946 
+                                value=1946>1946</OPTION> <OPTION label=1947 
+                                value=1947>1947</OPTION> <OPTION label=1948 
+                                value=1948>1948</OPTION> <OPTION label=1949 
+                                value=1949>1949</OPTION> <OPTION label=1950 
+                                value=1950>1950</OPTION> <OPTION label=1951 
+                                value=1951>1951</OPTION> <OPTION label=1952 
+                                value=1952>1952</OPTION> <OPTION label=1953 
+                                value=1953>1953</OPTION> <OPTION label=1954 
+                                value=1954>1954</OPTION> <OPTION label=1955 
+                                value=1955>1955</OPTION> <OPTION label=1956 
+                                value=1956>1956</OPTION> <OPTION label=1957 
+                                value=1957>1957</OPTION> <OPTION label=1958 
+                                value=1958>1958</OPTION> <OPTION label=1959 
+                                value=1959>1959</OPTION> <OPTION label=1960 
+                                value=1960>1960</OPTION> <OPTION label=1961 
+                                value=1961>1961</OPTION> <OPTION label=1962 
+                                value=1962>1962</OPTION> <OPTION label=1963 
+                                value=1963>1963</OPTION> <OPTION label=1964 
+                                value=1964>1964</OPTION> <OPTION label=1965 
+                                value=1965>1965</OPTION> <OPTION label=1966 
+                                value=1966>1966</OPTION> <OPTION label=1967 
+                                value=1967>1967</OPTION> <OPTION label=1968 
+                                value=1968>1968</OPTION> <OPTION label=1969 
+                                value=1969>1969</OPTION> <OPTION label=1970 
+                                value=1970>1970</OPTION> <OPTION label=1971 
+                                value=1971>1971</OPTION> <OPTION label=1972 
+                                value=1972>1972</OPTION> <OPTION label=1973 
+                                value=1973>1973</OPTION> <OPTION label=1974 
+                                value=1974>1974</OPTION> <OPTION label=1975 
+                                value=1975>1975</OPTION> <OPTION label=1976 
+                                value=1976>1976</OPTION> <OPTION label=1977 
+                                value=1977>1977</OPTION> <OPTION label=1978 
+                                value=1978>1978</OPTION> <OPTION label=1979 
+                                value=1979>1979</OPTION> <OPTION label=1980 
+                                value=1980 selected>1980</OPTION> <OPTION 
+                                label=1981 value=1981>1981</OPTION> <OPTION 
+                                label=1982 value=1982>1982</OPTION> <OPTION 
+                                label=1983 value=1983>1983</OPTION> <OPTION 
+                                label=1984 value=1984>1984</OPTION> <OPTION 
+                                label=1985 value=1985>1985</OPTION> <OPTION 
+                                label=1986 value=1986>1986</OPTION> <OPTION 
+                                label=1987 value=1987>1987</OPTION> <OPTION 
+                                label=1988 value=1988>1988</OPTION> <OPTION 
+                                label=1989 value=1989>1989</OPTION> <OPTION 
+                                label=1990 value=1990>1990</OPTION> <OPTION 
+                                label=1991 value=1991>1991</OPTION> <OPTION 
+                                label=1992 value=1992>1992</OPTION> <OPTION 
+                                label=1993 value=1993>1993</OPTION> <OPTION 
+                                label=1994 value=1994>1994</OPTION> <OPTION 
+                                label=1995 value=1995>1995</OPTION> <OPTION 
+                                label=1996 value=1996>1996</OPTION> <OPTION 
+                                label=1997 value=1997>1997</OPTION> <OPTION 
+                                label=1998 value=1998>1998</OPTION> <OPTION 
+                                label=1999 value=1999>1999</OPTION> <OPTION 
+                                label=2000 value=2000>2000</OPTION> <OPTION 
+                                label=2001 value=2001>2001</OPTION> <OPTION 
+                                label=2002 value=2002>2002</OPTION> <OPTION 
+                                label=2003 value=2003>2003</OPTION> <OPTION 
+                                label=2004 value=2004>2004</OPTION> <OPTION 
+                                label=2005 value=2005>2005</OPTION> <OPTION 
+                                label=2006 value=2006>2006</OPTION> <OPTION 
+                                label=2007 value=2007>2007</OPTION> <OPTION 
+                                label=2008 value=2008>2008</OPTION></SELECT> 
+                              <SELECT name=bir_Month> <OPTION label=01 
+                                value=01 selected>01</OPTION> <OPTION label=02 
+                                value=02>02</OPTION> <OPTION label=03 
+                                value=03>03</OPTION> <OPTION label=04 
+                                value=04>04</OPTION> <OPTION label=05 
+                                value=05>05</OPTION> <OPTION label=06 
+                                value=06>06</OPTION> <OPTION label=07 
+                                value=07>07</OPTION> <OPTION label=08 
+                                value=08>08</OPTION> <OPTION label=09 
+                                value=09>09</OPTION> <OPTION label=10 
+                                value=10>10</OPTION> <OPTION label=11 
+                                value=11>11</OPTION> <OPTION label=12 
+                                value=12>12</OPTION></SELECT></TD>
+                            <TD colSpan=2>
+                              <DIV align=right>现居住地：</DIV></TD>
+                            <TD><INPUT class=case id=cityBut style="CURSOR: hand" onClick="citytypeSelector.showSelector();set_change_flag(true,'resume_base',this);" type=button value=请选择居住地 name=cityBut></TD>
+                            <TD width="3%">&nbsp; </TD></TR>
+                          <TR>
+                            <TD>
+                              <DIV align=right><SPAN 
+                              class=c_n1>*</SPAN>工作年限：</DIV></TD>
+                            <TD><SELECT id=id_work_time style="WIDTH: 130px" 
+                              onchange="set_change_flag(true,'resume_base',this);workexp_req();" 
+                              name=experience_id> <OPTION value=1 
+                                selected>在读学生</OPTION> <OPTION 
+                                value=2>应届毕业生</OPTION> <OPTION 
+                                value=3>一年以上</OPTION> <OPTION 
+                                value=4>二年以上</OPTION> <OPTION 
+                                value=5>三年以上</OPTION> <OPTION 
+                                value=6>五年以上</OPTION> <OPTION 
+                                value=7>八年以上</OPTION> <OPTION 
+                                value=8>十年以上</OPTION> <OPTION 
+                                value=9>十五年以上</OPTION></SELECT></TD>
+                            <TD colSpan=2>
+                              <DIV align=right>职称：</DIV></TD>
+                            <TD><INPUT id=id_title style="WIDTH: 125px" 
+                              onpropertychange="set_change_flag(true,'resume_base',this);" 
+                              name=title></TD>
+                            <TD>&nbsp; </TD></TR>
+                          <TR>
+                            <TD>
+                              <DIV align=right>户口所在地：</DIV></TD>
+                            <TD><INPUT class=case id=accountbut style="CURSOR: pointer" onClick="accountSelector.showSelector();set_change_flag(true,'resume_base',this);" type=button value=请选择户口所在地 name=accountbut></TD>
+                            <TD colSpan=2>
+                              <DIV align=right>证件类型：</DIV></TD>
+                            <TD><SELECT id=id_document_type 
+                              style="WIDTH: 130px" 
+                              onchange="set_change_flag(true,'resume_base',this);" 
+                              name=document_type> <OPTION value="" 
+                                selected>请选择</OPTION> <OPTION 
+                                value=1>身份证</OPTION> <OPTION value=2>护照</OPTION> 
+                                <OPTION value=3>驾驶执照</OPTION> <OPTION 
+                                value=4>户口本</OPTION> <OPTION 
+                              value=5>其他</OPTION></SELECT> </TD>
+                            <TD>&nbsp; </TD></TR>
+                          <TR>
+                            <TD>
+                              <DIV align=right>证件号：</DIV></TD>
+                            <TD><INPUT id=id_document_number 
+                              style="WIDTH: 125px" 
+                              onpropertychange="set_change_flag(true,'resume_base',this);" 
+                              maxLength=30 name=document_number></TD>
+                            <TD colSpan=2>
+                              <DIV align=right>婚姻状况：</DIV></TD>
+                            <TD><SELECT id=id_marital_status 
+                              style="WIDTH: 130px" 
+                              onchange="set_change_flag(true,'resume_base',this);" 
+                              name=marital_status> <OPTION 
+                                value="">请选择</OPTION> <OPTION value=1 
+                                selected>-------未婚---------</OPTION> <OPTION 
+                                value=2>-------已婚---------</OPTION></SELECT></TD>
+                            <TD>&nbsp; </TD></TR>
+                          <TR>
+                            <TD>
+                              <DIV align=right>国籍：</DIV></TD>
+                            <TD><SELECT id=id_nationality style="WIDTH: 130px" 
+                              onchange="set_change_flag(true,'resume_base',this);" 
+                              name=nationality> <OPTION value="">请选择</OPTION> 
+                                <OPTION value=C selected>中国</OPTION> <OPTION 
+                                value=G>港澳台</OPTION> <OPTION 
+                                value=F>外籍人士</OPTION></SELECT></TD>
+                            <TD colSpan=2>
+                              <DIV align=right>民族：</DIV></TD>
+                            <TD><SELECT id=id_national style="WIDTH: 130px" 
+                              onchange="set_change_flag(true,'resume_base',this);" 
+                              name=national> <OPTION value="" 
+                                selected>请选择</OPTION> <OPTION 
+                                value=1>汉族</OPTION> <OPTION value=2>蒙古族</OPTION> 
+                                <OPTION value=3>回族</OPTION> <OPTION 
+                                value=4>藏族</OPTION> <OPTION 
+                                value=5>维吾尔族</OPTION> <OPTION 
+                                value=6>苗族</OPTION> <OPTION value=7>彝族</OPTION> 
+                                <OPTION value=8>壮族</OPTION> <OPTION 
+                                value=9>朝鲜族</OPTION> <OPTION 
+                                value=10>满族</OPTION> <OPTION 
+                                value=11>侗族</OPTION> <OPTION 
+                                value=12>瑶族</OPTION> <OPTION 
+                                value=13>白族</OPTION> <OPTION 
+                                value=14>土家族</OPTION> <OPTION 
+                                value=15>哈尼族</OPTION> <OPTION 
+                                value=16>哈萨克族</OPTION> <OPTION 
+                                value=17>傣族</OPTION> <OPTION 
+                                value=18>黎族</OPTION> <OPTION 
+                                value=19>傈僳族</OPTION> <OPTION 
+                                value=20>佤族</OPTION> <OPTION 
+                                value=21>畲族</OPTION> <OPTION 
+                                value=22>高山族</OPTION> <OPTION 
+                                value=23>拉祜族</OPTION> <OPTION 
+                                value=24>水族</OPTION> <OPTION 
+                                value=25>东乡族</OPTION> <OPTION 
+                                value=26>纳西族</OPTION> <OPTION 
+                                value=27>景颇族</OPTION> <OPTION 
+                                value=28>柯尔克孜族</OPTION> <OPTION 
+                                value=29>土族</OPTION> <OPTION 
+                                value=30>达斡尔族</OPTION> <OPTION 
+                                value=31>仫佬族</OPTION> <OPTION 
+                                value=32>羌族</OPTION> <OPTION 
+                                value=33>布朗族</OPTION> <OPTION 
+                                value=34>撒拉族</OPTION> <OPTION 
+                                value=35>毛南族</OPTION> <OPTION 
+                                value=36>仡佬族</OPTION> <OPTION 
+                                value=37>锡伯族</OPTION> <OPTION 
+                                value=38>阿昌族</OPTION> <OPTION 
+                                value=39>普米族</OPTION> <OPTION 
+                                value=40>塔吉克族</OPTION> <OPTION 
+                                value=41>怒族</OPTION> <OPTION 
+                                value=42>乌孜别克族</OPTION> <OPTION 
+                                value=43>俄罗斯族</OPTION> <OPTION 
+                                value=44>鄂温克族</OPTION> <OPTION 
+                                value=45>德昂族</OPTION> <OPTION 
+                                value=46>保安族</OPTION> <OPTION 
+                                value=47>裕固族</OPTION> <OPTION 
+                                value=48>京族</OPTION> <OPTION 
+                                value=49>塔塔尔族</OPTION> <OPTION 
+                                value=50>独龙族</OPTION> <OPTION 
+                                value=51>鄂伦春族</OPTION> <OPTION 
+                                value=52>赫哲族</OPTION> <OPTION 
+                                value=53>门巴族</OPTION> <OPTION 
+                                value=54>珞巴族</OPTION> <OPTION 
+                                value=55>基诺族</OPTION> <OPTION 
+                                value=56>布依族</OPTION></SELECT> </TD>
+                            <TD>&nbsp; </TD></TR>
+                          <TR>
+                            <TD>
+                              <DIV align=right>身高：</DIV></TD>
+                            <TD><INPUT id=id_height 
+                              onkeyup="this.value=this.value.replace(/\D/g,'')" 
+                              style="WIDTH: 80px" 
+                              onpropertychange="set_change_flag(true,'resume_base',this);" 
+                              value=0 name=height>厘米</TD>
+                            <TD colSpan=2>
+                              <DIV align=right>体重：</DIV></TD>
+                            <TD><INPUT id=id_weight 
+                              onkeyup="this.value=this.value.replace(/\D/g,'')" 
+                              style="WIDTH: 80px" 
+                              onpropertychange="set_change_flag(true,'resume_base',this);" 
+                              value=0 name=weight>公斤</TD>
+                            <TD align=middle colSpan=2><BR><SPAN 
+                              id=cancel_photo_span ><A 
+                              style="CURSOR: pointer" 
+                              onclick=cancel_photo()>删除相片</A></SPAN> </TD>
+                            <TD align=middle>&nbsp; </TD></TR>
+                          <!--<tr style="height: 26px;">
+																		<td align="right">
+																			<div align="right">
+																				居住地靠近地铁站：</div>
+																		</td>
+																		<td colspan="7" valign="middle">
+																			<input type="button" class="input_jobs_search_high" value="请选择地铁" name="subwayBut" onclick="subwaySelector.showSelector();set_change_flag(true,'resume_base',this);" id="subwayBut" />
+																			<input type="hidden" name="str_subway" value=",," id="id_subway" />
+																			(步行离地铁站15分钟请选择) </td>
+																	</tr>--></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR>
+              <TR>
+                <TD height=12>
+                  <HR>
+                </TD></TR>
+              <TR>
+                <TD>
+                  <TABLE cellSpacing=2 cellPadding=3 width="100%" border=0>
+                    <TBODY>
+                    <TR>
+                      <TD><SPAN 
+                      id=resume_photo><STRONG>个人相片上传</STRONG></SPAN></TD></TR>
+                    <TR>
+                      <TD>
+                        <TABLE cellSpacing=1 cellPadding=3 width="100%" 
+border=0>
+                          <TBODY>
+                          <TR>
+                            <TD width="26%">
+                              <DIV align=right>上传照片：</DIV></TD>
+                            <TD width="74%">
+                              <FORM action=/modules/jsresume/upload_photo.php 
+                              method=post target=upload_iframe 
+                              encType=multipart/form-data><INPUT id=id_photo 
+                              onpropertychange="set_change_flag(true,'resume_photo',this);" 
+                              type=file size=25 name=photo> <INPUT id=but_up onClick="return check_photo()" type=submit value="上 传" name=but_up> 
+                              </FORM><IFRAME  
+                              name=upload_iframe marginWidth=0 marginHeight=0 
+                              src="about:blank" frameBorder=0 width=0 
+                              scrolling=no height=0></IFRAME></TD></TR>
+                          <TR>
+                            <TD width="26%">&nbsp; </TD>
+                            <TD>大小为100KB，宽150px，高150px。照片格式为jpg,jpeg,gif! 
+                          </TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR>
+              <TR>
+                <TD height=12>
+                  <HR>
+                </TD></TR>
+              <TR>
+                <TD height=12>
+                  <TABLE cellSpacing=2 cellPadding=3 width="100%" border=0>
+                    <TBODY>
+                    <TR>
+                      <TD width=600 colSpan=2><STRONG><A>联系方式</A></STRONG>&nbsp;<IMG 
+                        src="../../images/icon_p_01.gif"></STRONG></TD>
+                      <TD align=right><INPUT class=but_input id=check_contact_save onclick=check_contact() type=button value=保存联系方式 name=check_contact_save></TD></TR>
+                    <TR>
+                      <TD colSpan=3>
+                        <TABLE cellSpacing=0 cellPadding=3 width="100%" 
+border=0>
+                          <TBODY>
+                          <TR>
+                            <TD vAlign=center width="18%">
+                              <DIV align=right><SPAN 
+                              class=c_n1>*</SPAN>电子邮箱：</DIV></TD>
+                            <TD vAlign=center width="20%"><INPUT id=id_email 
+                              onpropertychange="set_change_flag(true,'resume_contact',this);" 
+                              name=e_mail></TD>
+                            <TD vAlign=center align=right width="22%">
+                              <DIV align=right><SPAN 
+                            class=c_n1>*</SPAN>手机：</DIV></TD>
+                            <TD vAlign=center width="40%"><INPUT id=id_mobile 
+                              onkeyup=chkUtil(this,this.value) 
+                              onpropertychange="set_change_flag(true,'resume_contact',this);" 
+                              maxLength=20 name=mobile></TD></TR>
+                          <TR>
+                            <TD vAlign=center align=right>
+                              <DIV align=right>QQ：</DIV></TD>
+                            <TD vAlign=center><INPUT id=id_qq 
+                              onkeyup=chkUtil(this,this.value) 
+                              onpropertychange="set_change_flag(true,'resume_contact',this);" 
+                              maxLength=10 name=qq></TD>
+                            <TD vAlign=center align=right>
+                              <DIV align=right>固定电话：</DIV></TD>
+                            <TD vAlign=center><INPUT id=id_area_num 
+                              onkeyup=chkUtil(this,this.value) 
+                              style="WIDTH: 40px" 
+                              onpropertychange="set_change_flag(true,'resume_contact',this);" 
+                              maxLength=5 name=area_num> -<INPUT id=id_tel_num 
+                              onkeyup=chkUtil(this,this.value) 
+                              style="WIDTH: 82px" 
+                              onpropertychange="set_change_flag(true,'resume_contact',this);" 
+                              maxLength=8 name=tel_num>- <INPUT id=id_ext_num 
+                              onkeyup=chkUtil(this,this.value) 
+                              style="WIDTH: 40px" 
+                              onpropertychange="set_change_flag(true,'resume_contact',this);" 
+                              maxLength=5 name=ext_num></TD></TR>
+                          
+                          <TR>
+                            <TD vAlign=center align=right><div align="right">小灵通：</div></TD>
+                            <TD vAlign=center><input id="id_area_num2" 
+                              onkeyup="chkUtil(this,this.value)" 
+                              style="WIDTH: 40px" 
+                              onpropertychange="set_change_flag(true,'resume_contact',this);" 
+                              maxlength="4" name="area_num2" />
+                              -
+                                <input id="id_tel_num2" 
+                              onkeyup="chkUtil(this,this.value)" 
+                              style="WIDTH: 82px" 
+                              onpropertychange="set_change_flag(true,'resume_contact',this);" 
+                              maxlength="8" name="tel_num2" /></TD>
+                            <TD vAlign=center align=right><div align="right">邮政编码：</div></TD>
+                            <TD vAlign=center><INPUT id=id_zipcode 
+                              onblur=check_zipcode(this) 
+                              onkeyup=chkUtil(this,this.value) 
+                              onpropertychange="set_change_flag(true,'resume_contact',this);" 
+                              maxLength=6 name=zipcode><SPAN 
+                              id=zipcode_span></SPAN></TD></TR>
+                          
+                          <TR>
+                            <TD vAlign=center>
+                              <DIV align=right>通讯地址：</DIV></TD>
+                            <TD vAlign=center colSpan=3><INPUT id=id_address 
+                              style="WIDTH: 200px" 
+                              onpropertychange="set_change_flag(true,'resume_contact',this);" 
+                              name=address></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR>
+              <TR>
+                <TD height=12>
+                  <HR>
+                </TD></TR>
+              <TR>
+                <TD>
+                  <TABLE cellSpacing=2 cellPadding=3 width="100%" border=0>
+                    <TBODY>
+                    <TR>
+                      <TD width=772><STRONG><A>求职意向</A></STRONG></STRONG>&nbsp;<IMG 
+                        src="../../images/icon_p_01.gif"></TD>
+                      <TD align=right colSpan=2><INPUT class=but_input id=check_job_wish_id onclick=check_job_wish() type=button value=保存求职意向 name=check_job_wish_id></TD></TR>
+                    <TR>
+                      <TD colSpan=3>
+                        <TABLE cellSpacing=0 cellPadding=3 width="100%" 
+border=0>
+                          <TBODY>
+                          <TR>
+                            <TD width="18%">
+                              <DIV align=right>求职性质：</DIV></TD>
+                            <TD width="82%"><SELECT id=id_work_type 
+                              style="WIDTH: 180px" 
+                              onchange="set_change_flag(true,'resume_wishjob',this);" 
+                              name=work_type> <OPTION value="" 
+                                selected>请选择</OPTION> <OPTION 
+                                value=1>全职</OPTION> <OPTION value=2>兼职</OPTION> 
+                                <OPTION value=3>短期合同制</OPTION> <OPTION 
+                                value=4>志愿者</OPTION></SELECT> </TD></TR>
+                          <TR>
+                            <TD width="18%">
+                              <DIV align=right>期望从事行业：</DIV></TD>
+                            <TD><INPUT class=case id=industryBut style="CURSOR: hand" onClick="industrySelector.showSelector();set_change_flag(true,'resume_wishjob',this);" type=button value=请选择行业类型 name=industryBut></TD></TR>
+                          <TR>
+                            <TD width="18%">
+                              <DIV align=right><SPAN 
+                              class=c_n1>*</SPAN>期望工作地：</DIV></TD>
+                            <TD><INPUT class=case id=job_place style="CURSOR: hand" onClick="wishplaceSelector.showSelector();set_change_flag(true,'resume_wishjob',this);" type=button size=60 value=请选择工作地点 name=job_place></TD></TR>
+                          <TR>
+                            <TD align=right><SPAN 
+class=c_n1>*</SPAN>期望工作职位：</TD>
+                            <TD><INPUT class=case id=wishjob style="CURSOR: hand" onClick="jobtypeSelector.showSelector();set_change_flag(true,'resume_wishjob',this);" type=button size=60 value=请选择期望工作职位 name=wishjob></TD></TR>
+                          <TR>
+                            <TD width="18%">
+                              <DIV align=right>期望月薪（税前）：</DIV></TD>
+                            <TD><SPAN class=pad7><SELECT id=id_wish_salary 
+                              style="WIDTH: 180px" 
+                              onchange="set_change_flag(true,'resume_wishjob',this);" 
+                              name=wish_salary> <OPTION value="" 
+                                selected>请选择</OPTION> <OPTION 
+                                value=1>1000以下</OPTION> <OPTION 
+                                value=2>1001到2000</OPTION> <OPTION 
+                                value=3>2001到3000</OPTION> <OPTION 
+                                value=4>3001到4000</OPTION> <OPTION 
+                                value=5>4001到6000</OPTION> <OPTION 
+                                value=6>6001到8000</OPTION> <OPTION 
+                                value=7>8001到10000</OPTION> <OPTION 
+                                value=8>10001到15000</OPTION> <OPTION 
+                                value=9>15001到20000</OPTION> <OPTION 
+                                value=10>20001到25000</OPTION> <OPTION 
+                                value=11>25001以上</OPTION> <OPTION 
+                                value=12>面议</OPTION></SELECT> </SPAN></TD></TR>
+                          <TR>
+                            <TD>
+                              <DIV align=right>期望单位性质：</DIV></TD>
+                            <TD><SPAN class=pad7><SELECT 
+                              id=id_wish_employer_type style="WIDTH: 180px" 
+                              onchange="set_change_flag(true,'resume_wishjob',this);" 
+                              name=wish_employer_type> <OPTION value="" 
+                                selected>请选择</OPTION> <OPTION 
+                                value=1>外商独资</OPTION> <OPTION 
+                                value=2>合资</OPTION> <OPTION 
+                                value=3>上市公司</OPTION> <OPTION 
+                                value=4>国企</OPTION> <OPTION 
+                                value=5>国家机关</OPTION> <OPTION 
+                                value=6>事业单位</OPTION> <OPTION 
+                                value=7>民营/私企</OPTION> <OPTION 
+                                value=8>代表处</OPTION> <OPTION 
+                                value=9>非赢利性组织</OPTION> <OPTION 
+                                value=10>其他</OPTION></SELECT> </SPAN></TD></TR>
+                          <TR>
+                            <TD>
+                              <DIV align=right>目前工作状态：</DIV></TD>
+                            <TD><SPAN class=pad7><SELECT class=kuang3 
+                              id=id_current_status style="WIDTH: 180px" 
+                              onchange="set_change_flag(true,'resume_wishjob',this);" 
+                              name=current_status> <OPTION value="" 
+                                selected>请选择</OPTION> <OPTION 
+                                value=1>---------在岗---------</OPTION> <OPTION 
+                                value=2>---------离职---------</OPTION></SELECT> 
+                              </SPAN></TD></TR>
+                          <TR>
+                            <TD width="18%">
+                              <DIV align=right>最快到岗时间：</DIV></TD>
+                            <TD><SPAN class=pad7><SELECT class=kuang3 
+                              id=id_entry_time style="WIDTH: 180px" 
+                              onchange="set_change_flag(true,'resume_wishjob',this);" 
+                              name=entry_time> <OPTION value="">请选择</OPTION> 
+                                <OPTION value=1 
+                                selected>---------随时---------</OPTION> <OPTION 
+                                value=2>---------一个月---------</OPTION> <OPTION 
+                                value=3>---------两周---------</OPTION> <OPTION 
+                                value=4>---------一周---------</OPTION> <OPTION 
+                                value=5>---------一个月以上---------</OPTION></SELECT> 
+                              </SPAN></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR>
+              <TR>
+                <TD>
+                  <HR>
+                </TD></TR>
+              <TR>
+                <TD>
+                  <TABLE cellSpacing=2 cellPadding=3 width="100%" border=0>
+                    <TBODY>
+                    <TR>
+                      <TD colSpan=2><STRONG><A>自我评价</A></STRONG></TD>
+                      <TD align=right width=294><INPUT class=but_input id=check_self_id onclick=check_self() type=button value=保存自我评价 name=check_self_id></TD></TR>
+                    <TR>
+                      <TD width=210>
+                        <DIV 
+                        align=right>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</DIV></TD>
+                      <TD 
+                        width=609>请在下面输入框中输入您对自己的简短评价，字数在1000字符以内。请简明扼要的说明您最大的优势是什么，避免使用一些空洞、老套的话</TD>
+                      <TD>&nbsp; </TD></TR>
+                    <TR>
+                      <TD>&nbsp; </TD>
+                      <TD><TEXTAREA id=id_self_evaluation onpropertychange="set_change_flag(true,'resume_self',this);" name=self_evaluation rows=4 cols=60></TEXTAREA></TD>
+                      <TD>&nbsp; </TD></TR></TBODY></TABLE></TD></TR>
+              <TR>
+                <TD>
+                  <HR>
+                </TD></TR>
+              <TR>
+                <TD>
+                  <TABLE cellSpacing=2 cellPadding=3 width="100%" border=0>
+                    <TBODY>
+                    <TR>
+                      <TD width="80%"><STRONG><A>教育背景</A></STRONG></STRONG>&nbsp;<IMG 
+                        src="../../images/icon_p_01.gif"></TD>
+                      <TD align=right width="84%">
+                        <DIV align=right><INPUT class=but_input id=add_edu_btn onclick=add_edu(this) type=button value=添加资料> 
+                        </DIV></TD></TR></TBODY></TABLE>
+                  <DIV id=div_edu>
+                  <TABLE cellSpacing=2 cellPadding=3 width="100%" border=0>
+                    <TBODY>
+                    <TR id=edu_list>
+                      <TD colSpan=3></TD></TR></TBODY></TABLE>
+                  <TABLE id=tbl_edu >
+                    <TBODY>
+                    <TR>
+                      <TD width="13%"><INPUT id=edu_id_hidden type=hidden 
+                        name=edu_id> 
+                        <DIV align=right><SPAN class=c_n1>*</SPAN>教育时间：</DIV></TD>
+                      <TD colSpan=2><SELECT id=id_edu_from_Year 
+                        onchange="set_change_flag(true,'resume_edu',this);" 
+                        name=edu_from_Year> <OPTION label=1939 
+                          value=1939>1939</OPTION> <OPTION label=1940 
+                          value=1940>1940</OPTION> <OPTION label=1941 
+                          value=1941>1941</OPTION> <OPTION label=1942 
+                          value=1942>1942</OPTION> <OPTION label=1943 
+                          value=1943>1943</OPTION> <OPTION label=1944 
+                          value=1944>1944</OPTION> <OPTION label=1945 
+                          value=1945>1945</OPTION> <OPTION label=1946 
+                          value=1946>1946</OPTION> <OPTION label=1947 
+                          value=1947>1947</OPTION> <OPTION label=1948 
+                          value=1948>1948</OPTION> <OPTION label=1949 
+                          value=1949>1949</OPTION> <OPTION label=1950 
+                          value=1950>1950</OPTION> <OPTION label=1951 
+                          value=1951>1951</OPTION> <OPTION label=1952 
+                          value=1952>1952</OPTION> <OPTION label=1953 
+                          value=1953>1953</OPTION> <OPTION label=1954 
+                          value=1954>1954</OPTION> <OPTION label=1955 
+                          value=1955>1955</OPTION> <OPTION label=1956 
+                          value=1956>1956</OPTION> <OPTION label=1957 
+                          value=1957>1957</OPTION> <OPTION label=1958 
+                          value=1958>1958</OPTION> <OPTION label=1959 
+                          value=1959>1959</OPTION> <OPTION label=1960 
+                          value=1960>1960</OPTION> <OPTION label=1961 
+                          value=1961>1961</OPTION> <OPTION label=1962 
+                          value=1962>1962</OPTION> <OPTION label=1963 
+                          value=1963>1963</OPTION> <OPTION label=1964 
+                          value=1964>1964</OPTION> <OPTION label=1965 
+                          value=1965>1965</OPTION> <OPTION label=1966 
+                          value=1966>1966</OPTION> <OPTION label=1967 
+                          value=1967>1967</OPTION> <OPTION label=1968 
+                          value=1968>1968</OPTION> <OPTION label=1969 
+                          value=1969>1969</OPTION> <OPTION label=1970 
+                          value=1970>1970</OPTION> <OPTION label=1971 
+                          value=1971>1971</OPTION> <OPTION label=1972 
+                          value=1972>1972</OPTION> <OPTION label=1973 
+                          value=1973>1973</OPTION> <OPTION label=1974 
+                          value=1974>1974</OPTION> <OPTION label=1975 
+                          value=1975>1975</OPTION> <OPTION label=1976 
+                          value=1976>1976</OPTION> <OPTION label=1977 
+                          value=1977>1977</OPTION> <OPTION label=1978 
+                          value=1978>1978</OPTION> <OPTION label=1979 
+                          value=1979>1979</OPTION> <OPTION label=1980 
+                          value=1980>1980</OPTION> <OPTION label=1981 
+                          value=1981>1981</OPTION> <OPTION label=1982 
+                          value=1982>1982</OPTION> <OPTION label=1983 
+                          value=1983>1983</OPTION> <OPTION label=1984 
+                          value=1984>1984</OPTION> <OPTION label=1985 
+                          value=1985>1985</OPTION> <OPTION label=1986 
+                          value=1986>1986</OPTION> <OPTION label=1987 
+                          value=1987>1987</OPTION> <OPTION label=1988 
+                          value=1988>1988</OPTION> <OPTION label=1989 
+                          value=1989>1989</OPTION> <OPTION label=1990 
+                          value=1990>1990</OPTION> <OPTION label=1991 
+                          value=1991>1991</OPTION> <OPTION label=1992 
+                          value=1992>1992</OPTION> <OPTION label=1993 
+                          value=1993>1993</OPTION> <OPTION label=1994 
+                          value=1994>1994</OPTION> <OPTION label=1995 
+                          value=1995>1995</OPTION> <OPTION label=1996 
+                          value=1996>1996</OPTION> <OPTION label=1997 
+                          value=1997>1997</OPTION> <OPTION label=1998 
+                          value=1998>1998</OPTION> <OPTION label=1999 
+                          value=1999>1999</OPTION> <OPTION label=2000 
+                          value=2000>2000</OPTION> <OPTION label=2001 
+                          value=2001>2001</OPTION> <OPTION label=2002 
+                          value=2002>2002</OPTION> <OPTION label=2003 
+                          value=2003>2003</OPTION> <OPTION label=2004 
+                          value=2004>2004</OPTION> <OPTION label=2005 
+                          value=2005>2005</OPTION> <OPTION label=2006 
+                          value=2006>2006</OPTION> <OPTION label=2007 
+                          value=2007>2007</OPTION> <OPTION label=2008 
+                          value=2008>2008</OPTION> <OPTION label=2009 value=2009 
+                          selected>2009</OPTION></SELECT> <SELECT 
+                        id=id_edu_from_Month 
+                        onchange="set_change_flag(true,'resume_edu',this);" 
+                        name=edu_from_Month> <OPTION label=01 
+                          value=01>01</OPTION> <OPTION label=02 
+                          value=02>02</OPTION> <OPTION label=03 
+                          value=03>03</OPTION> <OPTION label=04 
+                          value=04>04</OPTION> <OPTION label=05 
+                          value=05>05</OPTION> <OPTION label=06 
+                          value=06>06</OPTION> <OPTION label=07 
+                          value=07>07</OPTION> <OPTION label=08 
+                          value=08>08</OPTION> <OPTION label=09 
+                          value=09>09</OPTION> <OPTION label=10 
+                          value=10>10</OPTION> <OPTION label=11 value=11 
+                          selected>11</OPTION> <OPTION label=12 
+                          value=12>12</OPTION></SELECT>----<SELECT 
+                        id=id_edu_to_Year 
+                        onchange="set_change_flag(true,'resume_edu',this);" 
+                        name=edu_to_Year> <OPTION label=1939 
+                          value=1939>1939</OPTION> <OPTION label=1940 
+                          value=1940>1940</OPTION> <OPTION label=1941 
+                          value=1941>1941</OPTION> <OPTION label=1942 
+                          value=1942>1942</OPTION> <OPTION label=1943 
+                          value=1943>1943</OPTION> <OPTION label=1944 
+                          value=1944>1944</OPTION> <OPTION label=1945 
+                          value=1945>1945</OPTION> <OPTION label=1946 
+                          value=1946>1946</OPTION> <OPTION label=1947 
+                          value=1947>1947</OPTION> <OPTION label=1948 
+                          value=1948>1948</OPTION> <OPTION label=1949 
+                          value=1949>1949</OPTION> <OPTION label=1950 
+                          value=1950>1950</OPTION> <OPTION label=1951 
+                          value=1951>1951</OPTION> <OPTION label=1952 
+                          value=1952>1952</OPTION> <OPTION label=1953 
+                          value=1953>1953</OPTION> <OPTION label=1954 
+                          value=1954>1954</OPTION> <OPTION label=1955 
+                          value=1955>1955</OPTION> <OPTION label=1956 
+                          value=1956>1956</OPTION> <OPTION label=1957 
+                          value=1957>1957</OPTION> <OPTION label=1958 
+                          value=1958>1958</OPTION> <OPTION label=1959 
+                          value=1959>1959</OPTION> <OPTION label=1960 
+                          value=1960>1960</OPTION> <OPTION label=1961 
+                          value=1961>1961</OPTION> <OPTION label=1962 
+                          value=1962>1962</OPTION> <OPTION label=1963 
+                          value=1963>1963</OPTION> <OPTION label=1964 
+                          value=1964>1964</OPTION> <OPTION label=1965 
+                          value=1965>1965</OPTION> <OPTION label=1966 
+                          value=1966>1966</OPTION> <OPTION label=1967 
+                          value=1967>1967</OPTION> <OPTION label=1968 
+                          value=1968>1968</OPTION> <OPTION label=1969 
+                          value=1969>1969</OPTION> <OPTION label=1970 
+                          value=1970>1970</OPTION> <OPTION label=1971 
+                          value=1971>1971</OPTION> <OPTION label=1972 
+                          value=1972>1972</OPTION> <OPTION label=1973 
+                          value=1973>1973</OPTION> <OPTION label=1974 
+                          value=1974>1974</OPTION> <OPTION label=1975 
+                          value=1975>1975</OPTION> <OPTION label=1976 
+                          value=1976>1976</OPTION> <OPTION label=1977 
+                          value=1977>1977</OPTION> <OPTION label=1978 
+                          value=1978>1978</OPTION> <OPTION label=1979 
+                          value=1979>1979</OPTION> <OPTION label=1980 
+                          value=1980>1980</OPTION> <OPTION label=1981 
+                          value=1981>1981</OPTION> <OPTION label=1982 
+                          value=1982>1982</OPTION> <OPTION label=1983 
+                          value=1983>1983</OPTION> <OPTION label=1984 
+                          value=1984>1984</OPTION> <OPTION label=1985 
+                          value=1985>1985</OPTION> <OPTION label=1986 
+                          value=1986>1986</OPTION> <OPTION label=1987 
+                          value=1987>1987</OPTION> <OPTION label=1988 
+                          value=1988>1988</OPTION> <OPTION label=1989 
+                          value=1989>1989</OPTION> <OPTION label=1990 
+                          value=1990>1990</OPTION> <OPTION label=1991 
+                          value=1991>1991</OPTION> <OPTION label=1992 
+                          value=1992>1992</OPTION> <OPTION label=1993 
+                          value=1993>1993</OPTION> <OPTION label=1994 
+                          value=1994>1994</OPTION> <OPTION label=1995 
+                          value=1995>1995</OPTION> <OPTION label=1996 
+                          value=1996>1996</OPTION> <OPTION label=1997 
+                          value=1997>1997</OPTION> <OPTION label=1998 
+                          value=1998>1998</OPTION> <OPTION label=1999 
+                          value=1999>1999</OPTION> <OPTION label=2000 
+                          value=2000>2000</OPTION> <OPTION label=2001 
+                          value=2001>2001</OPTION> <OPTION label=2002 
+                          value=2002>2002</OPTION> <OPTION label=2003 
+                          value=2003>2003</OPTION> <OPTION label=2004 
+                          value=2004>2004</OPTION> <OPTION label=2005 
+                          value=2005>2005</OPTION> <OPTION label=2006 
+                          value=2006>2006</OPTION> <OPTION label=2007 
+                          value=2007>2007</OPTION> <OPTION label=2008 
+                          value=2008>2008</OPTION> <OPTION label=2009 value=2009 
+                          selected>2009</OPTION></SELECT> <SELECT 
+                        id=id_edu_to_Month 
+                        onchange="set_change_flag(true,'resume_edu',this);" 
+                        name=edu_to_Month> <OPTION label=01 
+                          value=01>01</OPTION> <OPTION label=02 
+                          value=02>02</OPTION> <OPTION label=03 
+                          value=03>03</OPTION> <OPTION label=04 
+                          value=04>04</OPTION> <OPTION label=05 
+                          value=05>05</OPTION> <OPTION label=06 
+                          value=06>06</OPTION> <OPTION label=07 
+                          value=07>07</OPTION> <OPTION label=08 
+                          value=08>08</OPTION> <OPTION label=09 
+                          value=09>09</OPTION> <OPTION label=10 
+                          value=10>10</OPTION> <OPTION label=11 value=11 
+                          selected>11</OPTION> <OPTION label=12 
+                          value=12>12</OPTION></SELECT> </TD></TR>
+                    <TR>
+                      <TD>
+                        <DIV align=right><SPAN class=c_n1>*</SPAN>学校：</DIV></TD>
+                      <TD colSpan=2><INPUT class=input1 id=id_college 
+                        onchange="set_change_flag(true,'resume_edu',this);" 
+                        size=60 name=college> </TD></TR>
+                    <TR>
+                      <TD>
+                        <DIV align=right><SPAN class=c_n1>*</SPAN>专业：</DIV></TD>
+                      <TD colSpan=2><INPUT class=input1 id=id_major 
+                        onchange="set_change_flag(true,'resume_edu',this);" 
+                        name=major> </TD></TR>
+                    <TR>
+                      <TD vAlign=top>
+                        <DIV align=right><SPAN class=c_n1>*</SPAN>学历：</DIV></TD>
+                      <TD colSpan=2><SELECT class=kuang3 id=id_degree 
+                        onchange="set_change_flag(true,'resume_edu',this);" 
+                        name=sct_degree> <OPTION value=1 selected>博士后</OPTION> 
+                          <OPTION value=2>博士</OPTION> <OPTION 
+                          value=3>MBA</OPTION> <OPTION value=4>硕士</OPTION> 
+                          <OPTION value=5>本科</OPTION> <OPTION 
+                          value=6>大专</OPTION> <OPTION value=7>中专/职中/技校</OPTION> 
+                          <OPTION value=8>高中</OPTION> <OPTION 
+                          value=9>高中以下</OPTION></SELECT> </TD></TR>
+                    <TR>
+                      <TD vAlign=center>
+                        <DIV align=right>专业描述：</DIV></TD>
+                      <TD 
+                        width="79%">以下限1000个字符，专业描述您可以填写您所学专业包括什么课程，您的毕业设计等等。<BR><TEXTAREA id=id_edu_desc name=edu_desc rows=5 cols=60 onChange="set_change_flag(true,'resume_edu',this);"></TEXTAREA></TD>
+                      <TD vAlign=bottom align=right width="12%"></TD></TR>
+                    <TR>
+                      <TD align=middle colSpan=2><INPUT class=but_input id=save_edu_id onclick=save_edu() type=button value=保存教育背景信息 name=save_edu_id></TD></TR></TBODY></TABLE></DIV></TD></TR>
+              <TR>
+                <TD>
+                  <HR>
+                </TD></TR>
+              <TR>
+                <TD>
+                  <TABLE cellSpacing=2 cellPadding=3 width="100%" border=0>
+                    <TBODY>
+                    <TR>
+                      <TD width=600><STRONG><A>工作经历</A></STRONG></STRONG>&nbsp;<A><IMG 
+                        src="../../images/icon_p_01.gif"></A></TD>
+                      <TD width=51>&nbsp; </TD>
+                      <TD>
+                        <DIV align=right><INPUT class=but_input id=add_workexp_btn onclick=add_workexp(this) type=button value=添加资料> 
+                        </DIV></TD></TR>
+                    <TR id=workexp_list>
+                      <TD colSpan=3>
+                        <TABLE id=tbl_workexp  
+                        cellSpacing=0 cellPadding=3 width="100%" border=0>
+                          <TBODY>
+                          <TR>
+                            <TD vAlign=center noWrap align=right width="26%">
+                              <DIV align=right><SPAN 
+                            class=c_n1>*</SPAN>时间：</DIV></TD>
+                            <TD vAlign=center align=left colSpan=6><SELECT 
+                              id=id_workexp_from_Year 
+                              onchange="set_change_flag(true,'resume_workexp',this);" 
+                              name=workexp_from_Year> <OPTION label=1939 
+                                value=1939>1939</OPTION> <OPTION label=1940 
+                                value=1940>1940</OPTION> <OPTION label=1941 
+                                value=1941>1941</OPTION> <OPTION label=1942 
+                                value=1942>1942</OPTION> <OPTION label=1943 
+                                value=1943>1943</OPTION> <OPTION label=1944 
+                                value=1944>1944</OPTION> <OPTION label=1945 
+                                value=1945>1945</OPTION> <OPTION label=1946 
+                                value=1946>1946</OPTION> <OPTION label=1947 
+                                value=1947>1947</OPTION> <OPTION label=1948 
+                                value=1948>1948</OPTION> <OPTION label=1949 
+                                value=1949>1949</OPTION> <OPTION label=1950 
+                                value=1950>1950</OPTION> <OPTION label=1951 
+                                value=1951>1951</OPTION> <OPTION label=1952 
+                                value=1952>1952</OPTION> <OPTION label=1953 
+                                value=1953>1953</OPTION> <OPTION label=1954 
+                                value=1954>1954</OPTION> <OPTION label=1955 
+                                value=1955>1955</OPTION> <OPTION label=1956 
+                                value=1956>1956</OPTION> <OPTION label=1957 
+                                value=1957>1957</OPTION> <OPTION label=1958 
+                                value=1958>1958</OPTION> <OPTION label=1959 
+                                value=1959>1959</OPTION> <OPTION label=1960 
+                                value=1960>1960</OPTION> <OPTION label=1961 
+                                value=1961>1961</OPTION> <OPTION label=1962 
+                                value=1962>1962</OPTION> <OPTION label=1963 
+                                value=1963>1963</OPTION> <OPTION label=1964 
+                                value=1964>1964</OPTION> <OPTION label=1965 
+                                value=1965>1965</OPTION> <OPTION label=1966 
+                                value=1966>1966</OPTION> <OPTION label=1967 
+                                value=1967>1967</OPTION> <OPTION label=1968 
+                                value=1968>1968</OPTION> <OPTION label=1969 
+                                value=1969>1969</OPTION> <OPTION label=1970 
+                                value=1970>1970</OPTION> <OPTION label=1971 
+                                value=1971>1971</OPTION> <OPTION label=1972 
+                                value=1972>1972</OPTION> <OPTION label=1973 
+                                value=1973>1973</OPTION> <OPTION label=1974 
+                                value=1974>1974</OPTION> <OPTION label=1975 
+                                value=1975>1975</OPTION> <OPTION label=1976 
+                                value=1976>1976</OPTION> <OPTION label=1977 
+                                value=1977>1977</OPTION> <OPTION label=1978 
+                                value=1978>1978</OPTION> <OPTION label=1979 
+                                value=1979>1979</OPTION> <OPTION label=1980 
+                                value=1980>1980</OPTION> <OPTION label=1981 
+                                value=1981>1981</OPTION> <OPTION label=1982 
+                                value=1982>1982</OPTION> <OPTION label=1983 
+                                value=1983>1983</OPTION> <OPTION label=1984 
+                                value=1984>1984</OPTION> <OPTION label=1985 
+                                value=1985>1985</OPTION> <OPTION label=1986 
+                                value=1986>1986</OPTION> <OPTION label=1987 
+                                value=1987>1987</OPTION> <OPTION label=1988 
+                                value=1988>1988</OPTION> <OPTION label=1989 
+                                value=1989>1989</OPTION> <OPTION label=1990 
+                                value=1990>1990</OPTION> <OPTION label=1991 
+                                value=1991>1991</OPTION> <OPTION label=1992 
+                                value=1992>1992</OPTION> <OPTION label=1993 
+                                value=1993>1993</OPTION> <OPTION label=1994 
+                                value=1994>1994</OPTION> <OPTION label=1995 
+                                value=1995>1995</OPTION> <OPTION label=1996 
+                                value=1996>1996</OPTION> <OPTION label=1997 
+                                value=1997>1997</OPTION> <OPTION label=1998 
+                                value=1998>1998</OPTION> <OPTION label=1999 
+                                value=1999>1999</OPTION> <OPTION label=2000 
+                                value=2000>2000</OPTION> <OPTION label=2001 
+                                value=2001>2001</OPTION> <OPTION label=2002 
+                                value=2002>2002</OPTION> <OPTION label=2003 
+                                value=2003>2003</OPTION> <OPTION label=2004 
+                                value=2004>2004</OPTION> <OPTION label=2005 
+                                value=2005>2005</OPTION> <OPTION label=2006 
+                                value=2006>2006</OPTION> <OPTION label=2007 
+                                value=2007>2007</OPTION> <OPTION label=2008 
+                                value=2008>2008</OPTION> <OPTION label=2009 
+                                value=2009 selected>2009</OPTION></SELECT> <SELECT 
+                              id=id_workexp_from_Month 
+                              onchange="set_change_flag(true,'resume_workexp',this);" 
+                              name=workexp_from_Month> <OPTION label=01 
+                                value=01>01</OPTION> <OPTION label=02 
+                                value=02>02</OPTION> <OPTION label=03 
+                                value=03>03</OPTION> <OPTION label=04 
+                                value=04>04</OPTION> <OPTION label=05 
+                                value=05>05</OPTION> <OPTION label=06 
+                                value=06>06</OPTION> <OPTION label=07 
+                                value=07>07</OPTION> <OPTION label=08 
+                                value=08>08</OPTION> <OPTION label=09 
+                                value=09>09</OPTION> <OPTION label=10 
+                                value=10>10</OPTION> <OPTION label=11 value=11 
+                                selected>11</OPTION> <OPTION label=12 
+                                value=12>12</OPTION></SELECT>---- <SELECT 
+                              id=id_workexp_to_Year 
+                              onchange="set_change_flag(true,'resume_workexp',this);set_workexp_to_Month();" 
+                              name=workexp_to_Year> <OPTION label=1939 
+                                value=1939>1939</OPTION><OPTION label=1940 
+                                value=1940>1940</OPTION><OPTION label=1941 
+                                value=1941>1941</OPTION><OPTION label=1942 
+                                value=1942>1942</OPTION><OPTION label=1943 
+                                value=1943>1943</OPTION><OPTION label=1944 
+                                value=1944>1944</OPTION><OPTION label=1945 
+                                value=1945>1945</OPTION><OPTION label=1946 
+                                value=1946>1946</OPTION><OPTION label=1947 
+                                value=1947>1947</OPTION><OPTION label=1948 
+                                value=1948>1948</OPTION><OPTION label=1949 
+                                value=1949>1949</OPTION><OPTION label=1950 
+                                value=1950>1950</OPTION><OPTION label=1951 
+                                value=1951>1951</OPTION><OPTION label=1952 
+                                value=1952>1952</OPTION><OPTION label=1953 
+                                value=1953>1953</OPTION><OPTION label=1954 
+                                value=1954>1954</OPTION><OPTION label=1955 
+                                value=1955>1955</OPTION><OPTION label=1956 
+                                value=1956>1956</OPTION><OPTION label=1957 
+                                value=1957>1957</OPTION><OPTION label=1958 
+                                value=1958>1958</OPTION><OPTION label=1959 
+                                value=1959>1959</OPTION><OPTION label=1960 
+                                value=1960>1960</OPTION><OPTION label=1961 
+                                value=1961>1961</OPTION><OPTION label=1962 
+                                value=1962>1962</OPTION><OPTION label=1963 
+                                value=1963>1963</OPTION><OPTION label=1964 
+                                value=1964>1964</OPTION><OPTION label=1965 
+                                value=1965>1965</OPTION><OPTION label=1966 
+                                value=1966>1966</OPTION><OPTION label=1967 
+                                value=1967>1967</OPTION><OPTION label=1968 
+                                value=1968>1968</OPTION><OPTION label=1969 
+                                value=1969>1969</OPTION><OPTION label=1970 
+                                value=1970>1970</OPTION><OPTION label=1971 
+                                value=1971>1971</OPTION><OPTION label=1972 
+                                value=1972>1972</OPTION><OPTION label=1973 
+                                value=1973>1973</OPTION><OPTION label=1974 
+                                value=1974>1974</OPTION><OPTION label=1975 
+                                value=1975>1975</OPTION><OPTION label=1976 
+                                value=1976>1976</OPTION><OPTION label=1977 
+                                value=1977>1977</OPTION><OPTION label=1978 
+                                value=1978>1978</OPTION><OPTION label=1979 
+                                value=1979>1979</OPTION><OPTION label=1980 
+                                value=1980>1980</OPTION><OPTION label=1981 
+                                value=1981>1981</OPTION><OPTION label=1982 
+                                value=1982>1982</OPTION><OPTION label=1983 
+                                value=1983>1983</OPTION><OPTION label=1984 
+                                value=1984>1984</OPTION><OPTION label=1985 
+                                value=1985>1985</OPTION><OPTION label=1986 
+                                value=1986>1986</OPTION><OPTION label=1987 
+                                value=1987>1987</OPTION><OPTION label=1988 
+                                value=1988>1988</OPTION><OPTION label=1989 
+                                value=1989>1989</OPTION><OPTION label=1990 
+                                value=1990>1990</OPTION><OPTION label=1991 
+                                value=1991>1991</OPTION><OPTION label=1992 
+                                value=1992>1992</OPTION><OPTION label=1993 
+                                value=1993>1993</OPTION><OPTION label=1994 
+                                value=1994>1994</OPTION><OPTION label=1995 
+                                value=1995>1995</OPTION><OPTION label=1996 
+                                value=1996>1996</OPTION><OPTION label=1997 
+                                value=1997>1997</OPTION><OPTION label=1998 
+                                value=1998>1998</OPTION><OPTION label=1999 
+                                value=1999>1999</OPTION><OPTION label=2000 
+                                value=2000>2000</OPTION><OPTION label=2001 
+                                value=2001>2001</OPTION><OPTION label=2002 
+                                value=2002>2002</OPTION><OPTION label=2003 
+                                value=2003>2003</OPTION><OPTION label=2004 
+                                value=2004>2004</OPTION><OPTION label=2005 
+                                value=2005>2005</OPTION><OPTION label=2006 
+                                value=2006>2006</OPTION><OPTION label=2007 
+                                value=2007>2007</OPTION><OPTION label=2008 
+                                value=2008>2008</OPTION><OPTION label=2009 
+                                value=2009>2009</OPTION><OPTION value=-1 
+                                selected>至今</OPTION></SELECT> <SELECT 
+                              id=id_workexp_to_Month 
+                              onchange="set_change_flag(true,'resume_workexp',this);" 
+                              name=workexp_to_Month> <OPTION label=01 value=01 
+                                selected>01</OPTION><OPTION label=02 
+                                value=02>02</OPTION><OPTION label=03 
+                                value=03>03</OPTION><OPTION label=04 
+                                value=04>04</OPTION><OPTION label=05 
+                                value=05>05</OPTION><OPTION label=06 
+                                value=06>06</OPTION><OPTION label=07 
+                                value=07>07</OPTION><OPTION label=08 
+                                value=08>08</OPTION><OPTION label=09 
+                                value=09>09</OPTION><OPTION label=10 
+                                value=10>10</OPTION><OPTION label=11 
+                                value=11>11</OPTION><OPTION label=12 
+                                value=12>12</OPTION></SELECT> </TD></TR>
+                          <TR>
+                            <TD vAlign=center>
+                              <DIV align=right><SPAN class=c_n1>*</SPAN> <INPUT 
+                              id=id_workexp_id type=hidden name=workexp_id> 
+                              公司：</DIV></TD>
+                            <TD vAlign=center width="27%"><INPUT 
+                              id=id_employer_name style="WIDTH: 180px" 
+                              onchange="set_change_flag(true,'resume_workexp',this);" 
+                              name=employer_name></TD>
+                            <TD vAlign=center align=right width="25%"><SPAN 
+                              class=c_n1>*</SPAN>行 业：</TD>
+                            <TD vAlign=center colSpan=4><INPUT class=case id=com_industryBut style="CURSOR: hand" onClick="com_industrySelector.showSelector();set_change_flag(true,'resume_workexp',this);" type=button value=请选择所属行业类型 name=com_industryBut> 
+                              <INPUT id=id_com_industry type=hidden 
+                              name=com_industry></TD></TR>
+                          <TR>
+                            <TD vAlign=center>
+                              <DIV align=right>公司规模：</DIV></TD>
+                            <TD vAlign=center><SELECT id=id_employer_size 
+                              style="WIDTH: 185px" 
+                              onchange="set_change_flag(true,'resume_workexp',this);" 
+                              name=employer_size> <OPTION value="" 
+                                selected>请选择</OPTION> <OPTION 
+                                value=1>20人以下</OPTION> <OPTION 
+                                value=2>21－50人</OPTION> <OPTION 
+                                value=3>51－100人</OPTION> <OPTION 
+                                value=4>101－300人</OPTION> <OPTION 
+                                value=5>301－500人</OPTION> <OPTION 
+                                value=6>500人以上</OPTION></SELECT></TD>
+                            <TD vAlign=center align=right>工作性质：</TD>
+                            <TD vAlign=center align=left colSpan=4><SELECT 
+                              id=id_worked_type style="WIDTH: 135px" 
+                              onchange="set_change_flag(true,'resume_workexp',this);" 
+                              name=worked_type> <OPTION value="" 
+                                selected>请选择</OPTION> <OPTION 
+                                value=1>全职</OPTION> <OPTION value=2>兼职</OPTION> 
+                                <OPTION value=3>短期合同制</OPTION> <OPTION 
+                                value=4>志愿者</OPTION></SELECT></TD></TR>
+                          <TR>
+                            <TD vAlign=center align=right>
+                              <DIV align=right>企业性质：</DIV></TD>
+                            <TD vAlign=center align=left><SELECT 
+                              id=id_employer_type style="WIDTH: 185px" 
+                              onchange="set_change_flag(true,'resume_workexp',this);" 
+                              name=employer_type> <OPTION value="" 
+                                selected>请选择</OPTION> <OPTION 
+                                value=1>外商独资</OPTION> <OPTION 
+                                value=2>合资</OPTION> <OPTION 
+                                value=3>上市公司</OPTION> <OPTION 
+                                value=4>国企</OPTION> <OPTION 
+                                value=5>国家机关</OPTION> <OPTION 
+                                value=6>事业单位</OPTION> <OPTION 
+                                value=7>民营/私企</OPTION> <OPTION 
+                                value=8>代表处</OPTION> <OPTION 
+                                value=9>非赢利性组织</OPTION> <OPTION 
+                                value=10>其他</OPTION></SELECT></TD>
+                            <TD vAlign=center align=right>部 门： </TD>
+                            <TD vAlign=center align=left colSpan=4><INPUT 
+                              id=id_job_department maxLength=40 
+                              onchange="set_change_flag(true,'resume_workexp',this);" 
+                              name=job_department></TD></TR>
+                          <TR>
+                            <TD vAlign=center align=right>
+                              <DIV align=right>月薪(税前)：</DIV></TD>
+                            <TD vAlign=center align=left></SELECT><SELECT 
+                              class=kuang9 id=id_person_salary 
+                              style="WIDTH: 185px" 
+                              onchange="set_change_flag(true,'resume_workexp',this);" 
+                              name=person_salary> <OPTION value="" 
+                                selected>请选择</OPTION> <OPTION 
+                                value=1>1000以下</OPTION> <OPTION 
+                                value=2>1001到2000</OPTION> <OPTION 
+                                value=3>2001到3000</OPTION> <OPTION 
+                                value=4>3001到4000</OPTION> <OPTION 
+                                value=5>4001到6000</OPTION> <OPTION 
+                                value=6>6001到8000</OPTION> <OPTION 
+                                value=7>8001到10000</OPTION> <OPTION 
+                                value=8>10001到15000</OPTION> <OPTION 
+                                value=9>15001到20000</OPTION> <OPTION 
+                                value=10>20001到25000</OPTION> <OPTION 
+                                value=11>25001以上</OPTION> <OPTION 
+                                value=12>保密</OPTION></SELECT></TD>
+                            <TD vAlign=center align=right><SPAN 
+                              class=c_n1>*</SPAN>职 位：</TD>
+                            <TD vAlign=center align=left colSpan=4><INPUT class=case id=but_com_job style="CURSOR: hand" onClick="com_jobtypeSelector.showSelector();set_change_flag(true,'resume_workexp',this);" type=button size=60 value=请选择工作职位 name=wishjob> 
+                              <INPUT id=id_com_job type=hidden 
+name=comjob></TD></TR>
+                          <TR>
+                            <TD vAlign=center>
+                              <DIV align=right>汇报对象：</DIV></TD>
+                            <TD vAlign=center><INPUT id=id_job_leader 
+                              style="WIDTH: 90px" 
+                              onchange="set_change_flag(true,'resume_workexp',this);" 
+                              name=job_leader>您上司的职衔</TD>
+                            <TD vAlign=center align=right>下属人数：</TD>
+                            <TD vAlign=center align=left colSpan=4><INPUT 
+                              class=kuang6 id=id_job_subordinate 
+                              onkeyup="this.value=this.value.replace(/\D/g,'')" 
+                              style="WIDTH: 100px" 
+                              onchange="set_change_flag(true,'resume_workexp',this);" 
+                              name=job_subordinate></TD></TR>
+                          <TR>
+                            <TD vAlign=center>
+                              <DIV align=right>工作证明人：</DIV></TD>
+                            <TD vAlign=center><INPUT id=id_job_authenticator 
+                              onchange="set_change_flag(true,'resume_workexp',this);" 
+                              name=job_authenticator></TD>
+                            <TD vAlign=center align=right>离职转岗原因：</TD>
+                            <TD vAlign=center align=left colSpan=4><INPUT 
+                              id=id_job_leave_reason style="WIDTH: 150px" 
+                              onchange="set_change_flag(true,'resume_workexp',this);" 
+                              name=job_leave_reason></TD></TR>
+                          <TR>
+                            <TD vAlign=center>
+                              <DIV align=right>公司简介：</DIV></TD>
+                            <TD vAlign=center colSpan=6><TEXTAREA class=t_area id=id_employer_desc name=employer_desc rows=5 cols=65 onChange="set_change_flag(true,'resume_workexp',this);"></TEXTAREA></TD></TR>
+                          <TR>
+                            <TD vAlign=center>
+                              <DIV align=right>工作描述：</DIV></TD>
+                            <TD vAlign=center colSpan=4><TEXTAREA class=t_area id=id_work_desc name=work_desc rows=5 cols=65 onChange="set_change_flag(true,'resume_workexp',this);"></TEXTAREA></TD>
+                            <TD vAlign=center width="1%">&nbsp; </TD>
+                            <TD vAlign=bottom align=right width="1%">&nbsp; 
+                          </TD></TR>
+                          <TR>
+                            <TD align=middle colSpan=4><INPUT class=but_input id=save_workexp_id onclick=save_workexp() type=button value=保存工作经历信息 name=save_workexp_id></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR>
+              <TR>
+                <TD>
+                  <HR>
+                </TD></TR>
+              <TR>
+                <TD>
+                  <TABLE cellSpacing=2 cellPadding=3 width="100%" border=0>
+                    <TBODY>
+                    <TR>
+                      <TD width="41%"><STRONG><A>语言技能</A></STRONG></TD>
+                      <TD align=right colSpan=2><INPUT class=but_input id=add_language_btn onclick=add_language(this) type=button value=添加资料 name=button></TD></TR>
+                    <TR id=language_list>
+                      <TD colSpan=3>
+                        <TABLE id=tbl_language  
+                        cellSpacing=3 cellPadding=3 width="100%" border=0>
+                          <TBODY>
+                          <TR>
+                            <TD vAlign=center align=right width="16%"><INPUT 
+                              class=btn_s id=id_langskill_id type=hidden 
+                              name=langskill_id> 外语语种： </TD>
+                            <TD vAlign=center align=left width="7%"><SELECT 
+                              id=id_language_type 
+                              onchange="show_lang_type();set_change_flag(true,'resume_languageskill',this);" 
+
+                              name=language_type> <OPTION value="" 
+                                selected>--请选择--</OPTION> <OPTION 
+                                value=1>外语</OPTION> <OPTION 
+                              value=2>方言</OPTION></SELECT> </TD>
+                            <TD vAlign=center align=left width="14%" height=26><!--外语---><SELECT class=kuang3 
+                              id=id_foreign  
+                              onchange="show_other_language(this);set_change_flag(true,'resume_languageskill',this);" 
+                              name=foreig> <OPTION value=1 
+                                selected>英语</OPTION> <OPTION value=2>法语</OPTION> 
+                                <OPTION value=3>西班牙语</OPTION> <OPTION 
+                                value=4>日语</OPTION> <OPTION value=5>朝鲜语</OPTION> 
+                                <OPTION value=6>德语</OPTION> <OPTION 
+                                value=7>俄语</OPTION> <OPTION 
+                                value=8>葡萄牙语</OPTION> <OPTION 
+                                value=9>阿拉伯语</OPTION> <OPTION 
+                                value=10>其他</OPTION></SELECT> <!--方言---><SELECT 
+                              class=kuang3 id=id_dialect  
+                              onchange="show_other_language(this);set_change_flag(true,'resume_languageskill',this);" 
+                              name=dialect> <OPTION value=1 
+                                selected>广东话</OPTION> <OPTION 
+                                value=2>闽南话</OPTION> <OPTION 
+                                value=3>上海话</OPTION> <OPTION 
+                                value=4>潮州话</OPTION> <OPTION 
+                                value=5>客家话</OPTION> <OPTION 
+                                value=6>四川话</OPTION> <OPTION 
+                              value=7>其他</OPTION></SELECT> <!--其他--></TD>
+                            <TD vAlign=center align=left width="27%"><INPUT 
+                              id=other_language_text  
+                              maxLength=10 
+                              onchange="set_change_flag(true,'resume_languageskill',this);" 
+                              size=15 name=other_language></TD>
+                            <TD vAlign=center align=left width="28%">掌握程度： 
+                              <SELECT class=kuang3 id=id_language_level 
+                              onchange="set_change_flag(true,'resume_languageskill',this);" 
+                              name=language_level> <OPTION value="" 
+                                selected>--请选择--</OPTION> <OPTION 
+                                value=1>优秀</OPTION> <OPTION value=2>良好</OPTION> 
+                                <OPTION value=3>一般</OPTION></SELECT> </TD></TR>
+                          <TR>
+                            <TD vAlign=center align=middle colSpan=5><INPUT class=but_input id=save_language_id onclick=save_language() type=button value=保存语言技能信息 name=button3></TD></TR></TBODY></TABLE>
+                    <TR>
+                      <TD colSpan=3>
+                    <TR>
+                      <TD colSpan=3>
+                        <HR>
+                      </TD>
+                    <TR>
+                      <TD><STRONG><A>IT技能</A></STRONG></TD>
+                      <TD align=right width="30%">&nbsp; </TD>
+                      <TD width="29%">
+                        <DIV align=right><INPUT class=but_input id=add_computerskill_btn onclick=add_computerskill(this) type=button value=添加资料 name=button2> 
+                        </DIV></TD>
+                    <TR id=computerskill_list>
+                      <TD colSpan=3></TD></TR>
+                    <TR>
+                      <TD colSpan=3>
+                        <TABLE id=tbl_computerskill  
+                        cellSpacing=3 cellPadding=3 width="100%" border=0>
+                          <TBODY>
+                          <TR>
+                            <TD vAlign=center align=right width="14%"><INPUT 
+                              id=id_computerskill_id type=hidden 
+                              name=computerskill_id>IT技能： </TD>
+                            <TD vAlign=center align=left width="32%"><INPUT 
+                              class=kuang1 id=id_computer_skillname maxLength=20 
+                              onchange="set_change_flag(true,'resume_computerskill',this);" 
+                              name=computer_skill> </TD>
+                            <TD vAlign=center align=left width="35%">掌握程度： 
+                              <SELECT class=kuang3 id=id_computer_level 
+                              onchange="set_change_flag(true,'resume_computerskill',this);" 
+                              name=sct_computer_level> <OPTION value="" 
+                                selected>--请选择--</OPTION> <OPTION 
+                                value=1>优秀</OPTION> <OPTION value=2>良好</OPTION> 
+                                <OPTION value=3>一般</OPTION></SELECT> </TD>
+                            <TD vAlign=center align=right width="19%"><INPUT class=but_input id=save_computerskill_id onclick=save_computerskill() type=button value=保存计算机技能信息 name=save_computerskill_id> 
+                            </TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR>
+              <TR>
+                <TD>
+                  <HR>
+                </TD></TR>
+              <TR>
+                <TD>                 
+                  <TABLE cellSpacing=2 cellPadding=3 width="100%" border=0>
+                    <TBODY>
+                    <TR>
+                      <TD width="72%"><STRONG><A>培训经历</A></STRONG></TD>
+                      <TD>
+                        <DIV align=right><INPUT class=but_input id=add_training_btn onclick=add_training(this) type=button value=添加资料 name=button22> 
+                        </DIV></TD></TR>
+                    <TR id=training_list>
+                      <TD colSpan=2>
+                        <TABLE id=tbl_training  
+                        cellSpacing=3 cellPadding=3 width="100%" border=0>
+                          <TBODY>
+                          <TR>
+                            <TD width=168>
+                              <DIV align=right><INPUT id=id_training_id 
+                              type=hidden name=training_id> 培训时间：</DIV>
+                            <TD colSpan=2><SELECT id=id_training_from_Year 
+                              onchange="set_change_flag(true,'resume_training',this);" 
+                              name=training_from_Year> <OPTION label=1939 
+                                value=1939>1939</OPTION> <OPTION label=1940 
+                                value=1940>1940</OPTION> <OPTION label=1941 
+                                value=1941>1941</OPTION> <OPTION label=1942 
+                                value=1942>1942</OPTION> <OPTION label=1943 
+                                value=1943>1943</OPTION> <OPTION label=1944 
+                                value=1944>1944</OPTION> <OPTION label=1945 
+                                value=1945>1945</OPTION> <OPTION label=1946 
+                                value=1946>1946</OPTION> <OPTION label=1947 
+                                value=1947>1947</OPTION> <OPTION label=1948 
+                                value=1948>1948</OPTION> <OPTION label=1949 
+                                value=1949>1949</OPTION> <OPTION label=1950 
+                                value=1950>1950</OPTION> <OPTION label=1951 
+                                value=1951>1951</OPTION> <OPTION label=1952 
+                                value=1952>1952</OPTION> <OPTION label=1953 
+                                value=1953>1953</OPTION> <OPTION label=1954 
+                                value=1954>1954</OPTION> <OPTION label=1955 
+                                value=1955>1955</OPTION> <OPTION label=1956 
+                                value=1956>1956</OPTION> <OPTION label=1957 
+                                value=1957>1957</OPTION> <OPTION label=1958 
+                                value=1958>1958</OPTION> <OPTION label=1959 
+                                value=1959>1959</OPTION> <OPTION label=1960 
+                                value=1960>1960</OPTION> <OPTION label=1961 
+                                value=1961>1961</OPTION> <OPTION label=1962 
+                                value=1962>1962</OPTION> <OPTION label=1963 
+                                value=1963>1963</OPTION> <OPTION label=1964 
+                                value=1964>1964</OPTION> <OPTION label=1965 
+                                value=1965>1965</OPTION> <OPTION label=1966 
+                                value=1966>1966</OPTION> <OPTION label=1967 
+                                value=1967>1967</OPTION> <OPTION label=1968 
+                                value=1968>1968</OPTION> <OPTION label=1969 
+                                value=1969>1969</OPTION> <OPTION label=1970 
+                                value=1970>1970</OPTION> <OPTION label=1971 
+                                value=1971>1971</OPTION> <OPTION label=1972 
+                                value=1972>1972</OPTION> <OPTION label=1973 
+                                value=1973>1973</OPTION> <OPTION label=1974 
+                                value=1974>1974</OPTION> <OPTION label=1975 
+                                value=1975>1975</OPTION> <OPTION label=1976 
+                                value=1976>1976</OPTION> <OPTION label=1977 
+                                value=1977>1977</OPTION> <OPTION label=1978 
+                                value=1978>1978</OPTION> <OPTION label=1979 
+                                value=1979>1979</OPTION> <OPTION label=1980 
+                                value=1980>1980</OPTION> <OPTION label=1981 
+                                value=1981>1981</OPTION> <OPTION label=1982 
+                                value=1982>1982</OPTION> <OPTION label=1983 
+                                value=1983>1983</OPTION> <OPTION label=1984 
+                                value=1984>1984</OPTION> <OPTION label=1985 
+                                value=1985>1985</OPTION> <OPTION label=1986 
+                                value=1986>1986</OPTION> <OPTION label=1987 
+                                value=1987>1987</OPTION> <OPTION label=1988 
+                                value=1988>1988</OPTION> <OPTION label=1989 
+                                value=1989>1989</OPTION> <OPTION label=1990 
+                                value=1990>1990</OPTION> <OPTION label=1991 
+                                value=1991>1991</OPTION> <OPTION label=1992 
+                                value=1992>1992</OPTION> <OPTION label=1993 
+                                value=1993>1993</OPTION> <OPTION label=1994 
+                                value=1994>1994</OPTION> <OPTION label=1995 
+                                value=1995>1995</OPTION> <OPTION label=1996 
+                                value=1996>1996</OPTION> <OPTION label=1997 
+                                value=1997>1997</OPTION> <OPTION label=1998 
+                                value=1998>1998</OPTION> <OPTION label=1999 
+                                value=1999>1999</OPTION> <OPTION label=2000 
+                                value=2000>2000</OPTION> <OPTION label=2001 
+                                value=2001>2001</OPTION> <OPTION label=2002 
+                                value=2002>2002</OPTION> <OPTION label=2003 
+                                value=2003>2003</OPTION> <OPTION label=2004 
+                                value=2004>2004</OPTION> <OPTION label=2005 
+                                value=2005>2005</OPTION> <OPTION label=2006 
+                                value=2006>2006</OPTION> <OPTION label=2007 
+                                value=2007>2007</OPTION> <OPTION label=2008 
+                                value=2008>2008</OPTION> <OPTION label=2009 
+                                value=2009 selected>2009</OPTION></SELECT> <SELECT 
+                              id=id_training_from_Month 
+                              onchange="set_change_flag(true,'resume_training',this);" 
+                              name=training_from_Month> <OPTION label=01 
+                                value=01>01</OPTION> <OPTION label=02 
+                                value=02>02</OPTION> <OPTION label=03 
+                                value=03>03</OPTION> <OPTION label=04 
+                                value=04>04</OPTION> <OPTION label=05 
+                                value=05>05</OPTION> <OPTION label=06 
+                                value=06>06</OPTION> <OPTION label=07 
+                                value=07>07</OPTION> <OPTION label=08 
+                                value=08>08</OPTION> <OPTION label=09 
+                                value=09>09</OPTION> <OPTION label=10 
+                                value=10>10</OPTION> <OPTION label=11 value=11 
+                                selected>11</OPTION> <OPTION label=12 
+                                value=12>12</OPTION></SELECT>----<SELECT 
+                              id=id_training_to_Year 
+                              onchange="set_change_flag(true,'resume_training',this);" 
+                              name=training_to_Year> <OPTION label=1939 
+                                value=1939>1939</OPTION> <OPTION label=1940 
+                                value=1940>1940</OPTION> <OPTION label=1941 
+                                value=1941>1941</OPTION> <OPTION label=1942 
+                                value=1942>1942</OPTION> <OPTION label=1943 
+                                value=1943>1943</OPTION> <OPTION label=1944 
+                                value=1944>1944</OPTION> <OPTION label=1945 
+                                value=1945>1945</OPTION> <OPTION label=1946 
+                                value=1946>1946</OPTION> <OPTION label=1947 
+                                value=1947>1947</OPTION> <OPTION label=1948 
+                                value=1948>1948</OPTION> <OPTION label=1949 
+                                value=1949>1949</OPTION> <OPTION label=1950 
+                                value=1950>1950</OPTION> <OPTION label=1951 
+                                value=1951>1951</OPTION> <OPTION label=1952 
+                                value=1952>1952</OPTION> <OPTION label=1953 
+                                value=1953>1953</OPTION> <OPTION label=1954 
+                                value=1954>1954</OPTION> <OPTION label=1955 
+                                value=1955>1955</OPTION> <OPTION label=1956 
+                                value=1956>1956</OPTION> <OPTION label=1957 
+                                value=1957>1957</OPTION> <OPTION label=1958 
+                                value=1958>1958</OPTION> <OPTION label=1959 
+                                value=1959>1959</OPTION> <OPTION label=1960 
+                                value=1960>1960</OPTION> <OPTION label=1961 
+                                value=1961>1961</OPTION> <OPTION label=1962 
+                                value=1962>1962</OPTION> <OPTION label=1963 
+                                value=1963>1963</OPTION> <OPTION label=1964 
+                                value=1964>1964</OPTION> <OPTION label=1965 
+                                value=1965>1965</OPTION> <OPTION label=1966 
+                                value=1966>1966</OPTION> <OPTION label=1967 
+                                value=1967>1967</OPTION> <OPTION label=1968 
+                                value=1968>1968</OPTION> <OPTION label=1969 
+                                value=1969>1969</OPTION> <OPTION label=1970 
+                                value=1970>1970</OPTION> <OPTION label=1971 
+                                value=1971>1971</OPTION> <OPTION label=1972 
+                                value=1972>1972</OPTION> <OPTION label=1973 
+                                value=1973>1973</OPTION> <OPTION label=1974 
+                                value=1974>1974</OPTION> <OPTION label=1975 
+                                value=1975>1975</OPTION> <OPTION label=1976 
+                                value=1976>1976</OPTION> <OPTION label=1977 
+                                value=1977>1977</OPTION> <OPTION label=1978 
+                                value=1978>1978</OPTION> <OPTION label=1979 
+                                value=1979>1979</OPTION> <OPTION label=1980 
+                                value=1980>1980</OPTION> <OPTION label=1981 
+                                value=1981>1981</OPTION> <OPTION label=1982 
+                                value=1982>1982</OPTION> <OPTION label=1983 
+                                value=1983>1983</OPTION> <OPTION label=1984 
+                                value=1984>1984</OPTION> <OPTION label=1985 
+                                value=1985>1985</OPTION> <OPTION label=1986 
+                                value=1986>1986</OPTION> <OPTION label=1987 
+                                value=1987>1987</OPTION> <OPTION label=1988 
+                                value=1988>1988</OPTION> <OPTION label=1989 
+                                value=1989>1989</OPTION> <OPTION label=1990 
+                                value=1990>1990</OPTION> <OPTION label=1991 
+                                value=1991>1991</OPTION> <OPTION label=1992 
+                                value=1992>1992</OPTION> <OPTION label=1993 
+                                value=1993>1993</OPTION> <OPTION label=1994 
+                                value=1994>1994</OPTION> <OPTION label=1995 
+                                value=1995>1995</OPTION> <OPTION label=1996 
+                                value=1996>1996</OPTION> <OPTION label=1997 
+                                value=1997>1997</OPTION> <OPTION label=1998 
+                                value=1998>1998</OPTION> <OPTION label=1999 
+                                value=1999>1999</OPTION> <OPTION label=2000 
+                                value=2000>2000</OPTION> <OPTION label=2001 
+                                value=2001>2001</OPTION> <OPTION label=2002 
+                                value=2002>2002</OPTION> <OPTION label=2003 
+                                value=2003>2003</OPTION> <OPTION label=2004 
+                                value=2004>2004</OPTION> <OPTION label=2005 
+                                value=2005>2005</OPTION> <OPTION label=2006 
+                                value=2006>2006</OPTION> <OPTION label=2007 
+                                value=2007>2007</OPTION> <OPTION label=2008 
+                                value=2008>2008</OPTION> <OPTION label=2009 
+                                value=2009 selected>2009</OPTION></SELECT> <SELECT 
+                              id=id_training_to_Month 
+                              onchange="set_change_flag(true,'resume_training',this);" 
+                              name=training_to_Month> <OPTION label=01 
+                                value=01>01</OPTION> <OPTION label=02 
+                                value=02>02</OPTION> <OPTION label=03 
+                                value=03>03</OPTION> <OPTION label=04 
+                                value=04>04</OPTION> <OPTION label=05 
+                                value=05>05</OPTION> <OPTION label=06 
+                                value=06>06</OPTION> <OPTION label=07 
+                                value=07>07</OPTION> <OPTION label=08 
+                                value=08>08</OPTION> <OPTION label=09 
+                                value=09>09</OPTION> <OPTION label=10 
+                                value=10>10</OPTION> <OPTION label=11 value=11 
+                                selected>11</OPTION> <OPTION label=12 
+                                value=12>12</OPTION></SELECT></TD></TR>
+                          <TR>
+                            <TD>
+                              <DIV align=right>培训机构：</DIV></TD>
+                            <TD colSpan=2><INPUT class=kuang1 
+                              id=id_training_institution maxLength=20 
+                              onchange="set_change_flag(true,'resume_training',this);" 
+                              size=60 name=training_institution></TD></TR>
+                          <TR>
+                            <TD vAlign=center>
+                              <DIV align=right>培训课程：</DIV></TD>
+                            <TD width=819><INPUT class=kuang1 
+                              id=id_training_course maxLength=20 
+                              onchange="set_change_flag(true,'resume_training',this);" 
+                              size=60 name=training_course> </TD>
+                            <TD width=50><INPUT class=but_input id=save_training_id onclick=save_training() type=button value=保存培训信息 name=save_training_id></TD></TR></TBODY></TABLE></TD></TR>
+                    <TR>
+                      <TD colSpan=2 height=8>&nbsp;</TD>
+                    </TR>
+                    <TR>
+                      <TD><STRONG><A>证书</A></STRONG></TD>
+                      <TD>
+                        <DIV align=right><INPUT class=but_input id=add_cert_btn onclick=add_cert(this) type=button value=添加资料 name=button23> 
+                        </DIV></TD></TR>
+					<TR>
+                      <TD colSpan=2 height=8>
+                        <HR>
+                      </TD></TR>
+                    <TR id=cert_list>
+                      <TD colSpan=2>
+                        <TABLE id=tbl_cert  cellSpacing=3 
+                        cellPadding=3 width="100%" border=0>
+                          <TBODY>
+                          <TR>
+                            <TD align=right width=239>
+                              <DIV align=right><INPUT id=id_cert_id type=hidden 
+                              onchange="set_change_flag(true,'resume_cert',this);" 
+                              name=cert_id>获得时间：</DIV></TD>
+                            <TD colSpan=2><SELECT id=id_cert_from_Year 
+                              onchange="set_change_flag(true,'resume_cert',this);" 
+                              name=cert_from_Year> <OPTION label=1939 
+                                value=1939>1939</OPTION> <OPTION label=1940 
+                                value=1940>1940</OPTION> <OPTION label=1941 
+                                value=1941>1941</OPTION> <OPTION label=1942 
+                                value=1942>1942</OPTION> <OPTION label=1943 
+                                value=1943>1943</OPTION> <OPTION label=1944 
+                                value=1944>1944</OPTION> <OPTION label=1945 
+                                value=1945>1945</OPTION> <OPTION label=1946 
+                                value=1946>1946</OPTION> <OPTION label=1947 
+                                value=1947>1947</OPTION> <OPTION label=1948 
+                                value=1948>1948</OPTION> <OPTION label=1949 
+                                value=1949>1949</OPTION> <OPTION label=1950 
+                                value=1950>1950</OPTION> <OPTION label=1951 
+                                value=1951>1951</OPTION> <OPTION label=1952 
+                                value=1952>1952</OPTION> <OPTION label=1953 
+                                value=1953>1953</OPTION> <OPTION label=1954 
+                                value=1954>1954</OPTION> <OPTION label=1955 
+                                value=1955>1955</OPTION> <OPTION label=1956 
+                                value=1956>1956</OPTION> <OPTION label=1957 
+                                value=1957>1957</OPTION> <OPTION label=1958 
+                                value=1958>1958</OPTION> <OPTION label=1959 
+                                value=1959>1959</OPTION> <OPTION label=1960 
+                                value=1960>1960</OPTION> <OPTION label=1961 
+                                value=1961>1961</OPTION> <OPTION label=1962 
+                                value=1962>1962</OPTION> <OPTION label=1963 
+                                value=1963>1963</OPTION> <OPTION label=1964 
+                                value=1964>1964</OPTION> <OPTION label=1965 
+                                value=1965>1965</OPTION> <OPTION label=1966 
+                                value=1966>1966</OPTION> <OPTION label=1967 
+                                value=1967>1967</OPTION> <OPTION label=1968 
+                                value=1968>1968</OPTION> <OPTION label=1969 
+                                value=1969>1969</OPTION> <OPTION label=1970 
+                                value=1970>1970</OPTION> <OPTION label=1971 
+                                value=1971>1971</OPTION> <OPTION label=1972 
+                                value=1972>1972</OPTION> <OPTION label=1973 
+                                value=1973>1973</OPTION> <OPTION label=1974 
+                                value=1974>1974</OPTION> <OPTION label=1975 
+                                value=1975>1975</OPTION> <OPTION label=1976 
+                                value=1976>1976</OPTION> <OPTION label=1977 
+                                value=1977>1977</OPTION> <OPTION label=1978 
+                                value=1978>1978</OPTION> <OPTION label=1979 
+                                value=1979>1979</OPTION> <OPTION label=1980 
+                                value=1980>1980</OPTION> <OPTION label=1981 
+                                value=1981>1981</OPTION> <OPTION label=1982 
+                                value=1982>1982</OPTION> <OPTION label=1983 
+                                value=1983>1983</OPTION> <OPTION label=1984 
+                                value=1984>1984</OPTION> <OPTION label=1985 
+                                value=1985>1985</OPTION> <OPTION label=1986 
+                                value=1986>1986</OPTION> <OPTION label=1987 
+                                value=1987>1987</OPTION> <OPTION label=1988 
+                                value=1988>1988</OPTION> <OPTION label=1989 
+                                value=1989>1989</OPTION> <OPTION label=1990 
+                                value=1990>1990</OPTION> <OPTION label=1991 
+                                value=1991>1991</OPTION> <OPTION label=1992 
+                                value=1992>1992</OPTION> <OPTION label=1993 
+                                value=1993>1993</OPTION> <OPTION label=1994 
+                                value=1994>1994</OPTION> <OPTION label=1995 
+                                value=1995>1995</OPTION> <OPTION label=1996 
+                                value=1996>1996</OPTION> <OPTION label=1997 
+                                value=1997>1997</OPTION> <OPTION label=1998 
+                                value=1998>1998</OPTION> <OPTION label=1999 
+                                value=1999>1999</OPTION> <OPTION label=2000 
+                                value=2000>2000</OPTION> <OPTION label=2001 
+                                value=2001>2001</OPTION> <OPTION label=2002 
+                                value=2002>2002</OPTION> <OPTION label=2003 
+                                value=2003>2003</OPTION> <OPTION label=2004 
+                                value=2004>2004</OPTION> <OPTION label=2005 
+                                value=2005>2005</OPTION> <OPTION label=2006 
+                                value=2006>2006</OPTION> <OPTION label=2007 
+                                value=2007>2007</OPTION> <OPTION label=2008 
+                                value=2008>2008</OPTION> <OPTION label=2009 
+                                value=2009 selected>2009</OPTION></SELECT> <SELECT 
+                              id=id_cert_from_Month 
+                              onchange="set_change_flag(true,'resume_cert',this);" 
+                              name=cert_from_Month> <OPTION label=01 
+                                value=01>01</OPTION> <OPTION label=02 
+                                value=02>02</OPTION> <OPTION label=03 
+                                value=03>03</OPTION> <OPTION label=04 
+                                value=04>04</OPTION> <OPTION label=05 
+                                value=05>05</OPTION> <OPTION label=06 
+                                value=06>06</OPTION> <OPTION label=07 
+                                value=07>07</OPTION> <OPTION label=08 
+                                value=08>08</OPTION> <OPTION label=09 
+                                value=09>09</OPTION> <OPTION label=10 
+                                value=10>10</OPTION> <OPTION label=11 value=11 
+                                selected>11</OPTION> <OPTION label=12 
+                                value=12>12</OPTION></SELECT></TD></TR>
+                          <TR>
+                            <TD>
+                              <DIV align=right>证书名称：</DIV></TD>
+                            <TD colSpan=2><INPUT id=id_cert_name maxLength=30 
+                              onchange="set_change_flag(true,'resume_cert',this);" 
+                              size=60 name=cert_name></TD></TR>
+                          <TR>
+                            <TD>
+                              <DIV align=right>发证机构：</DIV></TD>
+                            <TD colSpan=2><INPUT id=id_cert_institution 
+                              maxLength=30 
+                              onchange="set_change_flag(true,'resume_cert',this);" 
+                              size=60 name=institution></TD></TR>
+                          <TR>
+                            <TD>
+                              <DIV align=right>证书成绩：</DIV></TD>
+                            <TD width=764><INPUT id=id_results maxLength=10 
+                              onchange="set_change_flag(true,'resume_cert',this);" 
+                              size=60 name=results> </TD>
+                            <TD width=96>
+                              <DIV align=right><INPUT class=but_input id=save_cert_id onclick=save_cert() type=button value=保存证书信息 name=save_cert_id></DIV></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR>
+              <TR>
+                <TD>&nbsp;</TD></TR>
+              <TR>
+                <TD>
+                  <TABLE cellSpacing=2 cellPadding=3 width="100%" border=0>
+                    <TBODY>
+                    <TR>
+                      <TD width="73%"><STRONG><A>项目经验</A></STRONG>&nbsp;</TD>
+                      <TD align=right width="27%">
+                        <DIV align=right><INPUT class=but_input id=add_project_btn onclick=add_project(this) type=button value=添加资料 name=button24> 
+                        </DIV></TD></TR>
+                    <TR id=project55672>
+                      <TD colSpan=2>
+                        <TABLE cellSpacing=1 cellPadding=5 width="100%" 
+                        bgColor=#dddddd border=0>
+                          <TBODY>
+                          <TR>
+                            <TD align=middle width="20%" 
+                              bgColor=#ffffff>2009/04—2009/11</TD>
+                            <TD align=middle width="20%" bgColor=#ffffff>23</TD>
+                            <TD align=middle width="10%" 
+                              bgColor=#ffffff><LABEL><A style="CURSOR: pointer" 
+                              onclick="javascript:modify_project('55672')">修改</A></LABEL> 
+                            </TD>
+                            <TD align=middle width="10%" bgColor=#ffffff><A 
+                              style="CURSOR: pointer" 
+                              onclick="javascript:del_project('55672')">删除</A></TD></TR></TBODY></TABLE></TD></TR>
+                    <TR id=project_list>
+                      <TD colSpan=2>
+                        <TABLE id=tbl_project  
+                        cellSpacing=3 cellPadding=3 width="100%" border=0>
+                          <TBODY>
+                          <TR>
+                            <TD>
+                              <DIV align=right><SPAN 
+                              class=c_n1>*</SPAN>项目时间：</DIV></TD>
+                            <TD align=left colSpan=2><SELECT 
+                              id=id_project_from_Year 
+                              onchange="set_change_flag(true,'resume_project',this);" 
+                              name=project_from_Year> <OPTION label=1939 
+                                value=1939>1939</OPTION> <OPTION label=1940 
+                                value=1940>1940</OPTION> <OPTION label=1941 
+                                value=1941>1941</OPTION> <OPTION label=1942 
+                                value=1942>1942</OPTION> <OPTION label=1943 
+                                value=1943>1943</OPTION> <OPTION label=1944 
+                                value=1944>1944</OPTION> <OPTION label=1945 
+                                value=1945>1945</OPTION> <OPTION label=1946 
+                                value=1946>1946</OPTION> <OPTION label=1947 
+                                value=1947>1947</OPTION> <OPTION label=1948 
+                                value=1948>1948</OPTION> <OPTION label=1949 
+                                value=1949>1949</OPTION> <OPTION label=1950 
+                                value=1950>1950</OPTION> <OPTION label=1951 
+                                value=1951>1951</OPTION> <OPTION label=1952 
+                                value=1952>1952</OPTION> <OPTION label=1953 
+                                value=1953>1953</OPTION> <OPTION label=1954 
+                                value=1954>1954</OPTION> <OPTION label=1955 
+                                value=1955>1955</OPTION> <OPTION label=1956 
+                                value=1956>1956</OPTION> <OPTION label=1957 
+                                value=1957>1957</OPTION> <OPTION label=1958 
+                                value=1958>1958</OPTION> <OPTION label=1959 
+                                value=1959>1959</OPTION> <OPTION label=1960 
+                                value=1960>1960</OPTION> <OPTION label=1961 
+                                value=1961>1961</OPTION> <OPTION label=1962 
+                                value=1962>1962</OPTION> <OPTION label=1963 
+                                value=1963>1963</OPTION> <OPTION label=1964 
+                                value=1964>1964</OPTION> <OPTION label=1965 
+                                value=1965>1965</OPTION> <OPTION label=1966 
+                                value=1966>1966</OPTION> <OPTION label=1967 
+                                value=1967>1967</OPTION> <OPTION label=1968 
+                                value=1968>1968</OPTION> <OPTION label=1969 
+                                value=1969>1969</OPTION> <OPTION label=1970 
+                                value=1970>1970</OPTION> <OPTION label=1971 
+                                value=1971>1971</OPTION> <OPTION label=1972 
+                                value=1972>1972</OPTION> <OPTION label=1973 
+                                value=1973>1973</OPTION> <OPTION label=1974 
+                                value=1974>1974</OPTION> <OPTION label=1975 
+                                value=1975>1975</OPTION> <OPTION label=1976 
+                                value=1976>1976</OPTION> <OPTION label=1977 
+                                value=1977>1977</OPTION> <OPTION label=1978 
+                                value=1978>1978</OPTION> <OPTION label=1979 
+                                value=1979>1979</OPTION> <OPTION label=1980 
+                                value=1980>1980</OPTION> <OPTION label=1981 
+                                value=1981>1981</OPTION> <OPTION label=1982 
+                                value=1982>1982</OPTION> <OPTION label=1983 
+                                value=1983>1983</OPTION> <OPTION label=1984 
+                                value=1984>1984</OPTION> <OPTION label=1985 
+                                value=1985>1985</OPTION> <OPTION label=1986 
+                                value=1986>1986</OPTION> <OPTION label=1987 
+                                value=1987>1987</OPTION> <OPTION label=1988 
+                                value=1988>1988</OPTION> <OPTION label=1989 
+                                value=1989>1989</OPTION> <OPTION label=1990 
+                                value=1990>1990</OPTION> <OPTION label=1991 
+                                value=1991>1991</OPTION> <OPTION label=1992 
+                                value=1992>1992</OPTION> <OPTION label=1993 
+                                value=1993>1993</OPTION> <OPTION label=1994 
+                                value=1994>1994</OPTION> <OPTION label=1995 
+                                value=1995>1995</OPTION> <OPTION label=1996 
+                                value=1996>1996</OPTION> <OPTION label=1997 
+                                value=1997>1997</OPTION> <OPTION label=1998 
+                                value=1998>1998</OPTION> <OPTION label=1999 
+                                value=1999>1999</OPTION> <OPTION label=2000 
+                                value=2000>2000</OPTION> <OPTION label=2001 
+                                value=2001>2001</OPTION> <OPTION label=2002 
+                                value=2002>2002</OPTION> <OPTION label=2003 
+                                value=2003>2003</OPTION> <OPTION label=2004 
+                                value=2004>2004</OPTION> <OPTION label=2005 
+                                value=2005>2005</OPTION> <OPTION label=2006 
+                                value=2006>2006</OPTION> <OPTION label=2007 
+                                value=2007>2007</OPTION> <OPTION label=2008 
+                                value=2008>2008</OPTION> <OPTION label=2009 
+                                value=2009 selected>2009</OPTION></SELECT> <SELECT 
+                              id=id_project_from_Month 
+                              onchange="set_change_flag(true,'resume_project',this);" 
+                              name=project_from_Month> <OPTION label=01 
+                                value=01>01</OPTION> <OPTION label=02 
+                                value=02>02</OPTION> <OPTION label=03 
+                                value=03>03</OPTION> <OPTION label=04 
+                                value=04>04</OPTION> <OPTION label=05 
+                                value=05>05</OPTION> <OPTION label=06 
+                                value=06>06</OPTION> <OPTION label=07 
+                                value=07>07</OPTION> <OPTION label=08 
+                                value=08>08</OPTION> <OPTION label=09 
+                                value=09>09</OPTION> <OPTION label=10 
+                                value=10>10</OPTION> <OPTION label=11 value=11 
+                                selected>11</OPTION> <OPTION label=12 
+                                value=12>12</OPTION></SELECT>----<SELECT 
+                              id=id_project_to_Year 
+                              onchange="set_change_flag(true,'resume_project',this);" 
+                              name=project_to_Year> <OPTION label=1939 
+                                value=1939>1939</OPTION> <OPTION label=1940 
+                                value=1940>1940</OPTION> <OPTION label=1941 
+                                value=1941>1941</OPTION> <OPTION label=1942 
+                                value=1942>1942</OPTION> <OPTION label=1943 
+                                value=1943>1943</OPTION> <OPTION label=1944 
+                                value=1944>1944</OPTION> <OPTION label=1945 
+                                value=1945>1945</OPTION> <OPTION label=1946 
+                                value=1946>1946</OPTION> <OPTION label=1947 
+                                value=1947>1947</OPTION> <OPTION label=1948 
+                                value=1948>1948</OPTION> <OPTION label=1949 
+                                value=1949>1949</OPTION> <OPTION label=1950 
+                                value=1950>1950</OPTION> <OPTION label=1951 
+                                value=1951>1951</OPTION> <OPTION label=1952 
+                                value=1952>1952</OPTION> <OPTION label=1953 
+                                value=1953>1953</OPTION> <OPTION label=1954 
+                                value=1954>1954</OPTION> <OPTION label=1955 
+                                value=1955>1955</OPTION> <OPTION label=1956 
+                                value=1956>1956</OPTION> <OPTION label=1957 
+                                value=1957>1957</OPTION> <OPTION label=1958 
+                                value=1958>1958</OPTION> <OPTION label=1959 
+                                value=1959>1959</OPTION> <OPTION label=1960 
+                                value=1960>1960</OPTION> <OPTION label=1961 
+                                value=1961>1961</OPTION> <OPTION label=1962 
+                                value=1962>1962</OPTION> <OPTION label=1963 
+                                value=1963>1963</OPTION> <OPTION label=1964 
+                                value=1964>1964</OPTION> <OPTION label=1965 
+                                value=1965>1965</OPTION> <OPTION label=1966 
+                                value=1966>1966</OPTION> <OPTION label=1967 
+                                value=1967>1967</OPTION> <OPTION label=1968 
+                                value=1968>1968</OPTION> <OPTION label=1969 
+                                value=1969>1969</OPTION> <OPTION label=1970 
+                                value=1970>1970</OPTION> <OPTION label=1971 
+                                value=1971>1971</OPTION> <OPTION label=1972 
+                                value=1972>1972</OPTION> <OPTION label=1973 
+                                value=1973>1973</OPTION> <OPTION label=1974 
+                                value=1974>1974</OPTION> <OPTION label=1975 
+                                value=1975>1975</OPTION> <OPTION label=1976 
+                                value=1976>1976</OPTION> <OPTION label=1977 
+                                value=1977>1977</OPTION> <OPTION label=1978 
+                                value=1978>1978</OPTION> <OPTION label=1979 
+                                value=1979>1979</OPTION> <OPTION label=1980 
+                                value=1980>1980</OPTION> <OPTION label=1981 
+                                value=1981>1981</OPTION> <OPTION label=1982 
+                                value=1982>1982</OPTION> <OPTION label=1983 
+                                value=1983>1983</OPTION> <OPTION label=1984 
+                                value=1984>1984</OPTION> <OPTION label=1985 
+                                value=1985>1985</OPTION> <OPTION label=1986 
+                                value=1986>1986</OPTION> <OPTION label=1987 
+                                value=1987>1987</OPTION> <OPTION label=1988 
+                                value=1988>1988</OPTION> <OPTION label=1989 
+                                value=1989>1989</OPTION> <OPTION label=1990 
+                                value=1990>1990</OPTION> <OPTION label=1991 
+                                value=1991>1991</OPTION> <OPTION label=1992 
+                                value=1992>1992</OPTION> <OPTION label=1993 
+                                value=1993>1993</OPTION> <OPTION label=1994 
+                                value=1994>1994</OPTION> <OPTION label=1995 
+                                value=1995>1995</OPTION> <OPTION label=1996 
+                                value=1996>1996</OPTION> <OPTION label=1997 
+                                value=1997>1997</OPTION> <OPTION label=1998 
+                                value=1998>1998</OPTION> <OPTION label=1999 
+                                value=1999>1999</OPTION> <OPTION label=2000 
+                                value=2000>2000</OPTION> <OPTION label=2001 
+                                value=2001>2001</OPTION> <OPTION label=2002 
+                                value=2002>2002</OPTION> <OPTION label=2003 
+                                value=2003>2003</OPTION> <OPTION label=2004 
+                                value=2004>2004</OPTION> <OPTION label=2005 
+                                value=2005>2005</OPTION> <OPTION label=2006 
+                                value=2006>2006</OPTION> <OPTION label=2007 
+                                value=2007>2007</OPTION> <OPTION label=2008 
+                                value=2008>2008</OPTION> <OPTION label=2009 
+                                value=2009 selected>2009</OPTION></SELECT> <SELECT 
+                              id=id_project_to_Month 
+                              onchange="set_change_flag(true,'resume_project',this);" 
+                              name=project_to_Month> <OPTION label=01 
+                                value=01>01</OPTION> <OPTION label=02 
+                                value=02>02</OPTION> <OPTION label=03 
+                                value=03>03</OPTION> <OPTION label=04 
+                                value=04>04</OPTION> <OPTION label=05 
+                                value=05>05</OPTION> <OPTION label=06 
+                                value=06>06</OPTION> <OPTION label=07 
+                                value=07>07</OPTION> <OPTION label=08 
+                                value=08>08</OPTION> <OPTION label=09 
+                                value=09>09</OPTION> <OPTION label=10 
+                                value=10>10</OPTION> <OPTION label=11 value=11 
+                                selected>11</OPTION> <OPTION label=12 
+                                value=12>12</OPTION></SELECT></TD></TR>
+                          <TR>
+                            <TD align=left width=256>
+                              <DIV align=right><SPAN class=c_n1>*</SPAN> <INPUT 
+                              id=id_project_id type=hidden 
+                              name=project_id>项目名称：</DIV></TD>
+                            <TD align=left colSpan=2><INPUT id=id_project_name 
+                              maxLength=20 
+                              onchange="set_change_flag(true,'resume_project',this);" 
+                              name=project_name></TD></TR>
+                          <TR>
+                            <TD>
+                              <DIV align=right><SPAN class=c_n1>*</SPAN>项目描述： 
+                              </DIV>
+                              <DIV></DIV></TD>
+                            <TD align=left colSpan=2><TEXTAREA class=t_area id=id_project_desc name=project_desc rows=5 cols=60 onChange="set_change_flag(true,'resume_project',this);"></TEXTAREA></TD></TR>
+                          <TR>
+                            <TD vAlign=center align=right>
+                              <DIV align=right><SPAN 
+                              class=c_n1>*</SPAN>项目中的职责：</DIV>
+                              <DIV></DIV></TD>
+                            <TD width=693><TEXTAREA id=id_project_responsibility name=project_responsibility rows=5 cols=60 onChange="set_change_flag(true,'resume_project',this);"></TEXTAREA> 
+                            </TD>
+                            <TD vAlign=bottom width=88>&nbsp; </TD></TR>
+                          <TR>
+                            <TD align=middle colSpan=2><INPUT class=but_input id=save_project_id onclick=save_project() type=button value=保存项目经验信息 name=save_project_id></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR>
+              <TR>
+                <TD>
+                  <HR>
+                </TD></TR>
+              <TR>
+                <TD>
+                  <TABLE cellSpacing=0 cellPadding=3 width="100%" border=0>
+                    <TBODY>
+                    <TR>
+                      <TD align=left colSpan=3><STRONG><A>个性信息</A></STRONG>&nbsp;</TD>
+                      <TD align=right width="12%">&nbsp; </TD></TR>
+                    <TR>
+                      <TD align=right width="15%">&nbsp; </TD>
+                      <TD align=left colSpan=2><SELECT class=kuang3 
+                        id=id_personality_type 
+                        onchange="set_change_flag(true,'resume_info',this);" 
+                        name=personality_type> <OPTION value=1 
+                          selected>--------特长--------</OPTION> <OPTION 
+                          value=2>--------兴趣爱好--------</OPTION> <OPTION 
+                          value=3>--------社会活动--------</OPTION> <OPTION 
+                          value=4>--------奖状/奖学金--------</OPTION></SELECT></TD>
+                      <TD align=right>&nbsp; </TD></TR>
+                    <TR>
+                      <TD align=right>&nbsp; </TD>
+                      <TD align=left colSpan=2><TEXTAREA id=id_personality_desc onpropertychange="set_change_flag(true,'resume_info',this);" name=personality_desc rows=3 cols=60></TEXTAREA></TD>
+                      <TD align=right>&nbsp; </TD></TR>
+                    <TR>
+                      <TD align=left>&nbsp; </TD>
+                      <TD align=left width="21%"><!-- <input type="checkbox" name="is_subscribe" id="id_is_subscribe"   />
+
+	  订阅第三方信息--></TD>
+                      <TD align=left width="50%"><!--<input type="checkbox" name="is_remind" id="id_is_remind"  />
+
+接受职位提醒--></TD>
+                  <TD align=right><INPUT class=but_input id=check_personinfo_id onclick=check_personinfo() type=button value=保存个性信息 name=check_personinfo_id></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR>
+        <TR>
+          <TD bgcolor="#F0F0F0"><table cellspacing="1" cellpadding="3" width="99%" align="center" border="0">
+            <tbody>
+              <tr>
+                <td width="482">&nbsp;</td>
+                <td align="right" width="1344"><input name="button5" type="button" value="填写完毕，保存简历" />
+                    <input name="button5" type="button" style="CURSOR: pointer" value="Filling English Resume">
+                </td>
+              </tr>
+            </tbody>
+          </table></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE>
+	</tr>
+</table>
+</body>
+</html>

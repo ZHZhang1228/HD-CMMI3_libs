@@ -1,0 +1,186 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link href="../../../css/common.css" rel="stylesheet" type="text/css" />
+<script language="javascript">
+function onSelect(){
+var enteType=document.all("enteType");
+var rowA=document.all("rowA");
+var rowB=document.all("rowB");
+
+if(enteType.value=="生产型"){
+rowA.style.display="";
+rowB.style.display="none";
+}
+
+if(enteType.value=="研发型"){
+rowA.style.display="none";
+rowB.style.display="";
+}
+
+}
+</script>
+
+</head>
+
+<body>
+<div span class="title">创新基金申报</div></span>
+<div class="container">
+  <div class="content">
+    <div class="mainarea">
+      <div class="rect rect-white topmargin">
+        <div class="rmm">
+			<div class="tabs_header">
+				<ul class="tabs">
+				<li class="active"><a href=""><span>企业信息</span></a></li>
+				<li><a href="innoFunds_ProjectManage.html"><span>项目管理</span></a></li>
+				<li><a href="otheDeclManage_DeclareManage.html"><span>申报管理</span></a></li>
+				</ul>
+			</div>
+			<div class="tabs_content" style="padding-left:0; padding-right:0;">
+			<form>
+			<table class="formtable" cellpadding="0" cellspacing="0">
+			
+				  <tr class="odd">
+    <td width="187" align="right"  scope="row" ><div align="right"><strong><span style="color:#FF0000">*</span>企业名称</strong></div></td>
+    <td width="219"   align="left">   <div align="left">
+      <input type="text" name="textfield32"  size="25"/>
+    </div></td>
+
+    <td width="158"  align="left"><div align="right"><strong><span style="color:#FF0000">*</span>成立时间</strong></div></td>
+    <td width="294"  align="left"><div align="left">
+    </div></td>
+  </tr>
+  
+  <tr class="odd2">
+    <td align="right"  scope="row"><div align="right"><b>注册资本</b></div></td>
+    <td align="left">      <div align="left">
+      <input type="text" name="textfield32"  size="25"/>
+    万元</div></td>
+  <td  align="left"><div align="right"><strong>企业登记类型</strong></div></td>
+    <td  align="left"><div align="left">
+      <select name="select">
+          <option>国有企业</option>
+          <option>集体企业</option>
+          <option>股份合作企业</option>
+          <option>联营企业</option>
+          <option>有限责任公司</option>
+          <option>股份有限公司</option>
+          <option selected="selected">私营企业</option>
+          <option>港、澳、台投资企业</option>
+          <option>外商投资企业</option>
+          <option>其他企业</option>
+      </select>
+    </div></td>
+  </tr>
+  
+  <tr class="odd">
+    <td align="right"  scope="row"><div align="right"><strong><span style="color:#FF0000">*</span>是否留学人员创办企业</strong></div></td>
+    <td  align="left"><div align="left">
+          <input type="radio" name="radiobutton" value="radiobutton" />是
+          <input type="radio" name="radiobutton" value="radiobutton" />否</div></td>
+    <td  align="left"><div align="right"><strong>是否高新技术服务业</strong></div></td>
+    <td  align="left"><div align="left">
+          <input type="radio" name="radiobutton" value="radiobutton" />是
+          <input type="radio" name="radiobutton" value="radiobutton" />否</div></td>
+  </tr>
+  
+  <tr class="odd2">
+    <td><div align="right"><strong>企业类型</strong></div></td>
+    <td><div align="left">
+      <select name="enteType" onchange="return onSelect()">
+          <option selected="selected" value="生产型">生产型</option>
+          <option value="研发型">研发型</option>
+      </select>
+    </div></td>
+    <td><div align="right"><strong>企业人员</strong></div></td>
+    <td><div align="left">&nbsp;<a href="#" onclick="javascript:window.open('innoFunds_FirmPersons.html','','top=100,left=150,width=700,height=500,toolbar=no')">添加人员信息</a></div></td>
+  </tr>
+
+  
+  <tr  class="odd">
+  <td><div align="right"><strong>
+    已生产产品数
+  </strong></div></td>
+  
+  <td>
+    <div align="left">
+      <input type="text" name="textfield32"  size="25"/>
+    </div></td>
+  
+  <td><div align="right"><strong>
+    生产场地面积  </strong></div></td>
+  
+    <td>
+      <div align="left">
+      <input type="text" name="textfield32"  size="25"/>
+    m<sup>2</sup>
+      </div></td>
+  </tr>
+  
+
+
+  <tr  class="odd2">
+  <td>
+    <div align="right"><strong>已有成果数</strong></div></td>
+  
+  <td>
+  
+    <div align="left">
+      <input type="text" name="textfield32"  size="25"/>
+    </div></td>  
+  <td><div align="right"><strong>
+    已转让成果数</strong></div></td> 
+    <td>
+      <div align="left">
+      <input type="text" name="textfield32"  size="25"/>
+    </div></td>
+  </tr>
+  
+  
+
+  <tr class="odd">
+  <td><div align="right"><strong>上年度创汇</strong></div></td>
+  <td><div align="left">
+    <input type="text" name="textfield32"  size="25"/>
+  万元</div></td>
+  
+  <td><div align="right"><strong>上年度研发经费</strong></div></td>
+  <td><div align="left">
+    <input type="text" name="textfield32"  size="25"/>
+  万元</div></td>
+  </tr>
+  
+  <tr class="odd2">
+  <td><div align="right"><strong>附件</strong></div></td>
+  <td colspan="3"><div align="left">
+    <input name="file" type="file" size="30" />
+  </div></td>
+  </tr>
+  
+ 
+				<tr class="odd">
+				  <th align="right">&nbsp;</th>
+				  <td colspan="3"><button class="sbutton" type="submit"><span><em>保存</em></span></button> 
+				  <button class="sbutton" type="reset"><span><em>重置</em></span></button> 
+				  <button class="sbutton" type="button" onclick="javascript:window.history.back()"><span><em>返回</em></span></button></td>
+			    </tr>
+			</table>
+			</form>
+			</div>
+
+
+		</div>
+      </div>
+      <!--清除浮动-->
+      <br class="clear" />
+	</div>
+</div>
+</div>
+</body>
+</html>
+
+
+

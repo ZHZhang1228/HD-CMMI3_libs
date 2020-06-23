@@ -1,0 +1,151 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>授课培训需求调查管理</title>
+<link href="../../css/common.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript">
+
+function modifySurvey()
+{
+	var objs = document.getElementsByName("checkbox3");
+	var j=0;
+	for(var i=0;i<objs.length;i++)   
+	{    
+		  if(objs[i].checked)   
+		  {   
+		    j++;
+		    var id = objs[i].value;
+			window.location.href="Survey_Modify.html";   
+		  }
+	}
+	if(j == 0)
+	{
+		alert("请先选择记录！");
+	}
+}
+
+
+function deleteSurvey()
+{
+	var objs = document.getElementsByName("checkbox3");
+	var j=0;
+	for(var i=0;i<objs.length;i++)   
+	{    
+		  if(objs[i].checked)   
+		  {   
+		    j++;   
+		    var id = objs[i].value;
+			alert("确实要删除吗?");
+		    window.location.href="Survey_List.html"; 
+		    
+		  }
+	}
+	if(j == 0)
+	{
+		alert("请先选择记录！");
+	}
+}
+
+
+
+</script>
+</head>
+
+<body>
+<div span class="title">孵化服务</div>
+</span>
+<div class="container">
+  <div class="content">
+    <div class="mainarea">
+      <div class="rect rect-white topmargin">
+        <div class="rmm">
+          
+          <div class="datatitle topmargin">
+  <h3><img src="../../images/icons/result.gif" />授课培训需求调查管理</h3>
+  </div>
+  <table width="100%" cellpadding="2" cellspacing="0" class="dataTable">
+    <tr class="odd">
+      <td colspan="3" align="left"><font face="宋体"><strong><font size="3">企业名称</font></strong>
+          <input name="textfield22" type="text"  id="textfield22" value="" size="25" />
+　　　<strong><font face="宋体">所需培训内容</font></strong>
+<label>
+<select name="select">
+	    <option value="1" selected="selected">项目申报培训</option>
+	    <option value="2">财务知识培训</option>
+	    <option value="3">金融知识培训</option>
+	    <option value="4">企业管理培训</option>
+	    <option value="5">政策法规培训</option>
+	    <option value="6">专业技术培训</option>
+      </select>
+</label>
+&nbsp;　&nbsp;
+<input type="button" name="button12" id="button12" value="查询" />
+      </font></td>
+    </tr>
+	
+    <tr class="odd2">
+      <td width="12%" align="center"><label>
+        All
+        <input type="checkbox" name="checkbox" value="checkbox" />
+      </label></td>
+      <td width="22%" align="center"><font face="宋体"><strong><font size="3">个人/企业名称</font></strong></font></td>
+      <td width="37%" align="center"><strong><font face="宋体">所需培训内容</font></strong></td>
+    </tr>
+      <tr class="odd" >
+        <td align="center"><label>
+          <input type="checkbox" name="checkbox2" value="checkbox" />
+        </label></td>
+        <td align="center" bordercolor="1"><a href="teachingSurvey_View.html">aaa</a></td>
+      <td align="center"><p>项目申报培训</p>        </td>
+    </tr>
+    <tr class="odd2">
+      <td height="22" align="center"><label>
+        <input type="checkbox" name="checkbox3" value="checkbox" />
+      </label></td>
+      <td align="center"><a href="teachingSurvey_View.html">bbb</a></td>
+      <td align="center"><p>财务知识培训</p>      </td>
+    </tr>
+    <tr class="odd">
+      <td align="center"><label>
+        <input type="checkbox" name="checkbox4" value="checkbox" />
+      </label></td>
+      <td align="center"><a href="teachingSurvey_View.html">ccc</a></td>
+      <td align="center">金融知识培训</td>
+    </tr>
+    <tr class="odd2">
+      <td align="center"><label>
+        <input type="checkbox" name="checkbox5" value="checkbox" />
+      </label></td>
+      <td align="center"><a href="teachingSurvey_View.html">ddd</a></td>
+      <td align="center">企业管理培训</td>
+    </tr>  
+    <tr class="odd">
+      <td align="center"><label>
+        <input type="checkbox" name="checkbox6" value="checkbox" />
+      </label></td>
+      <td align="center"><a href="teachingSurvey_View.html">eee</a></td>
+      <td align="center">政策法规培训</td>
+    </tr>
+
+  </table>
+    <div class="page">
+  <span class="page-info">
+  <button class="lbutton" type="button" onclick="location.href='teachingSurvey_Add.html'"><span><em>新增</em></span></button>
+  <button class="lbutton" type="button" onClick="location.href='teachingSurvey_Modify.html'"><span><em>修改</em></span></button>
+  <button class="lbutton" type="button" onclick="location.href='teachingSurvey_List.html'"><span><em>删除</em></span></button>
+  </span>
+  <span class="page-link">         共15条 1页，当前第1页 &lt;&lt; &lt; &gt; &gt;&gt; 转
+            <select name="select12" id="select12">
+              <option>1</option>
+        </select>
+            页	</span>
+  </div>
+        </div>
+      </div>
+		<!--清除浮动--><br class="clear" />
+	</div>
+</div>
+</div>
+</body>
+</html>

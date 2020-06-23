@@ -1,0 +1,112 @@
+package management;
+
+import java.awt.*;
+import java.awt.event.*;
+import java.lang.reflect.*;
+import java.util.*;
+import javax.swing.*;
+import javax.swing.tree.*;
+import javax.swing.event.*;
+
+
+/**
+ * <p>Title: </p>
+ * <p>Description: </p>
+ * <p>Copyright: Copyright (c) 2004</p>
+ * <p>Company: </p>
+ * @author not attributable
+ * @version 1.0
+ */
+
+public class evFrame1 extends JFrame implements TreeSelectionListener {
+     JSplitPane jSplitPane1;
+     JTree jTree1=new JTree();
+     helloPanel helloPanel1;
+     /*
+     searchPanel3 searchPanel1;
+     reportPanel reportPanel1;
+   */
+    String strx;
+    GridBagLayout gridBagLayout1 = new GridBagLayout();
+    String ip;
+  public evFrame1() {
+    try {
+     jbInit();
+   }
+   catch(Exception e) {
+     e.printStackTrace();
+   }
+  }
+  public evFrame1(String strx1) {
+   strx=strx1;
+    try {
+   jbInit();
+ }
+ catch(Exception e) {
+   e.printStackTrace();
+ }
+}
+  public evFrame1(String strx1,String strx2) {
+  strx=strx1;
+  ip=strx2;
+   try {
+  jbInit();
+}
+catch(Exception e) {
+  e.printStackTrace();
+}
+}
+
+
+  private void jbInit() throws Exception {
+    jSplitPane1 = new JSplitPane();
+      this.getContentPane().setLayout(gridBagLayout1);
+      this.getContentPane().add(jSplitPane1,  new GridBagConstraints(0, 0, 1, 1, 1.0, 1.0
+              ,GridBagConstraints.CENTER, GridBagConstraints.BOTH, new Insets(0, 0, 0, 0), 388, 304));
+      jSplitPane1.add(jTree1, JSplitPane.LEFT);
+      jSplitPane1.setDividerLocation(110);
+      helloPanel1=new helloPanel();
+      /*
+      reportPanel1=new  reportPanel(strx,ip);
+      searchPanel1=new searchPanel3(strx,ip);
+     */
+      DefaultMutableTreeNode root = new DefaultMutableTreeNode("信用卡评估系统");
+     DefaultMutableTreeNode bitchThing = new DefaultMutableTreeNode("用户基本信息查询");
+     root.add(bitchThing);
+     bitchThing = new DefaultMutableTreeNode("用户个人通知查询");
+     root.add(bitchThing);
+     bitchThing = new DefaultMutableTreeNode("密码修改");
+     root.add(bitchThing);
+     bitchThing = new DefaultMutableTreeNode("帮助");
+     root.add(bitchThing);
+     bitchThing = new DefaultMutableTreeNode("退出系统");
+     root.add(bitchThing);
+     jTree1 = new JTree(root);
+     jSplitPane1.add(jTree1, JSplitPane.LEFT);
+     jSplitPane1.add(helloPanel1,JSplitPane.RIGHT);
+     jTree1.addTreeSelectionListener(this);
+     int mode = TreeSelectionModel.SINGLE_TREE_SELECTION;
+     jTree1.getSelectionModel().setSelectionMode(mode);
+  }
+
+  public void valueChanged(TreeSelectionEvent e) {
+    /**@todo Implement this javax.swing.event.TreeSelectionListener method*/
+   // throw new java.lang.UnsupportedOperationException("Method valueChanged() not yet implemented.");
+   String node=jTree1.getLastSelectedPathComponent().toString();
+        if(node.equals("信用卡评估系统")){
+          jSplitPane1.remove(jSplitPane1.getRightComponent());
+          jSplitPane1.add(helloPanel1,JSplitPane.RIGHT);
+        }
+        /*
+        if(node.equals("查询处理")){
+         jSplitPane1.remove(jSplitPane1.getRightComponent());
+         jSplitPane1.add(searchPanel1,JSplitPane.RIGHT);
+       }
+       if(node.equals("修改密码")){
+      jSplitPane1.remove(jSplitPane1.getRightComponent());
+      jSplitPane1.add(reportPanel1,JSplitPane.RIGHT);
+       }
+      */
+ }
+
+}

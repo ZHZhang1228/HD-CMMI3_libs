@@ -1,0 +1,906 @@
+
+(object Petal
+    version    	45
+    _written   	"Rose 7.6.0109.2314"
+    charSet    	134)
+
+(object Class_Category "Maintenance Examination Question"
+    is_unit    	TRUE
+    is_loaded  	TRUE
+    quid       	"41DB43BC018A"
+    exportControl 	"Public"
+    logical_models 	(list unit_reference_list
+	(object Class "ManageExamineQuestionForm"
+	    quid       	"41F0F22F0203"
+	    stereotype 	"boundary")
+	(object Class "ManageExamineQuestionControl"
+	    quid       	"41F5EA9E02CE"
+	    stereotype 	"control"
+	    operations 	(list Operations
+		(object Operation "AddExamineQuestion"
+		    quid       	"41F748AE036B"
+		    documentation 	"增加考题"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "ImportExamineQuestion"
+		    quid       	"41F748C4036B"
+		    documentation 	"批量导入考题"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "ModifyExamineQuestion"
+		    quid       	"41F748D903C8"
+		    documentation 	"修改考题"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)
+		(object Operation "DeleteExamineQuestion"
+		    quid       	"41F748E6036B"
+		    documentation 	"删除考题"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	0)))
+	(object UseCase "Maintenance Examination Question"
+	    quid       	"41DB43CD0311"
+	    stereotype 	"use-case realization"
+	    logical_models 	(list unit_reference_list
+		(object Mechanism @1
+		    logical_models 	(list unit_reference_list
+			(object Object "$UNNAMED$0"
+			    quid       	"41F0F16D03C8"
+			    collaborators 	(list link_list
+				(object Link
+				    quid       	"41F5EB600196"
+				    supplier   	"$UNNAMED$1"
+				    quidu      	"41F5EB3C0242"
+				    messages   	(list Messages
+					(object Message "AddExamineQuestion"
+					    quid       	"41F5EB600197"
+					    frequency  	"Aperiodic"
+					    synchronization 	"Simple"
+					    dir        	"FromClientToSupplier"
+					    sequence   	"1"
+					    ordinal    	0
+					    quidu      	"000000000000"
+					    creation   	FALSE)
+					(object Message "ImportExamineQuestion"
+					    quid       	"41F5EBA603C8"
+					    frequency  	"Aperiodic"
+					    synchronization 	"Simple"
+					    dir        	"FromClientToSupplier"
+					    sequence   	"2"
+					    ordinal    	3
+					    quidu      	"000000000000"
+					    creation   	FALSE)
+					(object Message "ModifyExamineQuestion"
+					    quid       	"41F5EBD2008C"
+					    frequency  	"Aperiodic"
+					    synchronization 	"Simple"
+					    dir        	"FromClientToSupplier"
+					    sequence   	"3"
+					    ordinal    	6
+					    quidu      	"000000000000"
+					    creation   	FALSE)
+					(object Message "DeleteExamineQuestion"
+					    quid       	"41F5EC02005D"
+					    frequency  	"Aperiodic"
+					    synchronization 	"Simple"
+					    dir        	"FromClientToSupplier"
+					    sequence   	"4"
+					    ordinal    	9
+					    quidu      	"000000000000"
+					    creation   	FALSE))))
+			    class      	"Use Case View::Use Case Model::Actor::Teacher"
+			    quidu      	"41DB3E920236"
+			    persistence 	"Transient"
+			    creationObj 	FALSE
+			    multi      	FALSE)
+			(object Object "$UNNAMED$1"
+			    quid       	"41F5EB3C0242"
+			    collaborators 	(list link_list
+				(object Link
+				    quid       	"41F5EB640232"
+				    supplier   	"$UNNAMED$2"
+				    quidu      	"41F5EB420203"
+				    messages   	(list Messages
+					(object Message "AddExamineQuestion"
+					    quid       	"41F5EB640233"
+					    frequency  	"Aperiodic"
+					    synchronization 	"Simple"
+					    dir        	"FromClientToSupplier"
+					    sequence   	"1.1"
+					    ordinal    	1
+					    quidu      	"000000000000"
+					    creation   	FALSE)
+					(object Message "ImportExamineQuestion"
+					    quid       	"41F5EBA903D8"
+					    frequency  	"Aperiodic"
+					    synchronization 	"Simple"
+					    dir        	"FromClientToSupplier"
+					    sequence   	"2.1"
+					    ordinal    	4
+					    quidu      	"000000000000"
+					    creation   	FALSE)
+					(object Message "ModifyExamineQuestion"
+					    quid       	"41F5EBD6005D"
+					    frequency  	"Aperiodic"
+					    synchronization 	"Simple"
+					    dir        	"FromClientToSupplier"
+					    sequence   	"3.1"
+					    ordinal    	7
+					    quidu      	"000000000000"
+					    creation   	FALSE)
+					(object Message "DeleteExamineQuestion"
+					    quid       	"41F5EC06037A"
+					    frequency  	"Aperiodic"
+					    synchronization 	"Simple"
+					    dir        	"FromClientToSupplier"
+					    sequence   	"4.1"
+					    ordinal    	10
+					    quidu      	"000000000000"
+					    creation   	FALSE))))
+			    class      	"Logical View::Analysis Model::Use Case Realization::Maintenance Examination Question::ManageExamineQuestionForm"
+			    quidu      	"41F0F22F0203"
+			    persistence 	"Transient"
+			    creationObj 	FALSE
+			    multi      	FALSE)
+			(object Object "$UNNAMED$2"
+			    quid       	"41F5EB420203"
+			    collaborators 	(list link_list
+				(object Link
+				    quid       	"41F5EB6A01B5"
+				    supplier   	"$UNNAMED$3"
+				    quidu      	"41F5EB5700CB"
+				    messages   	(list Messages
+					(object Message "SaveExamineQuestion"
+					    quid       	"41F5EB6A01B6"
+					    frequency  	"Aperiodic"
+					    synchronization 	"Simple"
+					    dir        	"FromClientToSupplier"
+					    sequence   	"1.1.1"
+					    ordinal    	2
+					    quidu      	"000000000000"
+					    creation   	FALSE)
+					(object Message "SaveExamineQuestion"
+					    quid       	"41F5EBAF003E"
+					    frequency  	"Aperiodic"
+					    synchronization 	"Simple"
+					    dir        	"FromClientToSupplier"
+					    sequence   	"2.1.1"
+					    ordinal    	5
+					    quidu      	"000000000000"
+					    creation   	FALSE)
+					(object Message "SaveExamineQuestion"
+					    quid       	"41F5EBDB009C"
+					    frequency  	"Aperiodic"
+					    synchronization 	"Simple"
+					    dir        	"FromClientToSupplier"
+					    sequence   	"3.1.1"
+					    ordinal    	8
+					    quidu      	"000000000000"
+					    creation   	FALSE)
+					(object Message "SaveExamineQuestion"
+					    quid       	"41F5EC0D001F"
+					    frequency  	"Aperiodic"
+					    synchronization 	"Simple"
+					    dir        	"FromClientToSupplier"
+					    sequence   	"4.1.1"
+					    ordinal    	11
+					    quidu      	"000000000000"
+					    creation   	FALSE))))
+			    class      	"Logical View::Analysis Model::Use Case Realization::Maintenance Examination Question::ManageExamineQuestionControl"
+			    quidu      	"41F5EA9E02CE"
+			    persistence 	"Transient"
+			    creationObj 	FALSE
+			    multi      	FALSE)
+			(object Object "$UNNAMED$3"
+			    quid       	"41F5EB5700CB"
+			    class      	"Logical View::Analysis Model::AnalysisClass::CExaminQuestion"
+			    quidu      	"41ECC138009C"
+			    persistence 	"Transient"
+			    creationObj 	FALSE
+			    multi      	FALSE))))
+	    logical_presentations 	(list unit_reference_list
+		(object InteractionDiagram "Maintenance Examination Question"
+		    mechanism_ref 	@1
+		    quid       	"41F0F1350222"
+		    title      	"Maintenance Examination Question"
+		    zoom       	100
+		    max_height 	28350
+		    max_width  	21600
+		    origin_x   	744
+		    origin_y   	0
+		    items      	(list diagram_item_list
+			(object InterObjView "$UNNAMED$0" @2
+			    location   	(304, 224)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	TRUE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object ItemLabel
+				Parent_View 	@2
+				location   	(304, 249)
+				anchor_loc 	1
+				nlines     	2
+				max_width  	360
+				justify    	0
+				label      	"")
+			    icon       	"Actor"
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    fill_color 	13434879
+			    quidu      	"41F0F16D03C8"
+			    width      	336
+			    height     	1354
+			    icon_height 	162
+			    icon_width 	120
+			    icon_y_offset 	0
+			    annotation 	1
+			    Focus_Of_Control 	(object Focus_Of_Control "" @3
+				location   	(304, 448)
+				line_color 	3342489
+				InterObjView 	@2
+				height     	1040
+				y_coord    	980
+				Nested     	FALSE))
+			(object InterObjView "$UNNAMED$1" @4
+			    location   	(816, 224)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	TRUE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object ItemLabel
+				Parent_View 	@4
+				location   	(816, 250)
+				anchor_loc 	1
+				nlines     	2
+				max_width  	687
+				justify    	0
+				label      	"")
+			    icon       	"boundary"
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    fill_color 	13434879
+			    quidu      	"41F5EB3C0242"
+			    width      	662
+			    height     	1354
+			    icon_height 	153
+			    icon_width 	229
+			    icon_y_offset 	0
+			    annotation 	1
+			    Focus_Of_Control 	(object Focus_Of_Control "" @5
+				location   	(816, 448)
+				line_color 	3342489
+				InterObjView 	@4
+				height     	212
+				y_coord    	152
+				Nested     	FALSE)
+			    Focus_Of_Control 	(object Focus_Of_Control "" @6
+				location   	(816, 704)
+				line_color 	3342489
+				InterObjView 	@4
+				height     	212
+				y_coord    	152
+				Nested     	FALSE)
+			    Focus_Of_Control 	(object Focus_Of_Control "" @7
+				location   	(816, 960)
+				line_color 	3342489
+				InterObjView 	@4
+				height     	212
+				y_coord    	152
+				Nested     	FALSE)
+			    Focus_Of_Control 	(object Focus_Of_Control "" @8
+				location   	(816, 1216)
+				line_color 	3342489
+				InterObjView 	@4
+				height     	212
+				y_coord    	152
+				Nested     	FALSE))
+			(object InterObjView "$UNNAMED$2" @9
+			    location   	(1568, 224)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	TRUE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object ItemLabel
+				Parent_View 	@9
+				location   	(1568, 249)
+				anchor_loc 	1
+				nlines     	2
+				max_width  	594
+				justify    	0
+				label      	"")
+			    icon       	"control"
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    fill_color 	13434879
+			    quidu      	"41F5EB420203"
+			    width      	446
+			    height     	1354
+			    icon_height 	164
+			    icon_width 	157
+			    icon_y_offset 	0
+			    annotation 	1
+			    Focus_Of_Control 	(object Focus_Of_Control "" @10
+				location   	(1456, 464)
+				line_color 	3342489
+				InterObjView 	@9
+				height     	136
+				y_coord    	76
+				Nested     	FALSE)
+			    Focus_Of_Control 	(object Focus_Of_Control "" @11
+				location   	(1456, 720)
+				line_color 	3342489
+				InterObjView 	@9
+				height     	136
+				y_coord    	76
+				Nested     	FALSE)
+			    Focus_Of_Control 	(object Focus_Of_Control "" @12
+				location   	(1456, 976)
+				line_color 	3342489
+				InterObjView 	@9
+				height     	136
+				y_coord    	76
+				Nested     	FALSE)
+			    Focus_Of_Control 	(object Focus_Of_Control "" @13
+				location   	(1456, 1232)
+				line_color 	3342489
+				InterObjView 	@9
+				height     	136
+				y_coord    	76
+				Nested     	FALSE))
+			(object InterObjView "$UNNAMED$3" @14
+			    location   	(2208, 224)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	TRUE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object ItemLabel
+				Parent_View 	@14
+				location   	(2208, 250)
+				anchor_loc 	1
+				nlines     	2
+				max_width  	462
+				justify    	0
+				label      	"")
+			    icon       	"entity"
+			    icon_style 	"Icon"
+			    line_color 	3342489
+			    fill_color 	13434879
+			    quidu      	"41F5EB5700CB"
+			    width      	438
+			    height     	1354
+			    icon_height 	153
+			    icon_width 	154
+			    icon_y_offset 	0
+			    annotation 	1
+			    Focus_Of_Control 	(object Focus_Of_Control "" @15
+				location   	(2096, 480)
+				line_color 	3342489
+				InterObjView 	@14
+				height     	60
+				y_coord    	0
+				Nested     	FALSE)
+			    Focus_Of_Control 	(object Focus_Of_Control "" @16
+				location   	(2096, 736)
+				line_color 	3342489
+				InterObjView 	@14
+				height     	60
+				y_coord    	0
+				Nested     	FALSE)
+			    Focus_Of_Control 	(object Focus_Of_Control "" @17
+				location   	(2096, 992)
+				line_color 	3342489
+				InterObjView 	@14
+				height     	60
+				y_coord    	0
+				Nested     	FALSE)
+			    Focus_Of_Control 	(object Focus_Of_Control "" @18
+				location   	(2096, 1248)
+				line_color 	3342489
+				InterObjView 	@14
+				height     	60
+				y_coord    	0
+				Nested     	FALSE))
+			(object InterMessView "" @19
+			    location   	(560, 448)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object SegLabel @20
+				Parent_View 	@19
+				location   	(559, 404)
+				font       	(object Font
+				    size       	10
+				    face       	"Arial"
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				quidu      	"41F5EB600197"
+				anchor_loc 	1
+				nlines     	1
+				max_width  	394
+				justify    	0
+				label      	"AddExamineQuestion"
+				pctDist    	0.500000
+				height     	45
+				orientation 	0)
+			    line_color 	3342489
+			    client     	@2
+			    supplier   	@4
+			    Focus_Src  	@3
+			    Focus_Entry 	@5
+			    origin     	(319, 448)
+			    terminus   	(800, 448)
+			    ordinal    	0)
+			(object InterMessView "" @21
+			    location   	(16, 464)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object SegLabel @22
+				Parent_View 	@21
+				location   	(1191, 420)
+				font       	(object Font
+				    size       	10
+				    face       	"Arial"
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				quidu      	"41F5EB640233"
+				anchor_loc 	1
+				nlines     	1
+				max_width  	394
+				justify    	0
+				label      	"AddExamineQuestion"
+				pctDist    	0.500000
+				height     	45
+				orientation 	0)
+			    line_color 	3342489
+			    client     	@4
+			    supplier   	@9
+			    Focus_Src  	@5
+			    Focus_Entry 	@10
+			    origin     	(831, 464)
+			    terminus   	(1552, 464)
+			    ordinal    	1)
+			(object InterMessView "" @23
+			    location   	(16, 480)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object SegLabel @24
+				Parent_View 	@23
+				location   	(1887, 436)
+				font       	(object Font
+				    size       	10
+				    face       	"Arial"
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				quidu      	"41F5EB6A01B6"
+				anchor_loc 	1
+				nlines     	1
+				max_width  	410
+				justify    	0
+				label      	"SaveExamineQuestion"
+				pctDist    	0.500000
+				height     	45
+				orientation 	0)
+			    line_color 	3342489
+			    client     	@9
+			    supplier   	@14
+			    Focus_Src  	@10
+			    Focus_Entry 	@15
+			    origin     	(1583, 480)
+			    terminus   	(2192, 480)
+			    ordinal    	2)
+			(object InterMessView "" @25
+			    location   	(16, 704)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object SegLabel @26
+				Parent_View 	@25
+				location   	(559, 660)
+				font       	(object Font
+				    size       	10
+				    face       	"Arial"
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				quidu      	"41F5EBA603C8"
+				anchor_loc 	1
+				nlines     	1
+				max_width  	435
+				justify    	0
+				label      	"ImportExamineQuestion"
+				pctDist    	0.500000
+				height     	45
+				orientation 	0)
+			    line_color 	3342489
+			    client     	@2
+			    supplier   	@4
+			    Focus_Src  	@3
+			    Focus_Entry 	@6
+			    origin     	(319, 704)
+			    terminus   	(800, 704)
+			    ordinal    	3)
+			(object InterMessView "" @27
+			    location   	(16, 720)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object SegLabel @28
+				Parent_View 	@27
+				location   	(1191, 676)
+				font       	(object Font
+				    size       	10
+				    face       	"Arial"
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				quidu      	"41F5EBA903D8"
+				anchor_loc 	1
+				nlines     	1
+				max_width  	435
+				justify    	0
+				label      	"ImportExamineQuestion"
+				pctDist    	0.500000
+				height     	45
+				orientation 	0)
+			    line_color 	3342489
+			    client     	@4
+			    supplier   	@9
+			    Focus_Src  	@6
+			    Focus_Entry 	@11
+			    origin     	(831, 720)
+			    terminus   	(1552, 720)
+			    ordinal    	4)
+			(object InterMessView "" @29
+			    location   	(16, 736)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object SegLabel @30
+				Parent_View 	@29
+				location   	(1887, 692)
+				font       	(object Font
+				    size       	10
+				    face       	"Arial"
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				quidu      	"41F5EBAF003E"
+				anchor_loc 	1
+				nlines     	1
+				max_width  	413
+				justify    	0
+				label      	"SaveExamineQuestion"
+				pctDist    	0.500000
+				height     	45
+				orientation 	0)
+			    line_color 	3342489
+			    client     	@9
+			    supplier   	@14
+			    Focus_Src  	@11
+			    Focus_Entry 	@16
+			    origin     	(1583, 736)
+			    terminus   	(2192, 736)
+			    ordinal    	5)
+			(object InterMessView "" @31
+			    location   	(16, 960)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object SegLabel @32
+				Parent_View 	@31
+				location   	(559, 916)
+				font       	(object Font
+				    size       	10
+				    face       	"Arial"
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				quidu      	"41F5EBD2008C"
+				anchor_loc 	1
+				nlines     	1
+				max_width  	440
+				justify    	0
+				label      	"ModifyExamineQuestion"
+				pctDist    	0.500000
+				height     	45
+				orientation 	0)
+			    line_color 	3342489
+			    client     	@2
+			    supplier   	@4
+			    Focus_Src  	@3
+			    Focus_Entry 	@7
+			    origin     	(319, 960)
+			    terminus   	(800, 960)
+			    ordinal    	6)
+			(object InterMessView "" @33
+			    location   	(16, 976)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object SegLabel @34
+				Parent_View 	@33
+				location   	(1191, 932)
+				font       	(object Font
+				    size       	10
+				    face       	"Arial"
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				quidu      	"41F5EBD6005D"
+				anchor_loc 	1
+				nlines     	1
+				max_width  	440
+				justify    	0
+				label      	"ModifyExamineQuestion"
+				pctDist    	0.500000
+				height     	45
+				orientation 	0)
+			    line_color 	3342489
+			    client     	@4
+			    supplier   	@9
+			    Focus_Src  	@7
+			    Focus_Entry 	@12
+			    origin     	(831, 976)
+			    terminus   	(1552, 976)
+			    ordinal    	7)
+			(object InterMessView "" @35
+			    location   	(16, 992)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object SegLabel @36
+				Parent_View 	@35
+				location   	(1887, 948)
+				font       	(object Font
+				    size       	10
+				    face       	"Arial"
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				quidu      	"41F5EBDB009C"
+				anchor_loc 	1
+				nlines     	1
+				max_width  	410
+				justify    	0
+				label      	"SaveExamineQuestion"
+				pctDist    	0.500000
+				height     	45
+				orientation 	0)
+			    line_color 	3342489
+			    client     	@9
+			    supplier   	@14
+			    Focus_Src  	@12
+			    Focus_Entry 	@17
+			    origin     	(1583, 992)
+			    terminus   	(2192, 992)
+			    ordinal    	8)
+			(object InterMessView "" @37
+			    location   	(560, 1216)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object SegLabel @38
+				Parent_View 	@37
+				location   	(559, 1172)
+				font       	(object Font
+				    size       	10
+				    face       	"Arial"
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				quidu      	"41F5EC02005D"
+				anchor_loc 	1
+				nlines     	1
+				max_width  	438
+				justify    	0
+				label      	"DeleteExamineQuestion"
+				pctDist    	0.500000
+				height     	45
+				orientation 	0)
+			    line_color 	3342489
+			    client     	@2
+			    supplier   	@4
+			    Focus_Src  	@3
+			    Focus_Entry 	@8
+			    origin     	(319, 1216)
+			    terminus   	(800, 1216)
+			    ordinal    	9)
+			(object InterMessView "" @39
+			    location   	(16, 1232)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object SegLabel @40
+				Parent_View 	@39
+				location   	(1190, 1190)
+				font       	(object Font
+				    size       	10
+				    face       	"Arial"
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				quidu      	"41F5EC06037A"
+				anchor_loc 	1
+				nlines     	1
+				max_width  	438
+				justify    	0
+				label      	"DeleteExamineQuestion"
+				pctDist    	0.499179
+				height     	43
+				orientation 	0)
+			    line_color 	3342489
+			    client     	@4
+			    supplier   	@9
+			    Focus_Src  	@8
+			    Focus_Entry 	@13
+			    origin     	(831, 1232)
+			    terminus   	(1552, 1232)
+			    ordinal    	10)
+			(object InterMessView "" @41
+			    location   	(16, 1248)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    label      	(object SegLabel @42
+				Parent_View 	@41
+				location   	(1887, 1204)
+				font       	(object Font
+				    size       	10
+				    face       	"Arial"
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				quidu      	"41F5EC0D001F"
+				anchor_loc 	1
+				nlines     	1
+				max_width  	410
+				justify    	0
+				label      	"SaveExamineQuestion"
+				pctDist    	0.500000
+				height     	45
+				orientation 	0)
+			    line_color 	3342489
+			    client     	@9
+			    supplier   	@14
+			    Focus_Src  	@13
+			    Focus_Entry 	@18
+			    origin     	(1583, 1248)
+			    terminus   	(2192, 1248)
+			    ordinal    	11))))))
+    logical_presentations 	(list unit_reference_list))

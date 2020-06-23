@@ -1,0 +1,472 @@
+package management;
+
+import java.awt.*;
+import javax.swing.*;
+import java.awt.event.*;
+import javax.swing.border.*;
+import com.borland.dbswing.*;
+import java.sql.*;
+import com.borland.dx.sql.dataset.*;
+import com.borland.dx.dataset.*;
+import java.util.*;
+import java.text.SimpleDateFormat;
+/**
+ * <p>Title: </p>
+ * <p>Description: </p>
+ * <p>Copyright: Copyright (c) 2004</p>
+ * <p>Company: </p>
+ * @author not attributable
+ * @version 1.0
+ */
+
+public class ZdthingPanel extends JPanel {
+  JLabel jLabel1 = new JLabel();
+  TitledBorder titledBorder1;
+  TitledBorder titledBorder2;
+  JLabel jLabel3 = new JLabel();
+  JTextField jTextField1 = new JTextField();
+  JLabel jLabel4 = new JLabel();
+  JTextField jTextField2 = new JTextField();
+  JButton jButton1 = new JButton();
+  JButton jButton2 = new JButton();
+  ZdthingPanel ZdthingPanel3;
+  ZdDialog1 ZdDialog11;
+  float r;
+  String query,query1;
+  Statement stmt1;
+  Statement stmt2;
+  PreparedStatement qstmt,qstmt1;
+  Connection con;
+  String insert1;
+  String insert2;
+  String str1;
+  String str2;
+  String str3;
+  String str4;
+  String str5;
+  String str6;
+  String YHid;
+  String YHID;
+  ResultSet rs;
+
+
+  JLabel jLabel2 = new JLabel();
+  JTextField jTextField3 = new JTextField();
+  Database database1 = new Database();
+  QueryDataSet queryDataSet1 = new QueryDataSet();
+  QueryResolver queryResolver1 = new QueryResolver();
+  JdbStatusLabel jdbStatusLabel1 = new JdbStatusLabel();
+  Column column1 = new Column();
+  Column column2 = new Column();
+  Column column3 = new Column();
+  Column column4 = new Column();
+  Column column5 = new Column();
+  Column column6 = new Column();
+  JLabel jLabel5 = new JLabel();
+  JLabel jLabel7 = new JLabel();
+  JTextField jTextField4 = new JTextField();
+  JLabel jLabel8 = new JLabel();
+  JTextField jTextField5 = new JTextField();
+  JButton jButton3 = new JButton();
+  JLabel jLabel9 = new JLabel();
+  JTextField jTextField6 = new JTextField();
+  Checkbox checkbox1 = new Checkbox();
+  Checkbox checkbox2 = new Checkbox();
+
+  java.util.Date today=new java.util.Date();
+ SimpleDateFormat sdf=new SimpleDateFormat("yyyy年MM月dd日hh时mm分ss秒 ");
+  JLabel jLabel10 = new JLabel();
+  JTextField jTextField7 = new JTextField();
+
+
+
+
+
+
+
+  public ZdthingPanel() {
+    try {
+      jbInit();
+    }
+    catch(Exception ex) {
+      ex.printStackTrace();
+    }
+  }
+  public ZdthingPanel(String str) {
+    YHID=str;
+    try {
+      jbInit();
+    }
+    catch(Exception e) {
+      e.printStackTrace();
+    }
+}
+
+
+  void jbInit() throws Exception {
+    titledBorder1 = new TitledBorder("");
+    titledBorder2 = new TitledBorder("");
+    jLabel1.setFont(new java.awt.Font("Dialog", 1, 22));
+    jLabel1.setForeground(Color.red);
+    jLabel1.setPreferredSize(new Dimension(186, 31));
+    jLabel1.setText("抵押质押物体申请");
+    jLabel1.setBounds(new Rectangle(139, 2, 192, 39));
+    this.setLayout(null);
+    jLabel3.setFont(new java.awt.Font("Dialog", 1, 15));
+    jLabel3.setForeground(Color.black);
+    jLabel3.setText("用户姓名");
+    jLabel3.setBounds(new Rectangle(31, 59, 98, 24));
+    //jTextField1.setNextFocusableComponent(jTextField2);
+    jTextField1.setRequestFocusEnabled(true);
+    jTextField1.setSelectedTextColor(Color.white);
+    jTextField1.setText("");
+    jTextField1.setScrollOffset(0);
+    jTextField1.setBounds(new Rectangle(134, 54, 205, 28));
+    jTextField1.addActionListener(new ZdthingPanel_jTextField1_actionAdapter(this));
+    jLabel4.setFont(new java.awt.Font("Dialog", 1, 15));
+    jLabel4.setText("身份证号码");
+    jLabel4.setBounds(new Rectangle(14, 91, 104, 26));
+    jTextField2.setMinimumSize(new Dimension(6, 22));
+    //jTextField2.setNextFocusableComponent(this);
+    jTextField2.setText("");
+    jTextField2.setBounds(new Rectangle(135, 88, 206, 30));
+    jTextField2.addActionListener(new ZdthingPanel_jTextField2_actionAdapter(this));
+    jButton1.setBounds(new Rectangle(56, 406, 83, 30));
+    jButton1.setFont(new java.awt.Font("Dialog", 1, 15));
+    jButton1.setHorizontalAlignment(SwingConstants.CENTER);
+    jButton1.setSelected(false);
+    jButton1.setText("确   定");
+    jButton1.addActionListener(new ZdthingPanel_jButton1_actionAdapter(this));
+    jButton2.setBounds(new Rectangle(288, 405, 77, 31));
+    jButton2.setFont(new java.awt.Font("Dialog", 1, 15));
+    jButton2.setContentAreaFilled(true);
+    jButton2.setText("取  消");
+    jButton2.addActionListener(new ZdthingPanel_jButton2_actionAdapter(this));
+    this.setFont(new java.awt.Font("Dialog", 1, 15));
+    this.setForeground(Color.black);
+    this.setOpaque(true);
+    this.setRequestFocusEnabled(true);
+    jLabel2.setFont(new java.awt.Font("Dialog", 1, 15));
+    jLabel2.setText("用户号");
+    jLabel2.setBounds(new Rectangle(44, 124, 79, 31));
+   // jTextField3.setNextFocusableComponent(jTextField1);
+    jTextField3.setEditable(false);
+    jTextField3.setText("");
+    jTextField3.setBounds(new Rectangle(137, 128, 206, 28));
+    jTextField3.addActionListener(new ZdthingPanel_jTextField3_actionAdapter(this));
+    jdbStatusLabel1.setVisible(false);
+    jdbStatusLabel1.setHorizontalTextPosition(SwingConstants.TRAILING);
+    jdbStatusLabel1.setText("jdbStatusLabel1");
+    jdbStatusLabel1.setDataSet(queryDataSet1);
+    jdbStatusLabel1.setBounds(new Rectangle(29, 225, 110, 15));
+    column1.setCaption("质抵押物编号");
+    column1.setColumnName("ZdId");
+    column1.setDataType(com.borland.dx.dataset.Variant.STRING);
+    column1.setPrecision(20);
+    column1.setRowId(true);
+    column1.setSchemaName("dbo");
+    column1.setTableName("ZDthing");
+    column1.setServerColumnName("ZdId");
+    column1.setSqlType(1);
+    column2.setCaption("用户号");
+    column2.setColumnName("UserId");
+    column2.setDataType(com.borland.dx.dataset.Variant.STRING);
+    column2.setPrecision(8);
+    column2.setSchemaName("dbo");
+    column2.setTableName("ZDthing");
+    column2.setServerColumnName("UserId");
+    column2.setSqlType(1);
+    column3.setCaption("质抵押物名称");
+    column3.setColumnName("Zdname");
+    column3.setDataType(com.borland.dx.dataset.Variant.STRING);
+    column3.setPrecision(40);
+    column3.setSchemaName("dbo");
+    column3.setTableName("ZDthing");
+    column3.setServerColumnName("Zdname");
+    column3.setSqlType(12);
+    column4.setCaption("质抵押物金额");
+    column4.setColumnName("Zdprice");
+    column4.setDataType(com.borland.dx.dataset.Variant.BIGDECIMAL);
+    column4.setPrecision(19);
+    column4.setScale(4);
+    column4.setSchemaName("dbo");
+    column4.setTableName("ZDthing");
+    column4.setServerColumnName("Zdprice");
+    column4.setSqlType(3);
+    column5.setCaption("质抵押日期");
+    column5.setColumnName("Zddate");
+    column5.setDataType(com.borland.dx.dataset.Variant.TIMESTAMP);
+    column5.setSchemaName("dbo");
+    column5.setTableName("ZDthing");
+    column5.setServerColumnName("Zddate");
+    column5.setSqlType(93);
+    column6.setCaption("质抵押状态");
+    column6.setColumnName("Zdstate");
+    column6.setDataType(com.borland.dx.dataset.Variant.STRING);
+    column6.setPrecision(6);
+    column6.setSchemaName("dbo");
+    column6.setTableName("ZDthing");
+    column6.setServerColumnName("Zdstate");
+    column6.setSqlType(1);
+    queryDataSet1.setColumns(new Column[] {column1, column2, column3, column4, column5, column6});
+    jLabel5.setFont(new java.awt.Font("Dialog", 1, 15));
+    jLabel5.setHorizontalAlignment(SwingConstants.CENTER);
+    jLabel5.setText("物体类型");
+    jLabel5.setBounds(new Rectangle(18, 162, 90, 31));
+    jLabel7.setFont(new java.awt.Font("Dialog", 1, 15));
+    jLabel7.setText("物品名称");
+    jLabel7.setBounds(new Rectangle(31, 202, 86, 24));
+    jTextField4.setText("");
+    jTextField4.setBounds(new Rectangle(132, 202, 211, 29));
+    jTextField4.addActionListener(new ZdthingPanel_jTextField4_actionAdapter(this));
+    jLabel8.setFont(new java.awt.Font("Dialog", 1, 15));
+    jLabel8.setText("物品金额");
+    jLabel8.setBounds(new Rectangle(33, 242, 84, 27));
+    jTextField5.setSelectedTextColor(Color.white);
+    jTextField5.setText("");
+    jTextField5.setBounds(new Rectangle(132, 243, 210, 30));
+    jButton3.setBounds(new Rectangle(171, 405, 84, 31));
+    jButton3.setFont(new java.awt.Font("Dialog", 1, 15));
+    jButton3.setSelected(false);
+    jButton3.setText("办  卡");
+    jButton3.addActionListener(new ZdthingPanel_jButton3_actionAdapter(this));
+    jLabel9.setFont(new java.awt.Font("Dialog", 1, 15));
+    jLabel9.setText("工作人员编号");
+    jLabel9.setBounds(new Rectangle(6, 284, 113, 30));
+    jTextField6.addActionListener(new ZdthingPanel_jTextField6_actionAdapter(this));
+    checkbox1.setFont(new java.awt.Font("Dialog", 1, 20));
+    checkbox1.setLabel("抵押物");
+    checkbox1.setBounds(new Rectangle(133, 167, 100, 21));
+    checkbox2.setFont(new java.awt.Font("Dialog", 1, 20));
+    checkbox2.setLabel("质押物");
+    checkbox2.setBounds(new Rectangle(253, 164, 93, 25));
+    jLabel10.setFont(new java.awt.Font("Dialog", 1, 15));
+    jLabel10.setHorizontalAlignment(SwingConstants.CENTER);
+    jLabel10.setText("日 期");
+    jLabel10.setBounds(new Rectangle(52, 340, 57, 26));
+    jTextField7.setSelectionStart(11);
+    jTextField7.setBounds(new Rectangle(133, 337, 209, 27));
+    jTextField6.setBounds(new Rectangle(131, 288, 210, 31));
+    this.add(jLabel1, null);
+    this.add(jdbStatusLabel1, null);
+    this.add(jButton3, null);
+    this.add(jButton1, null);
+    this.add(jButton2, null);
+    this.add(jTextField7, null);
+    this.add(jTextField6, null);
+    this.add(jTextField5, null);
+    this.add(jLabel8, null);
+    this.add(jLabel9, null);
+    this.add(jLabel10, null);
+    this.add(jTextField4, null);
+    this.add(jLabel7, null);
+    this.add(jLabel5, null);
+    this.add(checkbox1, null);
+    this.add(checkbox2, null);
+    this.add(jLabel2, null);
+    this.add(jTextField2, null);
+    this.add(jTextField3, null);
+    this.add(jTextField1, null);
+    this.add(jLabel4, null);
+    this.add(jLabel3, null);
+    jTextField6.setText(YHID);
+    jTextField6.setEditable(false);
+    jTextField7.setEditable(false);
+     jTextField7.setText(sdf.format(today));
+
+
+     String url = "jdbc:microsoft:sqlserver://localhost:1433;DatabaseName=CCES";
+        String username= "sa";
+        String password= "";
+        con = DriverManager.getConnection(url,username,password);
+
+
+
+  }
+
+
+  void jTextField1_actionPerformed(ActionEvent e) {
+
+  }
+
+  void jButton1_actionPerformed(ActionEvent e) {
+    try{
+    str1=jTextField3.getText();
+     str2=jTextField1.getText();
+     str3=jTextField2.getText();
+
+      // System.out.println(str4+"  right?");
+      str5=jTextField4.getText();
+      str6=jTextField5.getText();
+      float m=Float.parseFloat(str6);
+      System.out.println(m);
+      int a6=Integer.parseInt(str6);
+      if(checkbox1.getState())
+   {
+      str4=checkbox1.getLabel();
+      r=(3*m)/5;
+    //  System.out.println(r+"diya");
+    }
+   if(checkbox2.getState())
+     {  str4=checkbox2.getLabel();
+        r=(9*m)/10;
+    //    System.out.println(r+"zhiya");
+     }
+
+
+     insert1 = "Insert Into Users(YHworkerID,UserName,UserCard) Values("+"\'"+YHID+"\'"+","+"\'"+str2+"\'"+","+"\'"+str3+"\'"+")";//插入拥护数据
+     stmt1 = con.createStatement();
+     stmt1.executeUpdate(insert1);
+
+     query1="select UserId from Users where UserCard=?";//查询写入的用户号显示出来
+     qstmt = con.prepareStatement(query1);
+     qstmt.setString(1,str3);
+     rs=qstmt.executeQuery();
+      if(rs.next()){
+     String a=rs.getString("UserId");
+     long b=rs.getLong("UserId");
+     jTextField3.setText(a);
+
+
+    insert2 = "Insert Into ZDthing(UserId,Zdname,Zdprice,Zddate,Zdstate) Values("+"\'"+b+"\'"+","+"\'"+str5+"\'"+","+"\'"+a6+"\'"+","+"\'"+sdf.format(today)+"\'"+","+"\'"+str4+"\'"+")";
+   stmt2= con.createStatement();
+     stmt2.executeUpdate(insert2);
+      }
+    // System.out.println("here");
+
+       }
+       catch(Exception ep)
+       {  ep.printStackTrace();
+         System.out.print("操作取消，请填表。");
+       }
+        String str1=jTextField1.getText();
+
+  }
+
+  void jTextField2_actionPerformed(ActionEvent e) {
+
+  }
+
+  void jButton2_actionPerformed(ActionEvent e) {
+   jTextField3.setText("");
+   jTextField1.setText("");
+   jTextField2.setText("");
+   checkbox1.setState(false);
+   checkbox2.setState(false);
+   jTextField4.setText("");
+   jTextField5.setText("");
+   jTextField6.setText("");
+  }
+
+
+  void jTextField3_actionPerformed(ActionEvent e) {
+
+  }
+
+  void jTextField6_actionPerformed(ActionEvent e) {
+
+  }
+
+  void jButton3_actionPerformed(ActionEvent e) {
+    int n=(int) r;
+    ZdDialog11=new ZdDialog1(n);
+     ZdDialog11.setBounds(200,150,550,450);
+    ZdDialog11.show();
+
+
+  }
+
+  void jTextField4_actionPerformed(ActionEvent e) {
+
+  }
+
+
+  }
+
+class ZdthingPanel_jTextField1_actionAdapter implements java.awt.event.ActionListener {
+  ZdthingPanel adaptee;
+
+  ZdthingPanel_jTextField1_actionAdapter(ZdthingPanel adaptee) {
+    this.adaptee = adaptee;
+  }
+  public void actionPerformed(ActionEvent e) {
+    adaptee.jTextField1_actionPerformed(e);
+  }
+}
+
+class ZdthingPanel_jButton1_actionAdapter implements java.awt.event.ActionListener {
+  ZdthingPanel adaptee;
+
+  ZdthingPanel_jButton1_actionAdapter(ZdthingPanel adaptee) {
+    this.adaptee = adaptee;
+  }
+  public void actionPerformed(ActionEvent e) {
+    adaptee.jButton1_actionPerformed(e);
+  }
+}
+
+class ZdthingPanel_jTextField2_actionAdapter implements java.awt.event.ActionListener {
+  ZdthingPanel adaptee;
+
+  ZdthingPanel_jTextField2_actionAdapter(ZdthingPanel adaptee) {
+    this.adaptee = adaptee;
+  }
+  public void actionPerformed(ActionEvent e) {
+    adaptee.jTextField2_actionPerformed(e);
+  }
+}
+
+class ZdthingPanel_jButton2_actionAdapter implements java.awt.event.ActionListener {
+  ZdthingPanel adaptee;
+
+  ZdthingPanel_jButton2_actionAdapter(ZdthingPanel adaptee) {
+    this.adaptee = adaptee;
+  }
+  public void actionPerformed(ActionEvent e) {
+    adaptee.jButton2_actionPerformed(e);
+  }
+}
+
+class ZdthingPanel_jTextField3_actionAdapter implements java.awt.event.ActionListener {
+  ZdthingPanel adaptee;
+
+  ZdthingPanel_jTextField3_actionAdapter(ZdthingPanel adaptee) {
+    this.adaptee = adaptee;
+  }
+  public void actionPerformed(ActionEvent e) {
+    adaptee.jTextField3_actionPerformed(e);
+  }
+}
+
+class ZdthingPanel_jTextField6_actionAdapter implements java.awt.event.ActionListener {
+  ZdthingPanel adaptee;
+
+  ZdthingPanel_jTextField6_actionAdapter(ZdthingPanel adaptee) {
+    this.adaptee = adaptee;
+  }
+  public void actionPerformed(ActionEvent e) {
+    adaptee.jTextField6_actionPerformed(e);
+  }
+}
+
+class ZdthingPanel_jButton3_actionAdapter implements java.awt.event.ActionListener {
+  ZdthingPanel adaptee;
+
+  ZdthingPanel_jButton3_actionAdapter(ZdthingPanel adaptee) {
+    this.adaptee = adaptee;
+  }
+  public void actionPerformed(ActionEvent e) {
+    adaptee.jButton3_actionPerformed(e);
+  }
+}
+
+class ZdthingPanel_jTextField4_actionAdapter implements java.awt.event.ActionListener {
+  ZdthingPanel adaptee;
+
+  ZdthingPanel_jTextField4_actionAdapter(ZdthingPanel adaptee) {
+    this.adaptee = adaptee;
+  }
+  public void actionPerformed(ActionEvent e) {
+    adaptee.jTextField4_actionPerformed(e);
+  }
+}
